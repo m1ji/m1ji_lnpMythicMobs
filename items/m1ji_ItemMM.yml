@@ -67,7 +67,7 @@ PvE_Weapon_EternalIcicle_m1ji_:
  - '&fダメージ: 3 × いっぱい 属性: &fnone'
  - '&f氷山の一部を顕現させ、範囲4m以内に大量の氷筍を召喚する'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
- - '&fスキル2 [<gradient:#ffb7ef:#98c8ff>&l</gradient>&r]'
+ - '&fスキル2 [<gradient:#ffb7ef:#98c8ff>&l凍矢</gradient>&r]'
  - '&f発動条件: 弓を射る / CT: 6秒'
  - '&fダメージ: 5-6 属性: &fnone'
  - '&f一発目の弾速と同じ速度の矢を5連射する'
@@ -79,3 +79,32 @@ PvE_Weapon_EternalIcicle_m1ji_:
  Skills: 
  - skill{s=m1ji_EternalIcicle_Swing} @self ~onSwing
  - skill{s=m1ji_EternalIcicle_Shoot} @self ~onShoot
+
+PvE_Weapon_GenesisPearl_m1ji_:
+ Id: stick
+ Model: 162
+ Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. &fPearl'
+ Lore:
+ - '&f涙と愛情と、'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<gradient:#ffffff:#a6a6a6>&l受容の舞</gradient>&r]'
+ - '&f発動条件: どちらかの手に持った状態で左クリック / CT: 12秒'
+ - '&fダメージ: 4 属性: &fnone'
+ - '&f前方の対象を自身の方向へ引き寄せる'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル2 [<gradient:#a6a6a6:#ffffff>&l拒絶の舞</gradient>&r]'
+ - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 8秒'
+ - '&fダメージ: 3-8 属性: &fnone'
+ - '&f長押しで溜めをチャージし、前方の対象をノックパックさせる'
+ Skills: 
+ - skill{s=m1ji_GenesisPearl_Swing} ~onSwing
+ - skill{s=m1ji_GenesisPearl_Use1} ~onUse  
+ - skill{s=m1ji_GenesisPearl_Use2} ~onUse  
+ Hide:
+ - ENCHANTS
+ - UNBREAKABLE
+ - ATTRIBUTES
+ Options:
+  Unbreakable: true
+ Enchantments:
+ - PROTECTION_ENVIRONMENTAL:6

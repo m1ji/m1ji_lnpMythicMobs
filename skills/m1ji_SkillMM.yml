@@ -1,6 +1,7 @@
 m1ji_CosmonicStraight_Use:
  Cooldown: 2
  Conditions:
+ - wearing{s=HAND;m=PvE_Weapon_CosmonicStraight_m1ji_} true
  - hasMana{a=>1} true
  Skills:
  - modifyMana{a=-10} @self
@@ -34,6 +35,7 @@ m1ji_CosmonicStraight_Use:
 m1ji_Axelia_Use:
  Cooldown: 3
  Conditions:
+ - wearing{s=HAND;m=PvE_Weapon_Axelia_m1ji_} true
  - hasMana{a=>1} true
  Skills:
  - modifyMana{a=-20} @self
@@ -105,6 +107,7 @@ m1ji_Axelia_Use:
 m1ji_EternalBlessings_Use:
  Cooldown: 18
  Conditions:
+ - wearing{s=HAND;m=PvE_Weapon_EternalBlessings_m1ji_} true
  - hasMana{a=>1} true
  Skills:
  - modifyMana{a=-55} @self
@@ -187,6 +190,7 @@ m1ji_EternalBlessings_UseField:
 m1ji_EternalIcicle_Swing:
  Cooldown: 16
  Conditions:
+ - wearing{s=HAND;m=PvE_Weapon_EternalIcicle_m1ji_} true
  - hasMana{a=>1} true
  - onground{} true
  Skills:
@@ -229,6 +233,8 @@ m1ji_EternalIcicle_Swing_1:
      } @RLNTE{a=30;r=9;s=1;minr=0}
  
 m1ji_EternalIcicle_Shoot:
+ Conditions:
+ - wearing{s=HAND;m=PvE_Weapon_EternalIcicle_m1ji_} true
  Skills:
  - cancelEvent
  - p{oT=[
@@ -269,4 +275,73 @@ m1ji_EternalIcicle_Shoot1:
      hp=false;
      repeat=3;
      repeatInterval=5
-     } @TL
+     } @TL ?wearing{s=HAND;m=PvE_Weapon_EternalIcicle_m1ji_}
+
+m1ji_GenesisPearl_Swing:
+ Cooldown: 12
+ Conditions:
+ - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
+ - hasMana{a=>1} true
+ Skills:
+ - modifyMana{a=-100} @self
+ - totem{oT=[
+     - e:pr{p=glow;r=4;pts=10;a=1} 
+     - e:pr{p=glow;r=4;pts=30;a=1;audience=caster} 
+     - e:pr{p=electric_spark;r=1;a=5;hS=1.2;pts=15;audience=caster;cd=0.15} 
+    ];
+    oE=[
+     - sudoskill{s=m1ji_GenesisPearl_Leap} @ENO{r=4;ignore=players}
+     - damage{a=4} @ENO{r=3;ignore=players}
+    ];
+    md=15;
+    hp=false;
+    } @Forward{f=3.5}
+
+m1ji_GenesisPearl_Leap:
+ Skills:
+ - leap{v=-500} @trigger{y=-1.5}
+
+m1ji_GenesisPearl_Use1:
+ Conditions:
+ - hasaura genesispearl_ct false
+ - hasaura genesispearl_charge false
+ - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
+ - hasMana{a=>100} true
+ Skills:
+ - setVar{var=caster.genesispearl;val=0;type=FLOAT} @self
+ - aura{auraName=genesispearl_ct;d=160} @self
+ - aura{auraName=genesispearl_charge;oT=m1ji_GenesisPearl_Use_oT;oE=m1ji_GenesisPearl_Use_oE;d=8;i=1} @self
+ - modifyMana{a=-100} @self
+ - message{m="m1ji_GenesisPearl_Use1"} @self
+
+m1ji_GenesisPearl_Use2:
+ Conditions:
+ - hasaura genesispearl_charge true
+ - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
+ - varInRange{var=caster.genesispearl;val=>8.0} false
+ Skills:
+ - aura{auraName=genesispearl_charge;oT=m1ji_GenesisPearl_Use_oT;oE=m1ji_GenesisPearl_Use_oE;d=6;i=1} @self
+ - message{m="m1ji_GenesisPearl_Use2"} @self
+
+m1ji_GenesisPearl_Use_oT:
+ Skills:
+ - setVar{var=caster.genesispearl;val=<caster.var.genesispearl|0>+0.4;type=FLOAT} @self
+ - message{m="<caster.var.genesispearl|0>"} @self
+ - e:pr{p=electric_spark;r=<caster.var.genesispearl>;pts=40;audience=caster} @self
+ - skill{s=m1ji_GenesisPearl_Use_END} @self
+
+m1ji_GenesisPearl_Use_END:
+ Conditions:
+ - varInRange{var=caster.genesispearl;val=>8.0} true
+ Skills:
+ - auraremove{aura=genesispearl_charge} @self
+
+m1ji_GenesisPearl_Use_oE:
+ Skills:
+ - message{m="m1ji_GenesisPearl_Use_oE"} @self
+ - e:pr{p=electric_spark;r=<caster.var.genesispearl>*0.8;pts=40;a=1;audience=caster} @self
+ - e:pr{p=poof;r=3;a=1;points=20;d=true;dir=0,-10,0;s=0.5;delay=3} @origin
+ - e:pr{p=poof;r=5;a=1;points=20;d=true;dir=0,-10,0;s=0.5;delay=5} @origin
+ - e:pr{p=poof;r=<caster.var.genesispearl>*0.8;a=1;points=20;d=true;dir=0,-10,0;s=0.5;delay=7} @origin
+ - pull{v=<caster.var.genesispearl>;to=true} @EIR{r=<caster.var.genesispearl>*0.8;ignore=players}
+ - damage{a=<caster.var.genesispearl>*0.6} @EIR{r=<caster.var.genesispearl>*0.8;ignore=players}
