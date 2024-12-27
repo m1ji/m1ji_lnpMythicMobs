@@ -1,10 +1,16 @@
+# Conditions:
+#  - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
+#  - hasMana{a=>100} true
+#  Skills:
+#  - modifyMana{a=-10} @self
+
 m1ji_CosmonicStraight_Use:
  Cooldown: 2
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_CosmonicStraight_m1ji_} true
- - hasMana{a=>1} true
+#  - hasMana{a=>1} true
  Skills:
- - modifyMana{a=-10} @self
+#  - modifyMana{a=-10} @self
  - p{oT=[
       - e:p{c=#00bfff;a=4;hs=0.5;vs=0.5;audience=caster} @origin
       - e:p{c=#4682b4;a=4;hs=0.5;vs=0.5;audience=caster} @origin
@@ -36,9 +42,9 @@ m1ji_Axelia_Use:
  Cooldown: 3
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_Axelia_m1ji_} true
- - hasMana{a=>1} true
+#  - hasMana{a=>1} true
  Skills:
- - modifyMana{a=-20} @self
+#  - modifyMana{a=-20} @self
  - setvariable{var=caster.radius;type=FLOAT;value=3}
  - p{oT=[
      - e:p{p=flame;audience=caster} @origin
@@ -108,9 +114,9 @@ m1ji_EternalBlessings_Use:
  Cooldown: 18
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_EternalBlessings_m1ji_} true
- - hasMana{a=>1} true
+#  - hasMana{a=>1} true
  Skills:
- - modifyMana{a=-55} @self
+#  - modifyMana{a=-55} @self
  - p{oT=[
      - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin
      - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{yoffset=+0.05}
@@ -191,10 +197,10 @@ m1ji_EternalIcicle_Swing:
  Cooldown: 16
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_EternalIcicle_m1ji_} true
- - hasMana{a=>1} true
+#  - hasMana{a=>1} true
  - onground{} true
  Skills:
- - modifyMana{a=-55} @self
+#  - modifyMana{a=-55} @self
  - sound{s=block.enchantment_table.use;v=2;p=2} @EIR{r=10}
  - sound{s=block.enchantment_table.use;v=2;p=2} @self
  - totem{oT=[
@@ -281,37 +287,41 @@ m1ji_GenesisPearl_Swing:
  Cooldown: 12
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
- - hasMana{a=>1} true
+#  - hasMana{a=>1} true
  Skills:
- - modifyMana{a=-100} @self
+#  - modifyMana{a=-100} @self
  - totem{oT=[
      - e:pr{p=glow;r=4;pts=10;a=1} 
      - e:pr{p=glow;r=4;pts=30;a=1;audience=caster} 
      - e:pr{p=electric_spark;r=1;a=5;hS=1.2;pts=15;audience=caster;cd=0.15} 
+     - sound{s=block.note_block.chime;v=1.5;p=1.85}
     ];
     oE=[
      - sudoskill{s=m1ji_GenesisPearl_Leap} @ENO{r=4;ignore=players}
      - damage{a=4} @ENO{r=3;ignore=players}
+     - sound{s=entity.wind_charge.wind_burst;v=1.5;p=1.3;repeat=2;repeatInterval=1} 
+     - sound{s=entity.wind_charge.wind_burst;v=1.5;p=1.5} 
     ];
     md=15;
     hp=false;
+    hnp=false;
     } @Forward{f=3.5}
 
 m1ji_GenesisPearl_Leap:
  Skills:
- - leap{v=-500} @trigger{y=-1.5}
+ - leap{v=-700} @trigger{y=-2}
 
 m1ji_GenesisPearl_Use1:
  Conditions:
  - hasaura genesispearl_ct false
  - hasaura genesispearl_charge false
  - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
- - hasMana{a=>100} true
+#  - hasMana{a=>100} true
  Skills:
+#  - modifyMana{a=-100} @self
  - setVar{var=caster.genesispearl;val=0;type=FLOAT} @self
  - aura{auraName=genesispearl_ct;d=160} @self
  - aura{auraName=genesispearl_charge;oT=m1ji_GenesisPearl_Use_oT;oE=m1ji_GenesisPearl_Use_oE;d=8;i=1} @self
- - modifyMana{a=-100} @self
 
 m1ji_GenesisPearl_Use2:
  Conditions:
@@ -324,6 +334,7 @@ m1ji_GenesisPearl_Use2:
 m1ji_GenesisPearl_Use_oT:
  Skills:
  - setVar{var=caster.genesispearl;val=<caster.var.genesispearl|0>+0.4;type=FLOAT} @self
+ - sound{s=block.amethyst_cluster.break;v=1.5;p=0.5+(<caster.var.genesispearl>/10)} @self
  - e:pr{p=electric_spark;r=<caster.var.genesispearl>;pts=40;audience=caster} @self
  - skill{s=m1ji_GenesisPearl_Use_END} @self
 
@@ -341,6 +352,116 @@ m1ji_GenesisPearl_Use_oE:
  - e:pr{p=poof;r=<caster.var.genesispearl>*0.8;a=1;points=20;d=true;dir=0,-10,0;s=0.5;delay=7} @origin
  - pull{v=<caster.var.genesispearl>;to=true} @EIR{r=<caster.var.genesispearl>*0.8;ignore=players}
  - damage{a=<caster.var.genesispearl>*0.6} @EIR{r=<caster.var.genesispearl>*0.8;ignore=players}
+ - sound{s=entity.wind_charge.wind_burst;v=1.5;p=1.3;repeat=2;repeatInterval=1} 
+ - sound{s=entity.wind_charge.wind_burst;v=1.5;p=1.5} 
+
+m1ji_GenesisTopaz_Swing:
+ Cooldown: 10
+ Conditions:
+ - wearing{s=HAND;m=PvE_Weapon_GenesisTopaz_m1ji_} true
+#  - hasMana{a=>100} true
+ Skills:
+#  - modifyMana{a=-100} @self
+ - sound{s=ambient.cave;v=2;p=1.5} @self
+ - sound{s=ambient.nether_wastes.mood;v=2;p=0.75}
+ - sound{s=entity.firework_rocket.launch;v=1.5;p=0.85} @self
+ - aura{auraName=genesisTopazUsed;d=160}
+ - aura{auraName=genesisTopazSilent;d=60} @self
+ - p{oT=[
+     - e:p{p=wax_on;mr=1;h=3;i=1;d=100;hS=0.2;vS=0.2;a=3;fo=true}
+     - endprojectile{} ?hasaura{aura=genesistopaz}
+    ];
+    oE=[
+     - skill{s=m1ji_GenesisTopaz_oE}
+    ];
+    v=5;
+    hp=false;
+    hnp=false;
+    sb=true;
+    md=160
+    } @TL
+
+m1ji_GenesisTopaz_Use:
+ Conditions:
+ - hasaura genesisTopazSilent false
+ - hasaura genesisTopazUsed true
+ Skills:
+ - aura{auraName=genesistopaz;d=10} @self
+ - sound{s=entity.generic.extinguish_fire;v=2;p=2} @self
+ - sound{s=block.beacon.power_select;v=1.5;p=2} @self
+ - sound{s=entity.illusioner.prepare_blindness;v=1.5;p=0.75}
+
+m1ji_GenesisTopaz_oE:
+ Skills:
+ - leap{v=550;repeat=6;repeatInterval=1} @origin
+ - pull{v=4;to=true;delay=8} @self
+ - e:p{p=reddust;c=#f2a828;size=1.15;hS=0.5;vS=0.5;a=15;repeat=5;repeatInterval=2;audience=caster} @Line{r=1}
+ - e:p{p=endrod;hS=0.5;vS=0.5;a=1} @Line{r=1}
+ - damage{a=10;type=none} @EntitiesInLine{r=2.5;ignore=players}
+ - sudoskill{s=m1ji_GenesisTopaz_oESudo} @EntitiesInLine{r=2.5;ignore=players}
+ - delay 15
+ - sound{s=entity.firework_rocket.large_blast;v=1.5;p=0.85} 
+ - sound{s=item.trident.thunder;v=1.5;p=0.95}
+ - e:p{p=gust_emitter_large;hs=2.5;a=6;audience=caster} @origin
+ - e:p{p=angry_villager;hs=2.5;vS=0.5;a=40;audience=caster} @origin
+ - damage{a=15} @ENO{r=3.5;ignore=players}
+ - sudoskill{s=m1ji_GenesisTopaz_oESudo;repeat=2;repeatInterval=1} @ENO{r=3.5;ignore=players}
+
+m1ji_GenesisTopaz_oESudo:
+ Skills:
+ - leap{v=-650} @trigger{y=-2}
+
+m1ji_GenesisRuby_Attack:
+ Cooldown: 5
+ Skills:
+ - sound{s=block.amethyst_block.hit;v=2;p=0.2;repeat=5;repeatInterval=1}
+ - sound{s=entity.lightning_bolt.thunder;v=0.75;p=0.66}
+ - damage{a=5} @target
+ - ignite{} @target
+ - leap{v=450} @target{y=-2}
+ - aura{auraName=genesisruby<caster.name>;oT=GenesisRiby_Attack_oT;oE=GenesisRiby_Attack_oE;d=200} @target
+
+GenesisRiby_Attack_oT:
+ Skills:
+ - e:pr{p=reddust;c=#7c2e3e;size=0.5;r=15;a=1;pts=250;fo=true;audience=caster} @selfLocation{y=1}
+
+GenesisRiby_Attack_oE:
+ Skills:
+ - stopsound{s=entity.lightning_bolt.thunder} @origin
+ - sound{s=entity.generic.burn;v=1;p=1.5;repeat=3;repeaetInterval=3}
+ - sound{s=entity.breeze.shoot;v=1;p=2}
+ - jump{v=1} @origin
+ - delay 10
+ - leap{v=250;repeat=6;repeatInterval=1;fo=true} @origin
+ - sound{s=entity.firework_rocket.twinkle_far;v=1;p=0.88}
+ - e:p{p=reddust;c=#7c2e3e;size=1.15;hS=0.25;vS=0.25;a=10;repeat=5;repeatInterval=2;audience=caster} @Line{r=1}
+ - damage{a=10} @EntitiesInLine{r=3}
+ - damage{a=15}
+ - e:p{p=flash}
+
+m1ji_GenesisRuby_Use:
+ Skills:
+ - auraremove{aura=genesisruby<caster.name>} @EIR{r=15}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 cl6_ShootItNowSwing:

@@ -1,0 +1,21 @@
+m1ji_Tester:
+  Type: villager
+  Display: '&dテスター'
+  Health: 100000
+  Damage: 0
+  Options:
+    KnockbackResistance: 1
+    NoAI: true
+    NoGravity: true
+    NoDamageTicks: 0
+  BossBar:
+    Enabled: true
+    Title: '<caster.name> <caster.hp>/<caster.mhp>'
+    Range: 32
+    Color: PURPLE
+    Style: SEGMENTED_10
+  Equipment:
+  - halloween2022_pumpkinHead head
+  - halloweenbody:3
+  Skills:
+  - message{m="&5&l<skill.var.damage-amount>"} @trigger ~onDamaged  

@@ -109,6 +109,62 @@ PvE_Weapon_GenesisPearl_m1ji_:
  Enchantments:
  - PROTECTION_ENVIRONMENTAL:6
 
+PvE_Weapon_GenesisTopaz_m1ji_:
+ Id: stick
+ Model: 162
+ Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#f2a33f>Topaz'
+ Lore:
+ - '&f希望を胸に。'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<gradient:#f0f267:#f2a33f>&l希望的観測</gradient>&r]'
+ - '&f発動条件: どちらかの手に持った状態で左クリック / CT: 12秒'
+ - '&fダメージ: 4 属性: &fnone'
+ - '&f前方にゆっくり移動する点を飛ばす'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル2 [<gradient:#f2a33f:#f0f267>&l信頼</gradient>&r]'
+ - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 8秒'
+ - '&fダメージ: 3-8 属性: &fnone'
+ - '&fスキル1で放った点の位置へブリンクし、通過点にダメージを与える'
+ Skills: 
+ - skill{s=m1ji_GenesisTopaz_Swing} ~onSwing
+ - skill{s=m1ji_GenesisTopaz_Use} ~onUse  
+ Hide:
+ - ENCHANTS
+ - UNBREAKABLE
+ - ATTRIBUTES
+ Options:
+  Unbreakable: true
+ Enchantments:
+ - PROTECTION_ENVIRONMENTAL:6
+
+PvE_Weapon_GenesisRuby_m1ji_:
+ Id: stick
+ Model: 162
+ Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#951665>Ruby'
+ Lore:
+ - '&f勇気と威厳を持って、'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<gradient:#77060e:#951665>&l咬み付き</gradient>&r]'
+ - '&f発動条件: 敵を殴る / CT: 12秒'
+ - '&fダメージ: 4 属性: &fnone'
+ - '&f殴った対象に印を付ける'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル2 [<gradient:#951665:#77060e>&l食らいつき</gradient>&r]'
+ - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 8秒'
+ - '&fダメージ: 3-8 属性: &fnone'
+ - '&f印が付いた敵に猛進する'
+ Skills: 
+ - skill{s=m1ji_GenesisRuby_Attack} ~onAttack
+ - skill{s=m1ji_GenesisRuby_Use} ~onUse  
+ Hide:
+ - ENCHANTS
+ - UNBREAKABLE
+ - ATTRIBUTES
+ Options:
+  Unbreakable: true
+ Enchantments:
+ - PROTECTION_ENVIRONMENTAL:6
+
 PvE_Weapon_ShootItNow_m1ji_:
  Id: nether_star
  Display: '&e&l --&b★ &f&lShoot it now &b★&e&l--> '
