@@ -95,7 +95,7 @@ PvE_Weapon_GenesisPearl_m1ji_:
  - '&fスキル2 [<gradient:#a6a6a6:#ffffff>&l拒絶の舞</gradient>&r]'
  - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 8秒'
  - '&fダメージ: 3-8 属性: &fnone'
- - '&f長押しで溜めをチャージし、前方の対象をノックパックさせる'
+ - '&f長押しで溜めをチャージし、前方の対象をノックバックさせる'
  Skills: 
  - skill{s=m1ji_GenesisPearl_Swing} ~onSwing
  - skill{s=m1ji_GenesisPearl_Use1} ~onUse  
@@ -108,3 +108,26 @@ PvE_Weapon_GenesisPearl_m1ji_:
   Unbreakable: true
  Enchantments:
  - PROTECTION_ENVIRONMENTAL:6
+
+PvE_Weapon_ShootItNow_m1ji_:
+ Id: nether_star
+ Display: '&e&l --&b★ &f&lShoot it now &b★&e&l--> '
+ Lore:
+ - '&e&m===[&6 説明 &e&m]==='
+ - '&f&l「&e&l煌めき、輝け。&f&l」'
+ - '&7その杖は、まるで星の軌跡のように光を放つ'
+ - '&7その輝きは、まるで星屑が舞い散るよう'
+ - ''
+ - '&7杖から発せられるエネルギーは魔法の威力を倍増させる'
+ - '&7また、使い手の技量に応じて輝きが変化する'
+ - ''
+ Skills:
+ - skill{s=cl6_ShootItNowSwing} @self ~onSwing
+ - skill{s=cl6_ShootItNowUse} @self ~onUse
+ - skill{s=cl6_ShootItNowShiftUse} @self ~onUse
+ Attributes:
+  MainHand:
+   Health: 10
+   Luck: 1
+   Armor: 2
+   ArmorToughness: 1
