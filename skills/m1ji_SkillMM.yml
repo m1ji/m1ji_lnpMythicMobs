@@ -17,6 +17,10 @@ m1ji_CosmonicStraight_Use:
       - damage{a=5;pi=true;type=none}
       - e:p{p=flash;audience=caster} @origin
      ];
+     oE=[
+      - e:p{p=flash;audience=caster} @origin
+      - damage{a=2;type=none} @EIR{r=3;ignore=players}
+     ];
      d=2000;
      mr=30;
      v=18;
@@ -179,3 +183,90 @@ m1ji_EternalBlessings_UseField:
      ];
      md=200;
      } @origin{yoffset=-0.75}
+
+m1ji_EternalIcicle_Swing:
+ Cooldown: 16
+ Conditions:
+ - hasMana{a=>1} true
+ - onground{} true
+ Skills:
+ - modifyMana{a=-55} @self
+ - sound{s=block.enchantment_table.use;v=2;p=2} @EIR{r=10}
+ - sound{s=block.enchantment_table.use;v=2;p=2} @self
+ - totem{oT=[
+     - e:pr{c=#72C6EF;points=100;a=1;r=10} @origin
+     - e:p{c=#F0F8FF;hS=4;a=85;audience=caster} @origin
+     - e:p{c=#F0F8FF;hS=4;a=15} @origin
+     ];
+     md=60;
+     oS=m1ji_EternalIcicle_Swing_1;
+     oE=[
+     - damage{a=3;type=none;fo=true} @EIR{r=10;ignore=players}
+     - sound{s=entity.evoker_fangs.attack;v=2;p=1.25;repeat=4;repeatInterval=1} @EIR{r=10}
+     ];
+     md=30
+     } @selfLocation{y=-1}
+     
+m1ji_EternalIcicle_Swing_1:
+ Skills:
+ - delay 30
+ - totem{oS=[
+     - p{oT=[
+         - e:p{p=endrod;audience=caster} @origin
+         - e:p{p=snowflake;audience=caster} @origin
+         ];
+         vO=90;
+         v=5;
+         mr=1.5;
+         d=100;
+         syo=-1;
+         hp=false;
+         i=1;
+         fo=true
+         } @origin
+     ];
+     md=1
+     } @RLNTE{a=30;r=9;s=1;minr=0}
+ 
+m1ji_EternalIcicle_Shoot:
+ Skills:
+ - cancelEvent
+ - p{oT=[
+      - e:p{p=snowflake;audience=caster} @origin
+      - e:p{p=crit;fo=true;audience=caster} @ProjectileForward{f=0.5}
+      - modifyProjectile{trait=gravity;action=MULTIPLY;value=0.1}
+     ];
+     oH=[
+      - damage{a=5;type=none;pi=true}    
+     ];
+     d=60;
+     v=45;
+     g=0.05;
+     hp=false;
+     hnp=true
+     } @TL
+ - skill{s=m1ji_EternalIcicle_Shoot1}
+
+m1ji_EternalIcicle_Shoot1:
+ Cooldown: 6
+ Skills:
+ - delay 5
+ - p{oT=[
+      - e:p{p=snowflake;audience=caster} @origin
+      - e:p{p=crit;fo=true;audience=caster} @ProjectileForward{f=0.5}
+      - modifyProjectile{trait=gravity;action=MULTIPLY;value=0.1}
+     ];
+     oH=[
+      - damage{a=6;type=none;pi=true}    
+     ];
+     oS=[
+      - sound{s=entity.arrow.shoot;v=1.5;p=1.535}
+     ];
+     d=60;
+     v=45;
+     g=0.05;
+     hnp=true;
+     hp=false;
+     repeat=3;
+     repeatInterval=5
+     } @TL

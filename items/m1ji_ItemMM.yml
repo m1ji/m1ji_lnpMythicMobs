@@ -6,7 +6,7 @@ PvE_Weapon_CosmonicStraight_m1ji_:
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<#64ffff>&lア<#5cf5fb>イ<#54ebf7>シ<#4be0f4>ン<#42d5f0>グ<#3bcbec>☆<#32c0e8>ス<#29b5e4>マ<#21aae0>ッ<#189fdc>シ<#0d91d8>ュ<#ffffff>&r]'
  - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 2秒'
- - '&fダメージ: 5 属性: &bnone'
+ - '&fダメージ: 5 属性: &fnone'
  - '&f範囲30mまで届く氷風を放つ。'
  Skills:
  - skill{s=m1ji_CosmonicStraight_Use} ~onUse
@@ -26,7 +26,7 @@ PvE_Weapon_Axelia_m1ji_:
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<#ff0000>&l朽<#d1000b>ち<#a30017>果<#d1000b>て<#ff0000>た<#ffffff>&r]'
  - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 3秒'
- - '&fダメージ: 7 属性: &cnone'
+ - '&fダメージ: 7 属性: &fnone'
  - '&f炎を放ち、敵の足元に空気中の蒼炎を収束させる。相手は朽ちる'
  Skills:
  - skill{s=m1ji_Axelia_Use} ~onUse
@@ -46,7 +46,7 @@ PvE_Weapon_EternalBlessings_m1ji_:
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<gradient:#ffb7ef:#98c8ff>&l彼方の恩恵</gradient>&r]'
  - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 3秒'
- - '&fダメージ: 3 × いっぱい 属性: &cnone'
+ - '&fダメージ: 3 × いっぱい 属性: &fnone'
  - '&f祝福の芽を投げ、着弾地点に祝福の花を展開し周囲の敵に継続的にダメージを与える'
  Options:
    Unbreakable: true
@@ -55,4 +55,27 @@ PvE_Weapon_EternalBlessings_m1ji_:
      Damage: +10%
  Skills: 
  - skill{s=m1ji_EternalBlessings_Use} @self ~onUse
-  
+
+PvE_Weapon_EternalIcicle_m1ji_:
+ Id: bow
+ Display: '<gradient:#F0F8FF:#72C6EF>&l永遠の氷筍</gradient>'
+ Lore:
+ - '&fかの氷山の如く'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<gradient:#ffb7ef:#98c8ff>&l彼方の氷筍</gradient>&r]'
+ - '&f発動条件: どちらかの手に持った状態で左クリック / CT: 16秒'
+ - '&fダメージ: 3 × いっぱい 属性: &fnone'
+ - '&f氷山の一部を顕現させ、範囲4m以内に大量の氷筍を召喚する'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル2 [<gradient:#ffb7ef:#98c8ff>&l</gradient>&r]'
+ - '&f発動条件: 弓を射る / CT: 6秒'
+ - '&fダメージ: 5-6 属性: &fnone'
+ - '&f一発目の弾速と同じ速度の矢を5連射する'
+ Options:
+   Unbreakable: true
+ Attributes:
+   Mainhand:
+     Damage: +10%
+ Skills: 
+ - skill{s=m1ji_EternalIcicle_Swing} @self ~onSwing
+ - skill{s=m1ji_EternalIcicle_Shoot} @self ~onShoot
