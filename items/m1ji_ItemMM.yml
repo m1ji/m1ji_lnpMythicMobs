@@ -1,0 +1,58 @@
+PvE_Weapon_CosmonicStraight_m1ji_:
+ Id: stick
+ Display: '<#ffff45>&lコ<#e8f855>ス<#dcf45e>モ<#d1f166>ニ<#baea77>ッ<#a3e388>ク<#8cdd98>☆<#75d6a9>ス<#5ecfba>ト<#47c8cb>レ<#37c4d6>ー<#19bbec>ト'
+ Lore:
+ - ' "&b氷の力を解き放て！&f" '
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<#64ffff>&lア<#5cf5fb>イ<#54ebf7>シ<#4be0f4>ン<#42d5f0>グ<#3bcbec>☆<#32c0e8>ス<#29b5e4>マ<#21aae0>ッ<#189fdc>シ<#0d91d8>ュ<#ffffff>&r]'
+ - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 2秒'
+ - '&fダメージ: 5 属性: &bnone'
+ - '&f範囲30mまで届く氷風を放つ。'
+ Skills:
+ - skill{s=m1ji_CosmonicStraight_Use} ~onUse
+ Attributes:
+   MainHand:
+    Damage: -90%
+ Hide:
+ - Attributes
+ Options:
+  Unbreakable: true
+
+PvE_Weapon_Axelia_m1ji_:
+ Id: book
+ Display: '<#ff9eff>&lア<#ff7ad1>ク<#ff57a3>セ<#ff3475>リ<#ff1047>ア'
+ Lore:
+ - '&f「はやくくちてください」'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<#ff0000>&l朽<#d1000b>ち<#a30017>果<#d1000b>て<#ff0000>た<#ffffff>&r]'
+ - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 3秒'
+ - '&fダメージ: 7 属性: &cnone'
+ - '&f炎を放ち、敵の足元に空気中の蒼炎を収束させる。相手は朽ちる'
+ Skills:
+ - skill{s=m1ji_Axelia_Use} ~onUse
+ Attributes:
+   MainHand:
+    Damage: -90%
+ Hide:
+ - Attributes
+ Options:
+  Unbreakable: true
+
+PvE_Weapon_EternalBlessings_m1ji_:
+ Id: netherite_hoe
+ Display: '<gradient:#EE82EE:#AFEEEE>&l永遠の祝福</gradient>'
+ Lore:
+ - '&f尽きる事のない祝福を'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<gradient:#ffb7ef:#98c8ff>&l彼方の恩恵</gradient>&r]'
+ - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 3秒'
+ - '&fダメージ: 3 × いっぱい 属性: &cnone'
+ - '&f祝福の芽を投げ、着弾地点に祝福の花を展開し周囲の敵に継続的にダメージを与える'
+ Options:
+   Unbreakable: true
+ Attributes:
+   Mainhand:
+     Damage: +10%
+ Skills: 
+ - skill{s=m1ji_EternalBlessings_Use} @self ~onUse
+  

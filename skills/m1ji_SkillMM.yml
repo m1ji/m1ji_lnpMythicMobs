@@ -1,0 +1,178 @@
+m1ji_CosmonicStraight_Use:
+ Cooldown: 2
+ Conditions:
+ - hasMana{a=>1} true
+ Skills:
+ - modifyMana{a=-10} @self
+ - p{oT=[
+      - e:p{c=#00bfff;a=4;hs=0.5;vs=0.5;audience=caster} @origin
+      - e:p{c=#4682b4;a=4;hs=0.5;vs=0.5;audience=caster} @origin
+      - e:p{c=#00ffff;a=4;hs=0.5;vs=0.5;audience=caster} @origin
+      - e:p{c=#0000d2;a=8;audience=caster} @origin
+      - e:p{p=firework;audience=caster} @origin
+     ];
+     oH=[
+      - e:p{c=#191970;hs=0.5;vs=0.5;fromOrigin=true;audience=caster} @target  
+      - e:p{c=#4169e1;hs=0.5;vs=0.5;fromOrigin=true;audience=caster} @target  
+      - damage{a=5;pi=true;type=none}
+      - e:p{p=flash;audience=caster} @origin
+     ];
+     d=2000;
+     mr=30;
+     v=18;
+     i=1;
+     hS=1.25;
+     vS=1.25;
+     hp=true;
+     hnp=true
+    } @TL
+
+m1ji_Axelia_Use:
+ Cooldown: 3
+ Conditions:
+ - hasMana{a=>1} true
+ Skills:
+ - modifyMana{a=-20} @self
+ - setvariable{var=caster.radius;type=FLOAT;value=3}
+ - p{oT=[
+     - e:p{p=flame;audience=caster} @origin
+     - e:p{p=soul_fire_flame;fromOrigin=true;audience=caster} @forward{f=-20}
+     ];
+     oH=[
+     - o{oT=[
+        - e:p{p=soul_fire_flame;audience=caster} @origin
+        - modifyProjectile{trait=RADIUS;action=SET;value=<caster.var.radius>}
+        - varmath{var=caster.radius;e="<caster.var.radius>-0.0515039"}
+         ];
+        oE=[
+        - e:p{p=largeexplosion;audience=caster} @origin
+        - damage{a=7;pi=true;type=none}
+        - e:p{p=flash;audience=caster} @origin
+         ];
+        oS=[
+        - potion{t=SLOW;d=60;l=200}
+        - potion{t=JUMP;d=60;l=190}
+            ];
+        points=150;
+        i=1;
+        d=60;
+        c=1;
+        StartingPoint=75;
+        r=3} @target
+    - o{oT=[
+        - e:p{p=soul_fire_flame;audience=caster} @origin
+        - modifyProjectile{trait=RADIUS;action=SET;value=<caster.var.radius>}
+         ];
+        points=150;
+        i=1;
+        d=60;
+        c=1;
+        StartingPoint=37;
+        r=3} @target
+    - o{oT=[
+        - e:p{p=soul_fire_flame;audience=caster} @origin
+        - modifyProjectile{trait=RADIUS;action=SET;value=<caster.var.radius>}
+         ];
+        points=150;
+        i=1;
+        d=60;
+        c=1;
+        StartingPoint=0;
+        r=3} @target
+    - o{oT=[
+        - e:p{p=soul_fire_flame;audience=caster} @origin
+        - modifyProjectile{trait=RADIUS;action=SET;value=<caster.var.radius>}
+         ];
+        points=150;
+        i=1;
+        d=60;
+        c=1;
+        StartingPoint=112;
+        r=3} @target    
+    ];
+     i=1;
+     v=15;
+     mr=30;
+     d=100;
+     hp=true;
+     hnp=true
+    } @TL
+
+m1ji_EternalBlessings_Use:
+ Cooldown: 18
+ Conditions:
+ - hasMana{a=>1} true
+ Skills:
+ - modifyMana{a=-55} @self
+ - p{oT=[
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{yoffset=+0.05}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{yoffset=+0.10}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{yoffset=+0.15}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{yoffset=-0.05}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{yoffset=-0.10}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{yoffset=-0.15}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{sideoffset=+0.05}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{sideoffset=+0.10}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{sideoffset=+0.15}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{sideoffset=-0.05}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{sideoffset=-0.10}
+     - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{sideoffset=-0.15}
+     ];
+     oE=[
+     - skill{s=m1ji_EternalBlessings_UseField}
+     ];
+     i=1;
+     d=60;
+     v=7;
+     mr=100;
+     g=0.25;
+     syo=1.5
+     } @TL
+
+m1ji_EternalBlessings_UseField:
+ Skills:
+ - setvariable{var=target.towa_usefield;val=0.00;type=FLOAT} @self
+ - totem{oT=[
+     - variableadd{var=target.towa_usefield;a=0.05} @self ?!varRange{var=caster.towa_usefield;val=>2.5}
+     - e:pr{c=#EE82EE;size=0.35;r=<caster.var.towa_usefield>;points=200;audience=caster;a=1;fo=true}
+     - p{oT=[
+         - e:p{c=#AFEEEE;a=1;size=0.75;fo=true;audience=caster}
+         ];
+         oE=[
+         - p{oT=[
+             - e:p{c=#EE82EE;a=1;size=0.45;fo=true;audience=caster}
+             ];
+             oH=[
+             - setvariable{var=3;type=FLOAT;value=2.5}
+             - damage{a=3;pi=true;pkb=true;type=none}
+             ];
+             d=60;
+             mr=40;
+             vO=0.5;
+             g=0.5;
+             i=2;
+             v=2;
+             fo=true;
+             hnp=true;
+             sE=false;
+             hR=1.25;
+             vR=1.25
+             } @RLNTE{a=7;r=2.5;s=1.5}
+         ];
+         oH=[
+         - setvariable{var=3;type=FLOAT;value=3.75}
+         - damage{a=3;pi=true;pkb=true;type=none}
+         ];
+         md=100;
+         v=3;
+         i=2;
+         fo=true;
+         cd=1.25;
+         hnp=true;
+         sE=false
+         } @RLNTE{a=8;r=7;s=1} ?varRange{var=caster.towa_usefield;val=>2.5}
+     - e:ps{c=#AFEEEE;m=ice;r=0.5;a=200;size=0.25;fo=true;audience=caster} @origin{yoffset=1.5}
+     ];
+     md=200;
+     } @origin{yoffset=-0.75}
