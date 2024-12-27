@@ -23,7 +23,7 @@ m1ji_CosmonicStraight_Use:
      i=1;
      hS=1.25;
      vS=1.25;
-     hp=true;
+     hp=false;
      hnp=true
     } @TL
 
@@ -94,7 +94,7 @@ m1ji_Axelia_Use:
      v=15;
      mr=30;
      d=100;
-     hp=true;
+     hp=false;
      hnp=true
     } @TL
 
@@ -127,7 +127,8 @@ m1ji_EternalBlessings_Use:
      v=7;
      mr=100;
      g=0.25;
-     syo=1.5
+     syo=1.5;
+     hp=false;
      } @TL
 
 m1ji_EternalBlessings_UseField:
@@ -155,6 +156,7 @@ m1ji_EternalBlessings_UseField:
              v=2;
              fo=true;
              hnp=true;
+             hp=false;
              sE=false;
              hR=1.25;
              vR=1.25
@@ -170,6 +172,7 @@ m1ji_EternalBlessings_UseField:
          fo=true;
          cd=1.25;
          hnp=true;
+         hp=false;
          sE=false
          } @RLNTE{a=8;r=7;s=1} ?varRange{var=caster.towa_usefield;val=>2.5}
      - e:ps{c=#AFEEEE;m=ice;r=0.5;a=200;size=0.25;fo=true;audience=caster} @origin{yoffset=1.5}
