@@ -584,6 +584,8 @@ m1ji_GenesisTourmaline_Swing:
  - e:p{p=reddust;c=#4ee4ff;hS=1;vS=1.5;a=15;repeat=4;repeatInterval=3} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:p{p=sweep_attack;hS=1.5;vS=1;a=20;repeat=3;repeatInterval=5}
  - e:p{p=flash} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players}
+ - e:lightning{delay=20} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - damage{a=<caster.var.calc_tourmaline>*2} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - auraremove{aura=genesistourmaline_chargeend}
 
 
