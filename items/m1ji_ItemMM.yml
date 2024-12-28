@@ -152,7 +152,6 @@ PvE_Weapon_GenesisRuby_m1ji_:
  - '&f印が付いた敵に猛進する'
  Skills: 
  - skill{s=m1ji_GenesisRuby_Attack} ~onAttack
- - message{m="うごいてる"} @self ~onAttack
  - skill{s=m1ji_GenesisRuby_Use} ~onUse  
  Hide:
  - ENCHANTS
