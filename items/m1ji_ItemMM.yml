@@ -217,6 +217,19 @@ PvE_Weapon_GenesisAmethyst_m1ji_:
  Enchantments:
  - PROTECTION_ENVIRONMENTAL:6
 
+PvE_Weapon_GAmethyst1_m1ji_:
+ Id: player_head
+ Display: 'amethyst1'
+ Options:
+   SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2IwYTZjNjYwMjY3OWMyYzMzMDk3MzJiNWZhZWNmZjJlMDg3ZjFkMDUxZTBiYTZiNTJkN2YyMzYzNWVmYTYwYiJ9fX0=
+
+PvE_Weapon_GAmethyst2_m1ji_:
+ Id: player_head
+ Display: 'amethyst2'
+ Options:
+   SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjNiMDk4YWE0ODQ0OWExYjkzNDRlMzA1YTFhMzE5YmUwNmZiYzc0NDNmN2UyZThlMjU2YzRkY2NlMjA5MzJhMyJ9fX0=
+
+
 PvE_Weapon_GenesisDiamond_m1ji_:
  Id: diamond
  Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <gradient:#9de1ff:#4c92ff>Diamond</gradient>'

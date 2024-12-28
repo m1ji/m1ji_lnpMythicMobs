@@ -716,19 +716,21 @@ m1ji_GenesisAmethyst_Swing:
  - sound{s=ui.loom.take_result;v=2} @self
  - sound{s=ui.loom.take_result;v=2} @self
  - sound{s=ui.loom.take_result;v=2} @self
- - totem{oE=[
-     - effect:explosion @origin
-     ];
-     md=30
-     } @RLNTE{a=18;r=9;s=1;minr=1}
- - totem{oE=[
-     - damage{a=50;fo=true;pi=true} @EntitiesNearOrigin{r=6}
-     - damage{a=40;ia=true;fo=true} @EntitiesNearOrigin{r=6}
-     ];
-     md=30
-     } @self
- - effect:itemspray{item=時計塔頭1;amount=9;velocity=5;d=30} @self
- - damage{a=5;ia=true} @EIR{r=5}
+ - totem{oS=[
+     - itemspary{i=PvE_Weapon_GAmethyst1_m1ji_;a=5;d=20;r=3;ap=false;audience=caster}
+     - itemspary{i=PvE_Weapon_GAmethyst2_m1ji_;a=5;d=20;r=3;ap=false;audience=caster}
+    ];
+    oT=[
+     - e:pr{p=falling_dust;m=purpur_block;r=3;pts=40}
+    ];
+    oE=[
+     - e:p{p=reddust;c=#956DAF;vS=<random.0to2>.<random.0to9>;a=40;size=0.8} @RLNTE{r=3;a=20;minr=0.5;s=0.5}
+     - damage{a=5} @ENO{r=3;ignore=players}
+    ];
+    md=20;
+    } @Forward{f=3}
+
+ # pearlと組み合わせられるように、前方にtotem設置してボカンして上に弾き飛ばす
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
