@@ -554,7 +554,7 @@ m1ji_GenesisTourmaline_oS:
 
 m1ji_GenesisTourmaline_oT:
  Skills:
- - e:pr{p=poof;r=2;a=1;points=20;d=true;dir=0,-10,0;s=0.5;cd=0.2;vS=0.5} @origin
+ - e:pr{p=poof;r=2;a=1;points=20;d=true;dir=0,-10,0;s=0.2;cd=0.6;vS=0.5} @origin
  - potion{t=SLOW;d=3;l=4} @self
  - setVar{var=caster.genesistourmaline_tick_y;val=<caster.l.y>;type=FLOAT} ?varInRange{var=caster.genesistourmaline_tick_y;val=<<caster.l.y>}
  - sound{s=block.enchantment_table.use;cd=0.5;p=1.25}
@@ -580,9 +580,9 @@ m1ji_GenesisTourmaline_Swing:
  - damage{a=5+(<caster.var.calc_tourmaline>*0.8);type=none;repeat=2;repeatInterval=2} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:p{p=omposter;hS=1;vS=1.5;a=10;repeat=1;repeatInterval=3} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players}
  - e:p{p=sweep_attack;hS=1;vS=1.5;a=10;repeat=1;repeatInterval=3} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players}
- - e:p{p=glow;hS=1.5;vS=1.5;a=12;repeat=4;repeatInterval=3} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - e:p{p=reddust;c=#4ee4ff;hS=1.5;vS=1.5;a=15;repeat=4;repeatInterval=3} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - e:p{p=sweep_attack;hS=1.5;vS=1.5;a=20;repeat=3;repeatInterval=5}
+ - e:p{p=glow;hS=1.5;vS=1;a=12;repeat=4;repeatInterval=3} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - e:p{p=reddust;c=#4ee4ff;hS=1;vS=1.5;a=15;repeat=4;repeatInterval=3} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - e:p{p=sweep_attack;hS=1.5;vS=1;a=20;repeat=3;repeatInterval=5}
  - e:p{p=flash} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players}
  - auraremove{aura=genesistourmaline_chargeend}
 
