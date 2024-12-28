@@ -189,6 +189,34 @@ PvE_Weapon_GenesisTourmaline_m1ji_:
  Enchantments:
  - PROTECTION_ENVIRONMENTAL:6
 
+PvE_Weapon_GenesisAmethyst_m1ji_:
+ Id: stick
+ Model: 112
+ Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <gradient:#c76eff:#ff55f9>Amethyst</gradient>'
+ Lore:
+ - '&f常に誠実であれ'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<gradient:#e2ffea:#ff87a5>&l耐えの時</gradient>&r]'
+ - '&f発動条件: スニークした状態で右クリック / CT: 10秒'
+ - '&f溜め時間: 2.8秒 属性: &fnone'
+ - '&f移動速度が低下し、力を溜める'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル2 [<gradient:#9fffd1:#ffb7d7>&l歓喜の舞</gradient>&r]'
+ - '&f発動条件: 左クリック / CT: なし'
+ - '&fダメージ: 7-15 属性: &fnone'
+ - '&fスキル1使用後のみ発動可能。溜め時間中のY座標最高到達点を基準に、周囲にダメージを与える'
+ Skills:
+ - skill{s=m1ji_GenesisAmethyst_Use} ~onUse
+ - skill{s=m1ji_GenesisAmethyst_Swing} ~onSwing
+ Hide:
+ - ENCHANTS
+ - UNBREAKABLE
+ - ATTRIBUTES
+ Options:
+  Unbreakable: true
+ Enchantments:
+ - PROTECTION_ENVIRONMENTAL:6
+
 PvE_Weapon_GenesisDiamond_m1ji_:
  Id: diamond
  Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <gradient:#9de1ff:#4c92ff>Diamond</gradient>'

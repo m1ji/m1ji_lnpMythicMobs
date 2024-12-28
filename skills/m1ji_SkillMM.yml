@@ -593,6 +593,141 @@ m1ji_GenesisTourmaline_Swing:
 
 
 
+m1ji_GenesisAmethyst_Use:
+ Cooldown: 0.85
+ Conditions:
+ - hasaura clsilent false
+ Skills:
+ - aura{auraName=clsilent;d=20} @self
+ - sound{s=block.note_block.chime;v=2;p=1.57} @self
+ - sound{s=block.note_block.chime;v=2;p=1.57} @self
+ - sound{s=block.note_block.chime;v=2;p=1.57} @self
+ - skill{s=時計塔11_12} @self
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     ];
+     oH=[
+     - damage{a=15;ia=true}
+     - damage{a=20;pi=true}
+     ];
+     v=25;
+     i=1;
+     hnp=true;
+     hp=false;
+     hR=2.5;
+     vR=2.5;
+     hto=true
+     } @EIR{r=5;limit=5;sort=RANDOM} 
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     ];
+     oH=[
+     - damage{a=10;ia=true}
+     - damage{a=20;pi=true}
+     ];
+     v=25;
+     i=1;
+     hR=2;
+     vR=2;
+     hnp=true;
+     hp=false;
+     hO=10
+     } @TL
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     ];
+     oH=[
+     - damage{a=10;ia=true}
+     - damage{a=20;pi=true}
+     ];
+     v=25;
+     i=1;
+     hR=2;
+     vR=2;
+     hnp=true;
+     hp=false;
+     hO=-10
+     } @TL
+     
+m1ji_GenesisAmethyst_Swing:
+ Cooldown: 4
+ Skills:
+ - delay 5
+ - sound{s=block.note_block.chime;v=2;p=1.57} @self
+ - sound{s=block.note_block.chime;v=2;p=1.57} @self
+ - sound{s=block.note_block.chime;v=2;p=1.57} @self
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     ];
+     oH=[
+     - damage{a=15;ia=true}
+     - damage{a=20;pi=true}
+     ];
+     v=25;
+     i=1;
+     hnp=true;
+     hp=false;
+     hR=2.5;
+     vR=2.5;
+     hto=true
+     } @EIR{r=5;limit=5;sort=RANDOM} 
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     ];
+     oH=[
+     - damage{a=10;ia=true}
+     - damage{a=20;pi=true}
+     ];
+     v=25;
+     i=1;
+     hR=2;
+     vR=2;
+     hnp=true;
+     hp=false;
+     hO=10
+     } @TL
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     ];
+     oH=[
+     - damage{a=10;ia=true}
+     - damage{a=20;pi=true}
+     ];
+     v=25;
+     i=1;
+     hR=2;
+     vR=2;
+     hnp=true;
+     hp=false;
+     hO=-10
+     } @TL
+     
+時計塔11_2:
+ Cooldown: 2.5
+ Skills:
+ - sound{s=ui.loom.take_result;v=2} @self
+ - sound{s=ui.loom.take_result;v=2} @self
+ - sound{s=ui.loom.take_result;v=2} @self
+ - totem{oE=[
+     - effect:explosion @origin
+     ];
+     md=30
+     } @RLNTE{a=18;r=9;s=1;minr=1}
+ - totem{oE=[
+     - damage{a=50;fo=true;pi=true} @EntitiesNearOrigin{r=6}
+     - damage{a=40;ia=true;fo=true} @EntitiesNearOrigin{r=6}
+     ];
+     md=30
+     } @self
+ - effect:itemspray{item=時計塔頭1;amount=9;velocity=5;d=30} @self
+ - damage{a=5;ia=true} @EIR{r=5}
+
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
 #
