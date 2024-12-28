@@ -463,7 +463,7 @@ GenesisRuby_Attack_oT:
  Skills:
  - e:pr{p=reddust;c=#7c2e3e;size=0.5;r=15+(<caster.var.genesisruby_attackplus>*3);a=1;pts=250;fo=true;audience=caster} @selfLocation{y=1}
  - e:pr{p=cherry_leaves;pts=200;r=15+(<caster.var.genesisruby_attackplus>*3);a=1;fo=true;y=<random.0to4>.<random.1to9>;cd=0.75;audience=caster}
- - e:pr{p=reddust;c=#4ee4ff;size=2;pts=500;r=15+(<caster.var.genesisruby_attackplus>*3);a=1;fo=true;y=<random.1to4>.<random.1to9>;cd=0.75} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - e:pr{p=reddust;c=#4ee4ff;size=1;pts=150;r=15+(<caster.var.genesisruby_attackplus>*3);a=1;fo=true;y=<random.0to4>.<random.1to9>;cd=0.75} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:ps{p=reddust;c=#4ee4ff;size=1.5;r=2;y=2.5;a=50;cd=0.1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:ps{p=reddust;c=#4ee4ff;size=0.5;r=2.5;y=2.5;a=20;hS=0.75;vS=0.75} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:ps{p=reddust;c=#cbba7d;size=0.5;r=2.5;y=2.5;a=20;hS=0.75;vS=0.75} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
