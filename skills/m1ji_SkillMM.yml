@@ -449,7 +449,7 @@ m1ji_GenesisRuby_Attack:
 #  Cooldown: 5+(<caster.var.genesisruby_attackplus>*2)
  Skills:
  - message{m="うごいてる2"}
-#  - e:ps{p=flame;y=3;r=3;a=100} @target 
+ - e:ps{p=flame;y=3;r=3;a=100} @target 
 #  - setVar{var=caster.genesisruby_attackplus;val=0;type=FLOAT}
 #  - setVar{var=caster.genesisruby_attackplus;val=0.5;type=FLOAT} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
 #  - sound{s=block.amethyst_block.hit;v=2;p=0.2;repeat=5;repeatInterval=1}

@@ -136,7 +136,7 @@ PvE_Weapon_GenesisTopaz_m1ji_:
  - PROTECTION_ENVIRONMENTAL:6
 
 PvE_Weapon_GenesisRuby_m1ji_:
- Id: stick
+ Id: iron_sword
  Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#951665>Ruby'
  Lore:
  - '&f勇気と威厳を持って、'
