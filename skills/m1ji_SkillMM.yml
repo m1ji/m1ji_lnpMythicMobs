@@ -728,9 +728,9 @@ m1ji_GenesisAmethyst_Swing:
          - e:pl{p=reddust;c=#ff87a5;size=0.6;fo=true} @trigger
         ];
         md=1
-     } @RLNTE{a=6;r=3;s=0.1;y=-1}
-     - e:pl{p=reddust;c=#ff87a5;size=0.6;origin=@ENO{r=3;ignore=players}} @trigger
+     } @RLNTE{a=6;r=3;s=0.2;y=-1.2}
      - damage{a=5} @ENO{r=3;ignore=players}
+     - jump{v=0.5} @ENO{r=3;ignore=players}
     ];
     md=20;
     } @forward{f=3}
