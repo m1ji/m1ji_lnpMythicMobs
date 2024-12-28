@@ -554,6 +554,7 @@ m1ji_GenesisTourmaline_oS:
 
 m1ji_GenesisTourmaline_oT:
  Skills:
+ - e:pr{p=poof;r=2;a=1;points=20;d=true;dir=0,-10,0;s=0.5;cd=0.2;vS=0.5} @origin
  - potion{t=SLOW;d=3;l=4} @self
  - setVar{var=caster.genesistourmaline_tick_y;val=<caster.l.y>;type=FLOAT} ?varInRange{var=caster.genesistourmaline_tick_y;val=<<caster.l.y>}
  - sound{s=block.enchantment_table.use;cd=0.5;p=1.25}
