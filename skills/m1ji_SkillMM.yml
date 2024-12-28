@@ -536,13 +536,14 @@ m1ji_GenesisRuby_Use:
 # //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 m1ji_GenesisTourmaline_Use:
+ Coooldown: 1
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisTourmaline_m1ji_} true
  - hasMana{a=>80} true
  - crouching{} true
  Skills:
  - modifyMana{a=-80} @self
- - aura{auraName=genesistourmaline_charge;d=58;oS=m1ji_GenesisTourmaline_oS;oT=m1ji_GenesisTourmaline_oT;oE=m1ji_GenesisTourmaline_oE} @self
+ - aura{auraName=genesistourmaline_charge;d=56;oS=m1ji_GenesisTourmaline_oS;oT=m1ji_GenesisTourmaline_oT;oE=m1ji_GenesisTourmaline_oE} @self
  
 m1ji_GenesisTourmaline_oS:
  Skills:
@@ -564,18 +565,20 @@ m1ji_GenesisTourmaline_oT:
 m1ji_GenesisTourmaline_oE:
  Skills:
  - setVar{var=caster.genesistourmaline_calc;val=<caster.genesistourmaline_tick_y>-<caster.genesistourmaline_start_y>}
- - setVar{var=caster.genesistourmaline_calc;val=50} ?varInRange{var=caster.genesistourmaline_calc;val=>50}
+#  - setVar{var=caster.genesistourmaline_calc;val=50} ?varInRange{var=caster.genesistourmaline_calc;val=>50}
  - actionmessage{m="チャージお～わり！ <caster.var.genesistourmaline_calc>"}
  - aura{auraName=genesistourmaline_chargeend;d=200;oT=m1ji_GenesisTourmaline_oEoT} @self
 
 m1ji_GenesisTourmaline_oEoT:
  Skills:
- - e:pr{c=#27d892;r=0.35;points=35;size=0.25;cd=0.15;audience=caster}
+ - e:pr{c=#27d892;r=0.35;points=35;size=0.25;cd=0.15;y=1.8;audience=caster}
+ - actionmessage{m="チャージお～わり！ <caster.var.genesistourmaline_calc>"}
 
 
 m1ji_GenesisTourmaline_Swing:
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisTourmaline_m1ji_} true
+ - hasaura genesistourmaline_chargeend true
  Skills:
  - damage{a=5+<caster.var.genesistourmaline_calc>;type=FLOAT} @EIR{r=2.5;ignore=players}
  - e:p{p=sweep_attack;hS=0.5;vS=1.5;a=3;repeat=1;repeatInterval=3} @EIR{r=2.5;ignore=players}
