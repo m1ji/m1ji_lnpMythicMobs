@@ -564,6 +564,7 @@ m1ji_GenesisTourmaline_oT:
 
 m1ji_GenesisTourmaline_oE:
  Skills:
+ - setVar{var=caster.genesistourmaline_calc;val=0}
  - varMath{var=caster.genesistourmaline_calc;e="<caster.genesistourmaline_tick_y>-<caster.genesistourmaline_start_y>"}
  - setVar{var=caster.genesistourmaline_calc;val=50} ?varInRange{var=caster.genesistourmaline_calc;val=>50}
  - actionmessage{m="チャージお～わり！ <caster.var.genesistourmaline_calc>"}
@@ -580,8 +581,10 @@ m1ji_GenesisTourmaline_Swing:
  - wearing{s=HAND;m=PvE_Weapon_GenesisTourmaline_m1ji_} true
  - hasaura genesistourmaline_chargeend true
  Skills:
- - damage{a=5+<caster.var.genesistourmaline_calc>;type=FLOAT} @EIR{r=2.5;ignore=players}
+ - damage{a=2;type=none} @EIR{r=2.5;ignore=players}
+ - damage{a=5+<caster.var.genesistourmaline_calc>;type=none} @EIR{r=2.5;ignore=players}
  - e:p{p=sweep_attack;hS=0.5;vS=1.5;a=3;repeat=1;repeatInterval=3} @EIR{r=2.5;ignore=players}
+ - auraremove{aura=genesistourmaline_chargeend}
 
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
