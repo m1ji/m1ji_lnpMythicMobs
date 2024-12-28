@@ -1,12 +1,12 @@
 m1ji_Tester:
-  Type: skeleton
+  Type: zombie
   Display: '&dテスター'
   Health: 100000
   Damage: 0
   Disguise: player m1ji_ setSkin m1ji_
   Options:
     KnockbackResistance: 1
-    NoAI: true
+    NoGravity: true
     NoDamageTicks: 0
   BossBar:
     Enabled: true
