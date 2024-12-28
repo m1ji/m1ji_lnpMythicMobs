@@ -547,6 +547,7 @@ m1ji_GenesisTourmaline_oS:
  - setVar{var=caster.genesistourmaline_sec1;val=2}
  - setVar{var=caster.genesistourmaline_sec2;val=9}
  - setVar{var=caster.genesistourmaline_start_y;val=<caster.l.y>;type=FLOAT}
+ - setVar{var=caster.genesistourmaline_tick_y;val=0;type=FLOAT}
  - actionmessage{m="Tourmalineチャージ中...<&co> <caster.var.genesistourmaline_sec1>.<caster.var.genesistourmaline_sec2>"}
 
 m1ji_GenesisTourmaline_oT:
