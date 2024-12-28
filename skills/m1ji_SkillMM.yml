@@ -8,9 +8,9 @@ m1ji_CosmonicStraight_Use:
  Cooldown: 2
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_CosmonicStraight_m1ji_} true
-#  - hasMana{a=>1} true
+ - hasMana{a=>1} true
  Skills:
-#  - modifyMana{a=-10} @self
+ - modifyMana{a=-10} @self
  - p{oT=[
       - e:p{c=#00bfff;a=4;hs=0.5;vs=0.5;audience=caster} @origin
       - e:p{c=#4682b4;a=4;hs=0.5;vs=0.5;audience=caster} @origin
@@ -42,9 +42,9 @@ m1ji_Axelia_Use:
  Cooldown: 3
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_Axelia_m1ji_} true
-#  - hasMana{a=>1} true
+ - hasMana{a=>1} true
  Skills:
-#  - modifyMana{a=-20} @self
+ - modifyMana{a=-20} @self
  - setvariable{var=caster.radius;type=FLOAT;value=3}
  - p{oT=[
      - e:p{p=flame;audience=caster} @origin
@@ -110,13 +110,23 @@ m1ji_Axelia_Use:
      hnp=true
     } @TL
 
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#
+#
+#
+#                                                    永遠シリーズ
+#
+#
+#
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
 m1ji_EternalBlessings_Use:
  Cooldown: 18
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_EternalBlessings_m1ji_} true
-#  - hasMana{a=>1} true
+ - hasMana{a=>1} true
  Skills:
-#  - modifyMana{a=-55} @self
+ - modifyMana{a=-55} @self
  - p{oT=[
      - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin
      - e:p{c=#EE82EE;size=0.20;fo=true;audience=caster} @origin{yoffset=+0.05}
@@ -197,10 +207,10 @@ m1ji_EternalIcicle_Swing:
  Cooldown: 16
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_EternalIcicle_m1ji_} true
-#  - hasMana{a=>1} true
+ - hasMana{a=>1} true
  - onground{} true
  Skills:
-#  - modifyMana{a=-55} @self
+ - modifyMana{a=-55} @self
  - sound{s=block.enchantment_table.use;v=2;p=2} @EIR{r=10}
  - sound{s=block.enchantment_table.use;v=2;p=2} @self
  - totem{oT=[
@@ -283,13 +293,24 @@ m1ji_EternalIcicle_Shoot1:
      repeatInterval=5
      } @TL ?wearing{s=HAND;m=PvE_Weapon_EternalIcicle_m1ji_}
 
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#
+#
+#
+#                                                    誕生石シリーズ
+#
+#
+#
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
 m1ji_GenesisPearl_Swing:
  Cooldown: 12+(<caster.var.pearl_swingplus>*5)
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
-#  - hasMana{a=>1} true
+ - hasMana{a=>1} true
  Skills:
-#  - modifyMana{a=-100} @self
+ - modifyMana{a=-100} @self
  - setVar{var=caster.pearl_swingplus;val=0}
  - setVar{var=caster.pearl_swingplus;val=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - totem{oT=[
@@ -332,9 +353,9 @@ m1ji_GenesisPearl_Use1:
  - hasaura genesispearl_ct false
  - hasaura genesispearl_charge false
  - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
-#  - hasMana{a=>100} true
+ - hasMana{a=>100} true
  Skills:
-#  - modifyMana{a=-100} @self
+ - modifyMana{a=-100} @self
  - setVar{var=caster.genesispearl_useplus;val=0}
  - setVar{var=caster.genesispearl_useplus;val=3} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - setVar{var=caster.genesispearl;val=0;type=FLOAT} @self
@@ -387,13 +408,17 @@ m1ji_GenesisPearl_Use_oEplus:
  - pull{v=<caster.var.genesispearl>;to=true} @EIR{r=<caster.var.genesispearl>*0.8;ignore=players}
  - damage{a=<caster.var.genesispearl>*0.8} @EIR{r=<caster.var.genesispearl>*0.8;ignore=players}
 
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
+
 m1ji_GenesisTopaz_Swing:
  Cooldown: 10
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisTopaz_m1ji_} true
-#  - hasMana{a=>100} true
+ - hasMana{a=>100} true
  Skills:
-#  - modifyMana{a=-100} @self
+ - modifyMana{a=-100} @self
  - sound{s=ambient.cave;v=2;p=1.5} @self
  - sound{s=ambient.nether_wastes.mood;v=2;p=0.75}
  - sound{s=entity.firework_rocket.launch;v=1.5;p=0.85} @self
@@ -445,9 +470,16 @@ m1ji_GenesisTopaz_oESudo:
  Skills:
  - leap{v=-650} @trigger{y=-2}
 
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
+
 m1ji_GenesisRuby_Attack:
  Cooldown: 5+(<caster.var.genesisruby_attackplus>*2)
+ Conditions:
+ - hasMana{a=>60} true
  Skills:
+ - modifyMana{a=-60} @self
  - setVar{var=caster.genesisruby_attackplus;val=0;type=FLOAT}
  - setVar{var=caster.genesisruby_attackplus;val=0.5;type=FLOAT} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.amethyst_block.hit;v=2;p=0.2;repeat=5;repeatInterval=1}
@@ -499,26 +531,44 @@ m1ji_GenesisRuby_Use:
  Skills:
  - auraremove{aura=genesisruby<caster.name>} @EIR{r=15+(<caster.var.genesisruby_attackplus>*3)}
 
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+m1ji_GenesisTourmaline_Use:
+ Conditions:
+ - hasMana{a=>80} true
+ Skills:
+ - modifyMana{a=-80} @self
+ - aura{auraName=genesistourmaline_charge;d=40;oS=m1ji_GenesisTourmaline_oS;oT=m1ji_GenesisTourmaline_oT;oE=m1ji_GenesisTourmaline_oE} @self
+ 
+m1ji_GenesisTourmaline_oS:
+ Skills:
+ - setVar{var=caster.genesistourmaline_sec1;val=2}
+ - setVar{var=caster.genesistourmaline_sec2;val=10}
+ - actionmessage{m="Tourmalineチャージ中...<&co> <caster.var.genesistourmaline_sec1>.<caster.var.genesistourmaline_sec2>"}
 
+m1ji_GenesisTourmaline_oT:
+ Skills:
+ - potion{t=SLOW;d=3;l=100} @self
+ - actionmessage{m="Tourmalineチャージ中...<&co> <caster.var.genesistourmaline_sec1>.<caster.var.genesistourmaline_sec2>"}
+ - setVar{var=caster.genesistourmaline_sec1;val=<caster.var.genesistourmaline_sec1>-1} ?varEquals{var=caster.genesistourmaline_sec2;val=0}
+ - setVar{var=caster.genesistourmaline_sec2;val=<caster.var.genesistourmaline_sec2>-1} ?!varEquals{var=caster.genesistourmaline_sec2;val=0}
+ - setVar{var=caster.genesistourmaline_sec2;val=10} ?varEquals{var=caster.genesistourmaline_sec2;val=0} ?!varEquals{var=caster.genesistourmaline_sec1;val=0}
 
+m1ji_GenesisTourmaline_oE:
+ Skills:
+ - actionmessage{m="チャージお～わり！"}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#
+#
+#
+#                                                    その他雑多
+#
+#
+#
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
 cl6_ShootItNowSwing:
  Cooldown: 4.5
