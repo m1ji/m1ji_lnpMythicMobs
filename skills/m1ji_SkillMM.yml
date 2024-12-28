@@ -537,8 +537,9 @@ m1ji_GenesisRuby_Use:
 
 m1ji_GenesisTourmaline_Use:
  Conditions:
- - wearing{s=HAND;n=PvE_Weapon_GenesisTourmaline_m1ji_} true
+ - wearing{s=HAND;m=PvE_Weapon_GenesisTourmaline_m1ji_} true
  - hasMana{a=>80} true
+ - crouching{} true
  Skills:
  - modifyMana{a=-80} @self
  - aura{auraName=genesistourmaline_charge;d=58;oS=m1ji_GenesisTourmaline_oS;oT=m1ji_GenesisTourmaline_oT;oE=m1ji_GenesisTourmaline_oE} @self
@@ -574,7 +575,7 @@ m1ji_GenesisTourmaline_oEoT:
 
 m1ji_GenesisTourmaline_Swing:
  Conditions:
- - wearing{s=HAND;n=PvE_Weapon_GenesisTourmaline_m1ji_} true
+ - wearing{s=HAND;m=PvE_Weapon_GenesisTourmaline_m1ji_} true
  Skills:
  - damage{a=5+<caster.var.genesistourmaline_calc>;type=FLOAT} @EIR{r=2.5;ignore=players}
  - e:p{p=sweep_attack;hS=0.5;vS=1.5;a=3;repeat=1;repeatInterval=3} @EIR{r=2.5;ignore=players}
