@@ -728,7 +728,8 @@ m1ji_GenesisAmethyst_Swing:
          - e:pl{p=reddust;c=#ff87a5;size=0.6;fo=true} @trigger
         ];
         md=1
-     } @RLNTE{a=6;r=3;s=0.1}
+     } @RLNTE{a=6;r=3;s=0.1;y=-1}
+     - e:pl{p=reddust;c=#ff87a5;size=0.6;origin=@ENO{r=3;ignore=players}} @trigger
      - damage{a=5} @ENO{r=3;ignore=players}
     ];
     md=20;
