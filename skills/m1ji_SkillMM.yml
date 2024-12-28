@@ -491,7 +491,7 @@ GenesisRuby_Attack_oE:
  - e:p{p=reddust;c=#7c2e3e;size=0.<random.5to9>;hS=0.25;vS=0.25;a=10;repeat=5;repeatInterval=2;audience=caster} @Line{r=1}
  - damage{a=10;type=none} @EntitiesInLine{r=3;ignore=players}
  - damage{a=15;type=none}
- - damage{a=7;repeat=2;repeatInterval=3;type=none} @EIR{r=2.5;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - damage{a=7;repeat=2;repeatInterval=3;type=none} @ENO{r=2.5;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:p{p=flash;repeat=1;repeatInterval=6}
  - e:p{p=sweep_attack;repeat=3;repeatInterval=3;delay=5;hS=0.5;vS=1.5}
 
