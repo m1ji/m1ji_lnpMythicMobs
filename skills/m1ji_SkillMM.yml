@@ -315,7 +315,7 @@ m1ji_GenesisPearl_plus:
  Conditions:
  - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
  Skills:
- - potion{t=SLOW;d=20;l=1} @ENOR{r=4}
+ - potion{t=SLOW;d=20;l=1} @ENR{r=4}
  - pull{v=6;to=true} @ENO{r=5;ignore=players}
  - e:ps{p=reddust;c=#4ee4ff;s=1;r=2;y=1.5;size=0.8;a=30;repeat=3;repeatInterval=2} 
  - e:lightning{delay=10} 
@@ -438,7 +438,7 @@ m1ji_GenesisTopaz_oE:
  - sound{s=item.trident.thunder;v=1.5;p=0.95}
  - e:p{p=gust_emitter_large;hs=2.5;a=6;audience=caster} @origin
  - e:p{p=angry_villager;hs=2.5;vS=0.5;a=40;audience=caster} @origin
- - damage{a=15} @ENO{r=3.5;ignore=players}
+ - damage{a=15;type=none} @ENO{r=3.5;ignore=players}
  - sudoskill{s=m1ji_GenesisTopaz_oESudo;repeat=2;repeatInterval=1} @ENO{r=3.5;ignore=players}
 
 m1ji_GenesisTopaz_oESudo:
@@ -446,31 +446,40 @@ m1ji_GenesisTopaz_oESudo:
  - leap{v=-650} @trigger{y=-2}
 
 m1ji_GenesisRuby_Attack:
- Cooldown: 5
+ Cooldown: 5+<caster.var.genesisruby_attackplus>
  Skills:
+ - setVar{var=caster.genesisruby_attackplus;val=0;type=FLOAT}
+ - setVar{var=caster.genesisruby_attackplus;val=0.5;type=FLOAT} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.amethyst_block.hit;v=2;p=0.2;repeat=5;repeatInterval=1}
  - sound{s=entity.lightning_bolt.thunder;v=0.75;p=0.66}
  - e:p{p=sweep_attack;repeat=3;repeatInterval=2;hS=0.5;vS=1.5;a=2}
- - damage{a=5} @target
+ - damage{a=5;type=none} @target
+ - damage{a=15;type=none} @target ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - ignite{} @target
  - leap{v=450} @target{y=-2}
- - aura{auraName=genesisruby<caster.name>;oT=GenesisRiby_Attack_oT;oE=GenesisRiby_Attack_oE;d=200} @target
+ - aura{auraName=genesisruby<caster.name>;oT=GenesisRuby_Attack_oT;oE=GenesisRuby_Attack_oE;d=200} @target
 
-GenesisRiby_Attack_oT:
+GenesisRuby_Attack_oT:
  Skills:
- - e:pr{p=reddust;c=#7c2e3e;size=0.5;r=15;a=1;pts=250;fo=true;audience=caster} @selfLocation{y=1}
- - e:pr{p=cherry_leaves;pts=250;r=15;a=1;fo=true;y=<random.0to4>.<random.1to9>;cd=1.5;audience=caster}
- - e:pr{p=cherry_leaves;pts=250;r=15;a=1;fo=true;y=<random.0to4>.<random.1to9>;cd=1.5;audience=caster}
+ - e:pr{p=reddust;c=#7c2e3e;size=0.5;r=15+(<caster.var.genesisruby_attackplus>*3);a=1;pts=250;fo=true;audience=caster} @selfLocation{y=1}
+ - e:pr{p=cherry_leaves;pts=250;r=15+(<caster.var.genesisruby_attackplus>*3);a=1;fo=true;y=<random.0to4>.<random.1to9>;cd=1.5;audience=caster}
+ - e:pr{p=reddust;c=#4ee4ff;size=2;prs=1000;r=15+(<caster.var.genesisruby_attackplus>*3);a=1;fo=true;y=<random.0to4>.<random.1to9>;cd=0.75} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - e:ps{p=reddust;c=#4ee4ff;size=1.5;r=2;y=2.5;a=50;cd=0.1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - e:ps{p=reddust;c=#4ee4ff;size=0.5;r=2.5;y=2.5;a=20;hS=0.75;vS=0.75} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - e:ps{p=reddust;c=#cbba7d;size=0.5;r=2.5;y=2.5;a=20;hS=0.75;vS=0.75} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - e:ps{p=reddust;c=#7c2e3e;size=0.5;r=2.5;y=2.5;a=20;hS=0.75;vS=0.75} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
 
-GenesisRiby_Attack_oE:
+GenesisRuby_Attack_oE:
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
  Skills:
+ - e:lightning{} 
  - stopsound{s=entity.lightning_bolt.thunder} @origin
  - sound{s=entity.generic.burn;v=1;p=1.5;repeat=3;repeaetInterval=3}
  - sound{s=entity.breeze.shoot;v=1;p=2}
- - jump{v=1} @origin
+ - jump{v=1+<caster.var.genesisruby_attackplus>} @origin
  - delay 10
+ - sound{s=entity.egg.throw;v=2;p=0.5;repeat=1;repeatInterval=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.amethyst_block.hit;v=2;p=1.5;repeat=1;repeatInterval=1}
  - sound{s=block.amethyst_block.hit;v=2;p=1.45;delay=3;repeat=1;repeatInterval=1}
  - sound{s=block.amethyst_block.hit;v=2;p=1.4;delay=6;repeat=1;repeatInterval=1}
@@ -480,14 +489,15 @@ GenesisRiby_Attack_oE:
  - sound{s=entity.firework_rocket.twinkle_far;v=1;p=0.88}
  - e:p{p=cherry_leaves;hS=0.5;vS=0.5;a=3;audience=caster} @Line{r=1}
  - e:p{p=reddust;c=#7c2e3e;size=0.<random.5to9>;hS=0.25;vS=0.25;a=10;repeat=5;repeatInterval=2;audience=caster} @Line{r=1}
- - damage{a=10} @EntitiesInLine{r=3}
- - damage{a=15}
+ - damage{a=10;type=none} @EntitiesInLine{r=3}
+ - damage{a=15;type=none}
+ - damage{a=7;repeat=2;repeatInterval=3;type=none} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:p{p=flash;repeat=1;repeatInterval=6}
  - e:p{p=sweep_attack;repeat=3;repeatInterval=3;delay=5;hS=0.5;vS=1.5}
 
 m1ji_GenesisRuby_Use:
  Skills:
- - auraremove{aura=genesisruby<caster.name>} @EIR{r=15}
+ - auraremove{aura=genesisruby<caster.name>} @EIR{r=15+(<caster.var.genesisruby_attackplus>*3)}
 
 
 
@@ -715,8 +725,6 @@ cl6_ShootItNowUseC:
       hnp=true;
       hp=false
       } @TL
-
-
 
 cl6_ShootItNowShiftUse:
  Conditions:
