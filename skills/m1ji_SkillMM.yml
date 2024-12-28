@@ -717,6 +717,7 @@ cl6_ShootItNowUseC:
       } @TL
 
 
+
 cl6_ShootItNowShiftUse:
  Conditions:
  - crouching true

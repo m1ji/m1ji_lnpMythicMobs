@@ -19,3 +19,4 @@ m1ji_Tester:
   - halloweenbody:3
   Skills:
   - message{m="&d&l<skill.var.damage-amount>"} @trigger ~onDamaged  
+  
