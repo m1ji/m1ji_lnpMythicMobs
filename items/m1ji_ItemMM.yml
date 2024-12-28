@@ -25,7 +25,7 @@ PvE_Weapon_Axelia_m1ji_:
  - '&f「はやくくちてください」'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<#ff0000>&l朽<#d1000b>ち<#a30017>果<#d1000b>て<#ff0000>た<#ffffff>&r]'
- - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 3秒'
+ - '&f発動条件: 右クリック / CT: 3秒'
  - '&fダメージ: 7 属性: &fnone'
  - '&f炎を放ち、敵の足元に空気中の蒼炎を収束させる。相手は朽ちる'
  Skills:
@@ -45,7 +45,7 @@ PvE_Weapon_EternalBlessings_m1ji_:
  - '&f尽きる事のない祝福を'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<gradient:#ffb7ef:#98c8ff>&l彼方の恩恵</gradient>&r]'
- - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 3秒'
+ - '&f発動条件: 右クリック / CT: 3秒'
  - '&fダメージ: 3 × いっぱい 属性: &fnone'
  - '&f祝福の芽を投げ、着弾地点に祝福の花を展開し周囲の敵に継続的にダメージを与える'
  Options:
@@ -63,7 +63,7 @@ PvE_Weapon_EternalIcicle_m1ji_:
  - '&fかの氷山の如く'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<gradient:#ffb7ef:#98c8ff>&l彼方の氷筍</gradient>&r]'
- - '&f発動条件: どちらかの手に持った状態で左クリック / CT: 16秒'
+ - '&f発動条件: 左クリック / CT: 16秒'
  - '&fダメージ: 3 × いっぱい 属性: &fnone'
  - '&f氷山の一部を顕現させ、範囲4m以内に大量の氷筍を召喚する'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
@@ -82,18 +82,17 @@ PvE_Weapon_EternalIcicle_m1ji_:
 
 PvE_Weapon_GenesisPearl_m1ji_:
  Id: stick
- Model: 162
  Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. &fPearl'
  Lore:
  - '&f涙と愛情と、'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<gradient:#ffffff:#a6a6a6>&l受容の舞</gradient>&r]'
- - '&f発動条件: どちらかの手に持った状態で左クリック / CT: 12秒'
+ - '&f発動条件: 左クリック / CT: 12秒'
  - '&fダメージ: 4 属性: &fnone'
  - '&f前方の対象を自身の方向へ引き寄せる'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル2 [<gradient:#a6a6a6:#ffffff>&l拒絶の舞</gradient>&r]'
- - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 8秒'
+ - '&f発動条件: 右クリック / CT: 8秒'
  - '&fダメージ: 3-8 属性: &fnone'
  - '&f長押しで溜めをチャージし、前方の対象をノックバックさせる'
  Skills: 
@@ -111,18 +110,17 @@ PvE_Weapon_GenesisPearl_m1ji_:
 
 PvE_Weapon_GenesisTopaz_m1ji_:
  Id: stick
- Model: 162
  Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#f2a33f>Topaz'
  Lore:
  - '&f希望を胸に。'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<gradient:#f0f267:#f2a33f>&l希望的観測</gradient>&r]'
- - '&f発動条件: どちらかの手に持った状態で左クリック / CT: 12秒'
+ - '&f発動条件: 左クリック / CT: 12秒'
  - '&fダメージ: 4 属性: &fnone'
  - '&f前方にゆっくり移動する点を飛ばす'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル2 [<gradient:#f2a33f:#f0f267>&l信頼</gradient>&r]'
- - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 8秒'
+ - '&f発動条件: 右クリック / CT: 8秒'
  - '&fダメージ: 3-8 属性: &fnone'
  - '&fスキル1で放った点の位置へブリンクし、通過点にダメージを与える'
  Skills: 
@@ -139,23 +137,41 @@ PvE_Weapon_GenesisTopaz_m1ji_:
 
 PvE_Weapon_GenesisRuby_m1ji_:
  Id: stick
- Model: 162
  Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#951665>Ruby'
  Lore:
  - '&f勇気と威厳を持って、'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<gradient:#77060e:#951665>&l咬み付き</gradient>&r]'
- - '&f発動条件: 敵を殴る / CT: 12秒'
+ - '&f発動条件: 敵を殴る / CT: 5秒'
  - '&fダメージ: 4 属性: &fnone'
  - '&f殴った対象に印を付ける'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル2 [<gradient:#951665:#77060e>&l食らいつき</gradient>&r]'
- - '&f発動条件: どちらかの手に持った状態で右クリック / CT: 8秒'
+ - '&f発動条件: 右クリック / CT: なし'
  - '&fダメージ: 3-8 属性: &fnone'
  - '&f印が付いた敵に猛進する'
  Skills: 
  - skill{s=m1ji_GenesisRuby_Attack} ~onAttack
  - skill{s=m1ji_GenesisRuby_Use} ~onUse  
+ Hide:
+ - ENCHANTS
+ - UNBREAKABLE
+ - ATTRIBUTES
+ Options:
+  Unbreakable: true
+ Enchantments:
+ - PROTECTION_ENVIRONMENTAL:6
+
+PvE_Weapon_GenesisDiamond_m1ji_:
+ Id: diamond
+ Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <gradient:#9de1ff:#4c92ff>Diamond</gradient>'
+ Lore:
+ - '&f紛う事無き才を此処に'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<gradient:#80b2ff:#4ee4ff>&l秘めたる力</gradient>&r]'
+ - '&f発動条件: オフハンドに装備する'
+ - '&fダメージ: ??? 属性: &fnone'
+ - '&f全てのGenesis武器を強化する。強化された武器はctが増加する'  
  Hide:
  - ENCHANTS
  - UNBREAKABLE

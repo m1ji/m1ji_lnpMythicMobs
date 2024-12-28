@@ -18,4 +18,4 @@ m1ji_Tester:
   - halloween2022_pumpkinHead head
   - halloweenbody:3
   Skills:
-  - message{m="&5&l<skill.var.damage-amount>"} @trigger ~onDamaged  
+  - message{m="&d&l<skill.var.damage-amount>"} @trigger ~onDamaged  
