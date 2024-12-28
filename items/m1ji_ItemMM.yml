@@ -162,7 +162,6 @@ PvE_Weapon_GenesisRuby_m1ji_:
  Enchantments:
  - PROTECTION_ENVIRONMENTAL:6
 
-
 PvE_Weapon_GenesisDiamond_m1ji_:
  Id: diamond
  Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <gradient:#9de1ff:#4c92ff>Diamond</gradient>'
