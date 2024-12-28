@@ -555,7 +555,7 @@ m1ji_GenesisTourmaline_oS:
 
 m1ji_GenesisTourmaline_oT:
  Skills:
- - potion{t=SLOW;d=3;l=100} @self
+ - potion{t=SLOW;d=3;l=2} @self
  - actionmessage{m="Tourmalineチャージ中...<&co> <caster.var.genesistourmaline_sec1>.<caster.var.genesistourmaline_sec2> | <caster.var.genesistourmaline_start_y> <caster.var.genesistourmaline_tick_y>"}
  - setVar{cd=0.1;var=caster.genesistourmaline_sec1;val=<caster.var.genesistourmaline_sec1>-1} ?varEquals{var=caster.genesistourmaline_sec2;val=1}
  - setVar{cd=0.1;var=caster.genesistourmaline_sec2;val=<caster.var.genesistourmaline_sec2>-1} ?!varEquals{var=caster.genesistourmaline_sec2;val=-1}
@@ -579,8 +579,11 @@ m1ji_GenesisTourmaline_Swing:
  - hasaura genesistourmaline_chargeend true
  Skills:
  - sound{s=entity.evoker_fangs.attack;repeat=2;repeatInterval=4;p=1.2}
- - damage{a=5+<caster.var.calc_tourmaline>;type=none} @EIR{r=2.5;ignore=players}
+ - damage{a=5+<caster.var.calc_tourmaline>;type=none} @EIR{r=2.5;ignore=players} ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - damage{a=8+(<caster.var.calc_tourmaline>*1.5);type=none} @EIR{r=2.5;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - damage{a=3+(<caster.var.calc_tourmaline>/2);type=none;repeat=2;repeatInterval=5} @EIR{r=2.5;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:p{p=sweep_attack;hS=0.5;vS=1.5;a=4;repeat=1;repeatInterval=3} @EIR{r=2.5;ignore=players}
+ - e:ps{p=reddust;c=#4ee4ff;size=0.8;r=1.5;a=5;repeat=3;repeatInterval=2} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:p{p=flash} @EIR{r=2.5;ignore=players}
  - auraremove{aura=genesistourmaline_chargeend}
 
