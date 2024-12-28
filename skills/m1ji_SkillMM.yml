@@ -591,7 +591,9 @@ m1ji_GenesisTourmaline_Swing:
  - sound{s=item.trident.thunder;p=2;v=1;delay=20}
  - sound{s=entity.evoker_fangs.attack;repeat=2;repeatInterval=4;p=1.2}
 
-
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 m1ji_GenesisAmethyst_Use:
  Cooldown: 0.85
@@ -602,7 +604,7 @@ m1ji_GenesisAmethyst_Use:
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
- - skill{s=時計塔11_12} @self
+ - skill{s=m1ji_GenesisAmethyst_Use2} @self
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
      - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
@@ -652,7 +654,7 @@ m1ji_GenesisAmethyst_Use:
      hO=-10
      } @TL
      
-m1ji_GenesisAmethyst_Swing:
+m1ji_GenesisAmethyst_Use2:
  Cooldown: 4
  Skills:
  - delay 5
@@ -708,7 +710,7 @@ m1ji_GenesisAmethyst_Swing:
      hO=-10
      } @TL
      
-時計塔11_2:
+m1ji_GenesisAmethyst_Swing:
  Cooldown: 2.5
  Skills:
  - sound{s=ui.loom.take_result;v=2} @self
