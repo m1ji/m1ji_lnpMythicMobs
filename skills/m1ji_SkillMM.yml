@@ -564,16 +564,16 @@ m1ji_GenesisTourmaline_oT:
 
 m1ji_GenesisTourmaline_oE:
  Skills:
- - setVar{var=caster.genesistourmaline_calc;val=0}
- - varMath{var=caster.genesistourmaline_calc;e="<caster.genesistourmaline_tick_y>-<caster.genesistourmaline_start_y>"}
- - setVar{var=caster.genesistourmaline_calc;val=50} ?varInRange{var=caster.genesistourmaline_calc;val=>50}
- - actionmessage{m="チャージお～わり！ <caster.var.genesistourmaline_calc>"}
+ - setVar{var=caster.calctourma;val=0}
+ - varMath{var=caster.calctourma;e="<caster.genesistourmaline_tick_y>-<caster.genesistourmaline_start_y>"}
+ - setVar{var=caster.calctourma;val=50} ?varInRange{var=caster.calctourma;val=>50}
+ - actionmessage{m="チャージお～わり！ <caster.var.calctourma>"}
  - aura{auraName=genesistourmaline_chargeend;d=200;oT=m1ji_GenesisTourmaline_oEoT} @self
 
 m1ji_GenesisTourmaline_oEoT:
  Skills:
  - e:pr{c=#27d892;r=0.35;points=35;size=0.25;cd=0.15;y=1.8;audience=caster}
- - actionmessage{m="チャージお～わり！ <caster.var.genesistourmaline_calc>"}
+ - actionmessage{m="チャージお～わり！ <caster.var.calctourma>"}
 
 
 m1ji_GenesisTourmaline_Swing:
@@ -582,7 +582,7 @@ m1ji_GenesisTourmaline_Swing:
  - hasaura genesistourmaline_chargeend true
  Skills:
  - damage{a=2;type=none} @EIR{r=2.5;ignore=players}
- - damage{a=5+<caster.var.genesistourmaline_calc>;type=none} @EIR{r=2.5;ignore=players}
+ - damage{a=5+<caster.var.calctourma>;type=none} @EIR{r=2.5;ignore=players}
  - e:p{p=sweep_attack;hS=0.5;vS=1.5;a=3;repeat=1;repeatInterval=3} @EIR{r=2.5;ignore=players}
  - auraremove{aura=genesistourmaline_chargeend}
 
