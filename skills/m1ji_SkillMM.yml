@@ -564,7 +564,7 @@ m1ji_GenesisTourmaline_oT:
 
 m1ji_GenesisTourmaline_oE:
  Skills:
- - setVar{var=caster.genesistourmaline_calc;val=<caster.genesistourmaline_tick_y>-<caster.genesistourmaline_start_y>}
+#  - setVar{var=caster.genesistourmaline_calc;val=<caster.genesistourmaline_tick_y>-<caster.genesistourmaline_start_y>}
 #  - setVar{var=caster.genesistourmaline_calc;val=50} ?varInRange{var=caster.genesistourmaline_calc;val=>50}
  - actionmessage{m="チャージお～わり！ <caster.var.genesistourmaline_calc>"}
  - aura{auraName=genesistourmaline_chargeend;d=200;oT=m1ji_GenesisTourmaline_oEoT} @self
