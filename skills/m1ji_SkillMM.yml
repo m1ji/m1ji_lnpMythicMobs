@@ -724,19 +724,23 @@ m1ji_GenesisAmethyst_Swing:
      - e:pr{p=falling_dust;m=purpur_block;r=3;pts=20;cd=0.5}
     ];
     oE=[
-     - p{oT=[
-         - e:p{p=reddust;c=#956DAF;audience=caster} @origin
-         - e:p{p=snowflake;audience=caster} @origin
-         ];
-         vO=90;
-         v=5;
-         mr=<random.0to1>.<random.0to9>;
-         d=100;
-         syo=-1;
-         hp=false;
-         i=1;
-         fo=true
-     } @RLNTE{a=30;r=9;s=1;minr=0}
+     - totem{oS=[
+        - p{oT=[
+            - e:p{p=reddust;c=#956DAF;audience=caster} @origin
+            - e:p{p=snowflake;audience=caster} @origin
+            ];
+            vO=90;
+            v=5;
+            mr=<random.0to1>.<random.0to9>;
+            d=100;
+            syo=-1;
+            hp=false;
+            i=1;
+            fo=true
+        } @origin
+     ];
+     md=1
+     } @RLNTE{a=10;r=3;s=1;minr=0}
      - damage{a=5} @ENO{r=3;ignore=players}
     ];
     md=20;
