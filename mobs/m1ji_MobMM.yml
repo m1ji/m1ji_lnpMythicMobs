@@ -1,5 +1,5 @@
 m1ji_Tester:
-  Type: zombie
+  Type: villager
   Display: '&dテスター'
   Health: 100000
   Damage: 0
@@ -7,7 +7,7 @@ m1ji_Tester:
   Options:
     KnockbackResistance: 1
     NoAI: true
-    NoDamageTicks: 0
+    NoGravity: true
   BossBar:
     Enabled: true
     Title: '<caster.name> <caster.hp>/<caster.mhp>'
