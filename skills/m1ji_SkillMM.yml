@@ -315,7 +315,7 @@ m1ji_GenesisPearl_plus:
  Conditions:
  - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
  Skills:
- - potion{t=SLOW;d=20;l=1} @ENR{r=4}
+ - potion{t=SLOW;d=20;l=1} @ENR{r=4;ignore=players}
  - pull{v=6;to=true} @ENO{r=5;ignore=players}
  - e:ps{p=reddust;c=#4ee4ff;s=1;r=2;y=1.5;size=0.8;a=30;repeat=3;repeatInterval=2} 
  - e:lightning{delay=10} 
@@ -446,7 +446,7 @@ m1ji_GenesisTopaz_oESudo:
  - leap{v=-650} @trigger{y=-2}
 
 m1ji_GenesisRuby_Attack:
- Cooldown: 5+<caster.var.genesisruby_attackplus>
+ Cooldown: 5 #+<caster.var.genesisruby_attackplus>
  Skills:
  - setVar{var=caster.genesisruby_attackplus;val=0;type=FLOAT}
  - setVar{var=caster.genesisruby_attackplus;val=0.5;type=FLOAT} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
@@ -489,7 +489,7 @@ GenesisRuby_Attack_oE:
  - sound{s=entity.firework_rocket.twinkle_far;v=1;p=0.88}
  - e:p{p=cherry_leaves;hS=0.5;vS=0.5;a=3;audience=caster} @Line{r=1}
  - e:p{p=reddust;c=#7c2e3e;size=0.<random.5to9>;hS=0.25;vS=0.25;a=10;repeat=5;repeatInterval=2;audience=caster} @Line{r=1}
- - damage{a=10;type=none} @EntitiesInLine{r=3}
+ - damage{a=10;type=none} @EntitiesInLine{r=3;ignore=players}
  - damage{a=15;type=none}
  - damage{a=7;repeat=2;repeatInterval=3;type=none} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:p{p=flash;repeat=1;repeatInterval=6}
