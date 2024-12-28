@@ -6,7 +6,7 @@ m1ji_Tester:
   Disguise: player m1ji_ setSkin m1ji_
   Options:
     KnockbackResistance: 1
-    NoGravity: true
+    NoAI: true
     NoDamageTicks: 0
   BossBar:
     Enabled: true
