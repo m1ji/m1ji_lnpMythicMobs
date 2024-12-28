@@ -554,7 +554,7 @@ m1ji_GenesisTourmaline_oT:
  - actionmessage{m="Tourmalineチャージ中...<&co> <caster.var.genesistourmaline_sec1>.<caster.var.genesistourmaline_sec2>"}
  - setVar{cd=0.1;var=caster.genesistourmaline_sec1;val=<caster.var.genesistourmaline_sec1>-1} ?varEquals{var=caster.genesistourmaline_sec2;val=1}
  - setVar{cd=0.1;var=caster.genesistourmaline_sec2;val=<caster.var.genesistourmaline_sec2>-1} ?!varEquals{var=caster.genesistourmaline_sec2;val=-1}
- - setVar{cd=0.1;var=caster.genesistourmaline_sec2;val=9} ?varEquals{var=caster.genesistourmaline_sec2;val=0} ?!varEquals{var=caster.genesistourmaline_sec1;val=0}
+ - setVar{cd=0.1;var=caster.genesistourmaline_sec2;val=9} ?varEquals{var=caster.genesistourmaline_sec2;val=0} ?!varEquals{var=caster.genesistourmaline_sec1;val=-1}
 
 m1ji_GenesisTourmaline_oE:
  Skills:
