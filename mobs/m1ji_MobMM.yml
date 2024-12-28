@@ -1,5 +1,5 @@
 m1ji_Tester:
-  Type: villager
+  Type: skeleton
   Display: '&dテスター'
   Health: 100000
   Damage: 0
@@ -8,6 +8,7 @@ m1ji_Tester:
     NoAI: true
     NoGravity: true
     NoDamageTicks: 0
+    Disguise: player m1ji_ setSkin m1ji_
   BossBar:
     Enabled: true
     Title: '<caster.name> <caster.hp>/<caster.mhp>'
@@ -19,4 +20,3 @@ m1ji_Tester:
   - halloweenbody:3
   Skills:
   - message{m="&d&l<skill.var.damage-amount>"} @trigger ~onDamaged  
-  
