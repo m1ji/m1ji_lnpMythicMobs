@@ -717,8 +717,8 @@ m1ji_GenesisAmethyst_Swing:
  - sound{s=ui.loom.take_result;v=2} @self
  - sound{s=ui.loom.take_result;v=2} @self
  - totem{oS=[
-     - itemspary{i=PvE_Weapon_GAmethyst1_m1ji_;a=5;d=20;r=3;ap=false;audience=caster}
-     - itemspary{i=PvE_Weapon_GAmethyst2_m1ji_;a=5;d=20;r=3;ap=false;audience=caster}
+     - itemspary{i=PvE_Weapon_GAmethyst1_m1ji_;a=5;d=20;r=3;ap=false;audience=caster} @origin
+     - itemspary{i=PvE_Weapon_GAmethyst2_m1ji_;a=5;d=20;r=3;ap=false;audience=caster} @origin
     ];
     oT=[
      - e:pr{p=falling_dust;m=purpur_block;r=3;pts=20;cd=0.5}
@@ -732,14 +732,16 @@ m1ji_GenesisAmethyst_Swing:
             v=5;
             mr=<random.0to1>.<random.0to9>;
             d=100;
-            syo=-1;
+            syo=-1.5;
             hp=false;
             i=1;
             fo=true
         } @origin
      ];
-     md=1
-     } @RLNTE{a=20;r=3;s=0.25;minr=0}
+     md=1;
+     sB=false;
+     sE=false;
+     } @RLNTE{a=20;r=2.85;s=0.05;minr=0}
      - damage{a=5} @ENO{r=3;ignore=players}
     ];
     md=20;
