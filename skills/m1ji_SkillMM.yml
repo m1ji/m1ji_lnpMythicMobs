@@ -498,7 +498,6 @@ GenesisRuby_Attack_oE:
 m1ji_GenesisRuby_Use:
  Skills:
  - auraremove{aura=genesisruby<caster.name>} @EIR{r=15+(<caster.var.genesisruby_attackplus>*3)}
- - message{m="つかった！！！！！！"}
 
 
 
