@@ -11,8 +11,8 @@ m1ji_Tester:
   BossBar:
     Enabled: true
     Title: '<caster.name> <caster.hp>/<caster.mhp>'
-    Range: 32
-    Color: PURPLE
-    Style: SEGMENTED_10
+    Range: 22
+    Color: PINK
+    Style: SEGMENTED_20
   Skills:
   - message{m="&d&l<skill.var.damage-amount>"} @trigger ~onDamaged  
