@@ -588,6 +588,7 @@ m1ji_GenesisTourmaline_Swing:
  - e:p{p=flash;audience=caster} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players}
  - e:p{p=reddust;c=#4ee4ff;vS=2;a=30;repeat=4;repeatInterval=3;audience=caster} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:lightning{delay=20} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - sound{s=item.trident.thunder;p=2;v=1;delay=20}
  - sound{s=entity.evoker_fangs.attack;repeat=2;repeatInterval=4;p=1.2}
 
 
