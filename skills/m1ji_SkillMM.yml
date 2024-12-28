@@ -547,21 +547,14 @@ m1ji_GenesisTourmaline_Use:
  
 m1ji_GenesisTourmaline_oS:
  Skills:
- - setVar{var=caster.genesistourmaline_sec1;val=2}
- - setVar{var=caster.genesistourmaline_sec2;val=9}
  - setVar{var=caster.genesistourmaline_start_y;val=<caster.l.y>;type=FLOAT}
  - setVar{var=caster.genesistourmaline_tick_y;val=0;type=FLOAT}
  - setVar{var=caster.genesistourmaline_plus;val=0}
  - setVar{var=caster.genesistourmaline_plus;val=2} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - actionmessage{m="Tourmalineチャージ中...<&co> <caster.var.genesistourmaline_sec1>.<caster.var.genesistourmaline_sec2>"}
 
 m1ji_GenesisTourmaline_oT:
  Skills:
- - potion{t=SLOW;d=3;l=3} @self
- - actionmessage{m="Tourmalineチャージ中...<&co> <caster.var.genesistourmaline_sec1>.<caster.var.genesistourmaline_sec2> | <caster.var.genesistourmaline_start_y> <caster.var.genesistourmaline_tick_y>"}
- - setVar{cd=0.1;var=caster.genesistourmaline_sec1;val=<caster.var.genesistourmaline_sec1>-1} ?varEquals{var=caster.genesistourmaline_sec2;val=1}
- - setVar{cd=0.1;var=caster.genesistourmaline_sec2;val=<caster.var.genesistourmaline_sec2>-1} ?!varEquals{var=caster.genesistourmaline_sec2;val=-1}
- - setVar{cd=0.1;var=caster.genesistourmaline_sec2;val=9} ?varEquals{var=caster.genesistourmaline_sec2;val=0} ?!varEquals{var=caster.genesistourmaline_sec1;val=-1}
+ - potion{t=SLOW;d=3;l=4} @self
  - setVar{var=caster.genesistourmaline_tick_y;val=<caster.l.y>;type=FLOAT} ?varInRange{var=caster.genesistourmaline_tick_y;val=<<caster.l.y>}
  - sound{s=block.enchantment_table.use;cd=0.5;p=1.25}
 
