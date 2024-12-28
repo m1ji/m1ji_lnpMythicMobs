@@ -724,8 +724,19 @@ m1ji_GenesisAmethyst_Swing:
      - e:pr{p=falling_dust;m=purpur_block;r=3;pts=20;cd=0.5}
     ];
     oE=[
-     - e:p{p=reddust;c=#956DAF;vS=0.<random.0to9>;a=20;size=0.8} @RLNTE{r=2.85;a=30;minr=1.5;s=1}
-     - e:p{p=reddust;c=#956DAF;vS=1.<random.0to4>;a=40;size=0.8} @RLNTE{r=1.5;a=10;minr=0.5;s=1}
+     - p{oT=[
+         - e:p{p=reddust;c=#956DAF;audience=caster} @origin
+         - e:p{p=snowflake;audience=caster} @origin
+         ];
+         vO=90;
+         v=5;
+         mr=<random.0to1>.<random.0to9>;
+         d=100;
+         syo=-1;
+         hp=false;
+         i=1;
+         fo=true
+     } @RLNTE{a=30;r=9;s=1;minr=0}
      - damage{a=5} @ENO{r=3;ignore=players}
     ];
     md=20;
