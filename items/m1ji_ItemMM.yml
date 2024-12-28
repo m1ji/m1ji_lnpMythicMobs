@@ -164,16 +164,16 @@ PvE_Weapon_GenesisRuby_m1ji_:
 
 PvE_Weapon_GenesisTourmaline_m1ji_:
  Id: stick
- Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#5a5961>Tourmaline'
+ Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#d4ceff>Tourmaline'
  Lore:
  - '&f忍耐強くあれ。'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
- - '&fスキル1 [<gradient:#6f7d73:#864757>&l耐えの時</gradient>&r]'
+ - '&fスキル1 [<gradient:#e2ffea:#ff87a5>&l耐えの時</gradient>&r]'
  - '&f発動条件: スニークした状態で右クリック / CT: 10秒'
  - '&f溜め時間: 3秒 属性: &fnone'
  - '&f移動不可状態になり、力を溜める'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
- - '&fスキル2 [<gradient:#565875:#c4dbd0>&l歓喜の舞</gradient>&r]'
+ - '&fスキル2 [<gradient:#9fffd1:#ffb7d7>&l歓喜の舞</gradient>&r]'
  - '&f発動条件: 左クリック / CT: なし'
  - '&fダメージ: 7-15 属性: &fnone'
  - '&fスキル1使用後のみ発動可能。溜め時間中のY座標最高到達点を基準に、周囲にダメージを与える'
