@@ -446,7 +446,7 @@ m1ji_GenesisTopaz_oESudo:
  - leap{v=-650} @trigger{y=-2}
 
 m1ji_GenesisRuby_Attack:
- Cooldown: 5 #+<caster.var.genesisruby_attackplus>
+ Cooldown: 5+<caster.var.genesisruby_attackplus>
  Skills:
  - message{m="うごいてる2"} @self
  - setVar{var=caster.genesisruby_attackplus;val=0;type=FLOAT}
@@ -499,6 +499,7 @@ GenesisRuby_Attack_oE:
 m1ji_GenesisRuby_Use:
  Skills:
  - auraremove{aura=genesisruby<caster.name>} @EIR{r=15+(<caster.var.genesisruby_attackplus>*3)}
+ - message{m="つかった！！！！！！"}
 
 
 
