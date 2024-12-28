@@ -284,7 +284,7 @@ m1ji_EternalIcicle_Shoot1:
      } @TL ?wearing{s=HAND;m=PvE_Weapon_EternalIcicle_m1ji_}
 
 m1ji_GenesisPearl_Swing:
- Cooldown: 1+(<caster.var.pearl_swingplus>*5)
+ Cooldown: 12+(<caster.var.pearl_swingplus>*5)
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisPearl_m1ji_} true
 #  - hasMana{a=>1} true
