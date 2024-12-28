@@ -374,8 +374,8 @@ m1ji_GenesisPearl_Use_oT:
  Skills:
  - setVar{var=caster.genesispearl;val=<caster.var.genesispearl|0>+0.4;type=FLOAT} @self
  - sound{s=block.amethyst_cluster.break;v=1.5;p=0.5+(<caster.var.genesispearl>/10)} @self
- - e:pr{p=electric_spark;r=<caster.var.genesispearl>;pts=40;audience=caster} @self 
- - e:pr{p=glow;r=<caster.var.genesispearl>;pts=55;audience=caster} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - e:pr{p=electric_spark;r=<caster.var.genesispearl>;pts=50;audience=caster} @self 
+ - e:pr{p=glow;r=<caster.var.genesispearl>;pts=25;audience=caster} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - skill{s=m1ji_GenesisPearl_Use_END} @self
 
 m1ji_GenesisPearl_Use_END:
