@@ -721,10 +721,11 @@ m1ji_GenesisAmethyst_Swing:
      - itemspary{i=PvE_Weapon_GAmethyst2_m1ji_;a=5;d=20;r=3;ap=false;audience=caster}
     ];
     oT=[
-     - e:pr{p=falling_dust;m=purpur_block;r=3;pts=20;cd=0.2}
+     - e:pr{p=falling_dust;m=purpur_block;r=3;pts=20;cd=0.5}
     ];
     oE=[
-     - e:p{p=reddust;c=#956DAF;vS=<random.0to1>.<random.0to9>;a=40;size=0.8} @RLNTE{r=3;a=20;minr=0.5;s=0.5}
+     - e:p{p=reddust;c=#956DAF;vS=0.<random.0to9>;a=20;size=0.8} @RLNTE{r=2.5;a=20;minr=0.5;s=0.5}
+     - e:p{p=reddust;c=#956DAF;vS=<random.0to1>.<random.0to9>;a=30;size=0.8} @RLNTE{r=1.5;a=20;minr=0.5;s=0.5}
      - damage{a=5} @ENO{r=3;ignore=players}
     ];
     md=20;
