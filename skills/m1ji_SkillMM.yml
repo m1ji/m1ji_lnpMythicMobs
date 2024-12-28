@@ -556,7 +556,7 @@ m1ji_GenesisTourmaline_oT:
  - setVar{cd=0.1;var=caster.genesistourmaline_sec1;val=<caster.var.genesistourmaline_sec1>-1} ?varEquals{var=caster.genesistourmaline_sec2;val=1}
  - setVar{cd=0.1;var=caster.genesistourmaline_sec2;val=<caster.var.genesistourmaline_sec2>-1} ?!varEquals{var=caster.genesistourmaline_sec2;val=-1}
  - setVar{cd=0.1;var=caster.genesistourmaline_sec2;val=9} ?varEquals{var=caster.genesistourmaline_sec2;val=0} ?!varEquals{var=caster.genesistourmaline_sec1;val=-1}
- - setVar{var=caster.genesistourmaline_tick_y;val=<caster.l.y>;type=FLOAT} ?varInRange{var=caster.genesistourmaline_tick_y;val=><caster.var.genesistourmaline_tick_y>}
+ - setVar{var=caster.genesistourmaline_tick_y;val=<caster.l.y>;type=FLOAT} ?!varInRange{var=caster.genesistourmaline_tick_y;val=><caster.var.genesistourmaline_tick_y>}
 
 m1ji_GenesisTourmaline_oE:
  Skills:
