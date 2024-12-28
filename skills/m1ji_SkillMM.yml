@@ -582,8 +582,8 @@ m1ji_GenesisTourmaline_Swing:
  Skills:
  - sound{s=entity.evoker_fangs.attack;repeat=2;repeatInterval=4;p=1.2}
  - damage{a=5+<caster.var.calc_tourmaline>;type=none} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - damage{a=8+(<caster.var.calc_tourmaline>*1.5);type=none} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - damage{a=3+(<caster.var.calc_tourmaline>/2);type=none;repeat=2;repeatInterval=2} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - damage{a=10+(<caster.var.calc_tourmaline>*1.5);type=none} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - damage{a=5+(<caster.var.calc_tourmaline>*0.8);type=none;repeat=2;repeatInterval=2} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:p{p=omposter;hS=1;vS=1.5;a=10;repeat=1;repeatInterval=3} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players}
  - e:p{p=sweep_attack;hS=1;vS=1.5;a=10;repeat=1;repeatInterval=3} @EIR{r=3+<caster.var.genesistourmaline_plus>;ignore=players}
  - e:p{p=glow;hS=1.5;vS=1.5;a=12;repeat=4;repeatInterval=3} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
