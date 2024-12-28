@@ -446,20 +446,18 @@ m1ji_GenesisTopaz_oESudo:
  - leap{v=-650} @trigger{y=-2}
 
 m1ji_GenesisRuby_Attack:
-#  Cooldown: 5+(<caster.var.genesisruby_attackplus>*2)
+ Cooldown: 5+(<caster.var.genesisruby_attackplus>*2)
  Skills:
- - message{m="うごいてる2"}
- - e:ps{p=flame;y=3;r=3;a=100} @target 
-#  - setVar{var=caster.genesisruby_attackplus;val=0;type=FLOAT}
-#  - setVar{var=caster.genesisruby_attackplus;val=0.5;type=FLOAT} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-#  - sound{s=block.amethyst_block.hit;v=2;p=0.2;repeat=5;repeatInterval=1}
-#  - sound{s=entity.lightning_bolt.thunder;v=0.75;p=0.66}
-#  - e:p{p=sweep_attack;repeat=3;repeatInterval=2;hS=0.5;vS=1.5;a=2}
-#  - damage{a=5;type=none} @target
-#  - damage{a=15;type=none} @target ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-#  - ignite{} @target
-#  - leap{v=450} @target{y=-2}
-#  - aura{auraName=genesisruby<caster.name>;oT=GenesisRuby_Attack_oT;oE=GenesisRuby_Attack_oE;d=200} @target
+ - setVar{var=caster.genesisruby_attackplus;val=0;type=FLOAT}
+ - setVar{var=caster.genesisruby_attackplus;val=0.5;type=FLOAT} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - sound{s=block.amethyst_block.hit;v=2;p=0.2;repeat=5;repeatInterval=1}
+ - sound{s=entity.lightning_bolt.thunder;v=0.75;p=0.66}
+ - e:p{p=sweep_attack;repeat=3;repeatInterval=2;hS=0.5;vS=1.5;a=2}
+ - damage{a=5;type=none} @target
+ - damage{a=15;type=none} @target ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - ignite{} @target
+ - leap{v=450} @target{y=-2}
+ - aura{auraName=genesisruby<caster.name>;oT=GenesisRuby_Attack_oT;oE=GenesisRuby_Attack_oE;d=200} @target
 
 GenesisRuby_Attack_oT:
  Skills:
