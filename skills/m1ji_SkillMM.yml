@@ -544,6 +544,10 @@ m1ji_GenesisRuby_airAttack:
  - sound{s=entity.iron_golem.repair;v=1.5;p=2}
  - sound{s=entity.zombie.attack_iron_door;v=1.5;p=1.85}
  - sound{s=block.small_amethyst_bud.break ;v=2;p=1.55;repeat=3;repeatInterval=2} 
+ - delay 10
+ - sound{s=item.trident.thunder;v=1.5;p=2}
+ - e:lightning{} @target
+ - damage{a=15;type=none} @target
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////////
