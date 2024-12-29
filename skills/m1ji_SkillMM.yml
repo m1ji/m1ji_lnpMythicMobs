@@ -565,12 +565,13 @@ m1ji_GenesisTourmaline_Use:
  Skills:
  - modifyMana{a=-80} @self
  - aura{auraName=genesistourmaline_charge;d=56;oS=m1ji_GenesisTourmaline_oS;oT=m1ji_GenesisTourmaline_oT;oE=m1ji_GenesisTourmaline_oE;bt=true;
-    bartimerdisplay="Tourmalineチャージ時間";bartimercolor="WHITE";bartimerstyle=SEGMENTED_10} @self
+    bartimerdisplay="Tourmalineチャージ時間";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10} @self
  
 m1ji_GenesisTourmaline_oS:
  Skills:
  - setVar{var=caster.genesistourmaline_start_y;val=<caster.l.y>;type=FLOAT}
  - setVar{var=caster.genesistourmaline_tick_y;val=0;type=FLOAT}
+ - setVar{var=caster.calc_tourmaline;val=0;type=FLOAT}
  - setVar{var=caster.genesistourmaline_plus;val=0}
  - setVar{var=caster.genesistourmaline_plus;val=2} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
 
@@ -585,7 +586,8 @@ m1ji_GenesisTourmaline_oE:
  Skills:
  - setVar{var=caster.calc_tourmaline;val=<caster.var.genesistourmaline_tick_y>-<caster.var.genesistourmaline_start_y>;type=FLOAT} @self
  - setVar{var=caster.calc_tourmaline;val=50} ?varInRange{var=caster.calc_tourmaline;val=>50}
- - aura{auraName=genesistourmaline_chargeend;d=200;oT=m1ji_GenesisTourmaline_oEoT} @self
+ - aura{auraName=genesistourmaline_chargeend;d=200;oT=m1ji_GenesisTourmaline_oEoT;
+        bt=true;bartimerdisplay="Tourmaline増加ダメージ<&co> <caster.var.calc_tourmaline>";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10} @self
 
 m1ji_GenesisTourmaline_oEoT:
  Skills:
