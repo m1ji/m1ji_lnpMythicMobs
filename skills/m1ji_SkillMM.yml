@@ -759,7 +759,11 @@ m1ji_GenesisAquamarine_Use:
          - totem{oT=GenesisAquamarine_UseTotem;d=<caster.var.ice_field_ct>}
          - aura{auraname=genesisaqua2;oT=GenesisAquamarine_Use2;d=160;i=1} @self
          ];
-         d=50
+         md=50;
+         sB=false;
+         sE=false;
+         hp=false;
+         hnp=false
          } @selfLocation{y=-1.85}
  - p{oT=[
      - e:p{p=snowflake} @origin
@@ -790,7 +794,6 @@ GenesisAquamarine_Use2:
   - setvariable{var=caster.genesisaqua2_1z;value=(<caster.var.genesisaqua2_z>-<caster.l.z>)*(<caster.var.genesisaqua2_z>-<caster.l.z>);type=FLOAT} @self
   - setvariable{var=caster.genesisaqua2_1;value=<caster.var.genesisaqua2_1x>+<caster.var.genesisaqua2_1z>;type=FLOAT} @self
   - skill{s=GenesisAquamarine_Use3} @self
-  - skill{s=GenesisAquamarine_Use4} @self
   
 GenesisAquamarine_Use3:
   Conditions:
@@ -798,11 +801,6 @@ GenesisAquamarine_Use3:
   Skills:
   - heal{a=(<caster.mhp>/20+2);cd=1.5} @self
   - potion{t=SPEED;d=10;l=1} @self
-  
-GenesisAquamarine_Use4:
-  Conditions:
-  - variableInRange{var=caster.genesisaqua2_1;value=>64} true
-  Skills:
 
 GenesisAquamarine_UseTotem:
  Skills:
@@ -811,7 +809,7 @@ GenesisAquamarine_UseTotem:
  - e:pr{p=snowflake;hS=2;vS=5;r=5.7;cd=0.3;audience=caster} @origin 
  - e:pr{c=#7401DF;r=7.5;points=75;cd=1;audience=world} @origin
  - e:pr{c=#2ECCFA;r=7.5;points=150;cd=1;audience=caster} @origin
- - freeze{ticks=200;cd=1.25} @trigger @EntitiesNearOrigin{r=7.5}
+ - freeze{ticks=200;cd=1.25} @EntitiesNearOrigin{r=7.5;ignore=players}
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
 #
