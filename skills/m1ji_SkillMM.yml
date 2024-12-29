@@ -506,6 +506,7 @@ GenesisRuby_Attack_oE:
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
  Skills:
+ - aura{auraName=genesisruby_air;d=30;oT=genesisruby_airoT} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:lightning{} 
  - stopsound{s=entity.lightning_bolt.thunder} @origin
  - sound{s=entity.generic.burn;v=1;p=1.5;repeat=3;repeaetInterval=3}
@@ -531,6 +532,22 @@ GenesisRuby_Attack_oE:
 m1ji_GenesisRuby_Use:
  Skills:
  - auraremove{aura=genesisruby<caster.name>} @EIR{r=15+(<caster.var.genesisruby_attackplus>*3)}
+
+genesisruby_airoT:
+ Skills:
+ - auraremove{aura=genesisruby_air} @self ?onground{}
+ - onattack{oH=genesisruby_airAttack;auraName=genesisruby_airAttack;d=1} ?!onground{}
+
+genesisruby_airAttack:
+ Conditions:
+ - hasaura genesisruby_air true
+ Skills:
+ - auraremove{aura=genesisruby_air}
+ - damage{a=30;type=none} @target
+ - e:p{p=sweep_attack;hS=1.5;vS=1.75;a=10;repeat=1;repeatInterval=3} @trigger
+ - sound{s=entity.iron_golem.repair;v=1.5;p=2}
+ - sound{s=entity.zombie.attack_iron_door;v=1.5;p=1.85}
+
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////////
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -716,24 +733,7 @@ m1ji_GenesisAmethyst_Swing:
  - sound{s=ui.loom.take_result;v=2} @self
  - sound{s=ui.loom.take_result;v=2} @self
  - sound{s=ui.loom.take_result;v=2} @self
- - totem{oS=[
-     - itemspary{i=PvE_Weapon_GAmethyst1_m1ji_;a=5;d=20;r=3;ap=false;audience=caster} @origin
-     - itemspary{i=PvE_Weapon_GAmethyst2_m1ji_;a=5;d=20;r=3;ap=false;audience=caster} @origin
-    ];
-    oT=[
-     - e:pr{p=falling_dust;m=purpur_block;r=3;pts=20;cd=0.5}
-    ];
-    oE=[
-     - totem{oE=[
-         - e:pl{p=reddust;c=#ff87a5;size=0.6;fo=true} @trigger
-        ];
-        md=1
-     } @RLNTE{a=6;r=3;s=0.2;y=-1.2}
-     - damage{a=5} @ENO{r=3;ignore=players}
-     - jump{v=0.5;origin=@ENO{r=3;ignore=players}} 
-    ];
-    md=20;
-    } @forward{f=3}
+
 
  # pearlと組み合わせられるように、前方にtotem設置してボカンして上に弾き飛ばす
 

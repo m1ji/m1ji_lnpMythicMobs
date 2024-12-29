@@ -194,7 +194,7 @@ PvE_Weapon_GenesisAmethyst_m1ji_:
  Model: 112
  Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <gradient:#c76eff:#ff55f9>Amethyst</gradient>'
  Lore:
- - '&f常に誠実であれ'
+ - '&f常に誠実に。'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
  - '&fスキル1 [<gradient:#e2ffea:#ff87a5>&l耐えの時</gradient>&r]'
  - '&f発動条件: スニークした状態で右クリック / CT: 10秒'
