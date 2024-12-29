@@ -635,13 +635,13 @@ m1ji_GenesisAmethyst_Use:
  - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true} @TL
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;sfo=0.25} @TL
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;sfo=0.75} @TL
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;sfo=1} @TL
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20;sfo=0.25} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20;sfo=0.75} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20;sfo=1} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20;sfo=0.25} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20;sfo=0.75} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20;sfo=1} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  
 m1ji_GenesisAmethystUse_oH:
  Skills:
@@ -662,7 +662,6 @@ m1ji_GenesisAmethyst_Use2:
      - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - e:p{c=#5ffffa;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - damage{fo=true;a=15} @EntitiesNearOrigin{r=1;limit=1;ignore=players;sort=NEAREST}
-     - damage{fo=true;a=10;ia=true} @EntitiesNearOrigin{r=01;limit=1;ignore=players;sort=NEAREST}
      ];
      d=21;
      yo=0
@@ -678,7 +677,6 @@ m1ji_GenesisAmethyst_Use2:
      - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - e:p{c=#5ffffa;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - damage{fo=true;a=15} @EntitiesNearOrigin{r=1;limit=1;ignore=players;sort=NEAREST}
-     - damage{fo=true;a=10;ia=true} @EntitiesNearOrigin{r=1;limit=1;ignore=players;sort=NEAREST}
      ];
      d=32;
      yo=0
