@@ -618,7 +618,10 @@ m1ji_GenesisTourmaline_Swing:
 
 m1ji_GenesisAmethyst_Use:
  Cooldown: 2.5+<caster.var.genesisamethyst_ct>
+ Conditions:
+ - hasMana{a=>45} true
  Skills:
+ - modifyManager{a=-45} @self
  - setVar{var=caster.genesisamethyst_ct;val=0} 
  - setVar{var=caster.genesisamethyst_ct;val=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
@@ -684,7 +687,10 @@ m1ji_GenesisAmethyst_Use2:
      
 m1ji_GenesisAmethyst_Swing:
  Cooldown: 8+(<caster.var.genesisamethyst_ct>*2)
+ Conditions:
+ - hasMana{a=>40} true
  Skills:
+ - modifyManager{a=-40} @self
  - setVar{var=caster.genesisamethyst_ct;val=0} 
  - setVar{var=caster.genesisamethyst_ct;val=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.end_portal.spawn;p=1.35;v=2} @self
