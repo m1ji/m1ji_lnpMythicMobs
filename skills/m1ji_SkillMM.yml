@@ -619,11 +619,11 @@ m1ji_GenesisTourmaline_Swing:
 # //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 m1ji_GenesisAmethyst_Use:
- Cooldown: 2.5+<caster.var.genesisamethyst_ct>
+ Cooldown: 1+(<caster.var.genesisamethyst_ct>/2)
  Conditions:
- - hasMana{a=>45} true
+ - hasMana{a=>35} true
  Skills:
- - modifyManager{a=-45} @self
+ - modifyManager{a=-35} @self
  - setVar{var=caster.genesisamethyst_ct;val=0} 
  - setVar{var=caster.genesisamethyst_ct;val=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
@@ -635,11 +635,10 @@ m1ji_GenesisAmethyst_Use:
  - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     - e:p{c=#f6ecff;a=15;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
      ];
      oH=[
-     - damage{a=15;ia=true}
-     - damage{a=20;pi=true}
+     - damage{a=8;type=none}
      ];
      v=25;
      i=1;
@@ -651,32 +650,84 @@ m1ji_GenesisAmethyst_Use:
      } @EIR{r=5;limit=5;sort=RANDOM} 
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     - e:p{c=#f6ecff;a=15;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
      ];
      oH=[
-     - damage{a=10;ia=true}
-     - damage{a=20;pi=true}
+     - damage{a=10;type=none}
      ];
      v=25;
      i=1;
-     hR=2;
-     vR=2;
+     hR=1.5;
+     vR=1.5;
      hnp=true;
      hp=false;
      hO=10
      } @TL
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     - e:p{c=#f6ecff;a=15;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
      ];
      oH=[
-     - damage{a=10;ia=true}
-     - damage{a=20;pi=true}
+     - damage{a=10;type=none}
      ];
      v=25;
      i=1;
-     hR=2;
-     vR=2;
+     hR=1.5;
+     vR=1.5;
+     hnp=true;
+     hp=false;
+     hO=-10
+     } @TL
+
+m1ji_GenesisAmethyst_Use1:
+ Conditions:
+ - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
+ Skills:
+ - delay 21
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#f6ecff;a=7;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     - e:p{c=#8eeeff;a=8;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     ];
+     oH=[
+     - damage{a=8;type=none}
+     ];
+     v=25;
+     i=1;
+     hnp=true;
+     hp=false;
+     hR=2.5;
+     vR=2.5;
+     hto=true
+     } @EIR{r=5;limit=5;sort=RANDOM} 
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#f6ecff;a=7;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     - e:p{c=#8eeeff;a=8;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     ];
+     oH=[
+     - damage{a=10;type=none}
+     ];
+     v=25;
+     i=1;
+     hR=1.5;
+     vR=1.5;
+     hnp=true;
+     hp=false;
+     hO=10
+     } @TL
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#f6ecff;a=7;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     - e:p{c=#8eeeff;a=8;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     ];
+     oH=[
+     - damage{a=10;type=none}
+     ];
+     v=25;
+     i=1;
+     hR=1.5;
+     vR=1.5;
      hnp=true;
      hp=false;
      hO=-10
