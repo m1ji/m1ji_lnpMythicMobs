@@ -716,7 +716,7 @@ m1ji_GenesisAmethyst_Swing:
      ]; 
      d=20;
      sB=false;
-     } @RLNTE{a=2;r=6;s=2;minr=2}
+     } @RLNTE{a=2+(<caster.var.genesisamethyst_ct>*2);r=6;s=2;minr=2}
  - totem{oS=[
      - e:pr{c=#f6ecff;size=0.85;r=1.5;points=15;repeat=32;repeatInterval=2;a=1;hS=0.05} @origin
      - e:p{c=#f6ecff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
