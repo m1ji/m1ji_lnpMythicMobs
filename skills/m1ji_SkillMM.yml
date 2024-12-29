@@ -535,8 +535,8 @@ m1ji_GenesisRuby_Use:
 
 m1ji_GenesisRuby_airAttack:
  Conditions:
- - hasaura genesisruby_air true
-#  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
+#  - hasaura genesisruby_air true
+ - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
  Skills:
  - message{m="なぐれた！"} @self
  - auraremove{aura=genesisruby_air}
