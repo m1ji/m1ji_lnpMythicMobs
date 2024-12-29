@@ -635,15 +635,12 @@ m1ji_GenesisAmethyst_Use:
  - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true} @TL
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;sfo=0.25} @TL
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;sfo=0.5} @TL
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;sfo=0.75} @TL
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20;sfo=0.25} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20;sfo=0.5} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20;sfo=0.75} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20;sfo=0.25} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20;sfo=0.5} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20;sfo=0.75} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  
 m1ji_GenesisAmethystUse_oH:
