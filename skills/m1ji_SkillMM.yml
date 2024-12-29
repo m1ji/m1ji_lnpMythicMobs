@@ -628,11 +628,7 @@ m1ji_GenesisAmethyst_Use:
  - setVar{var=caster.genesisamethyst_ct;val=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
- - sound{s=block.note_block.chime;v=2;p=1.42;delay=3} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - sound{s=block.note_block.chime;v=2;p=1.29;delay=3} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - sound{s=block.note_block.chime;v=2;p=1.25;delay=6} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - sound{s=block.note_block.chime;v=2;p=1.21;delay=6} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - skill{s=m1ji_GenesisAmethyst_Use2}
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
      - e:p{c=#f6ecff;a=15;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
@@ -679,10 +675,17 @@ m1ji_GenesisAmethyst_Use:
      hO=-10
      } @TL
 
-m1ji_GenesisAmethyst_Use1:
+m1ji_GenesisAmethyst_Use2:
  Conditions:
+ - hasaura genesisamethyst_silent false
  - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
  Skills:
+ - aura{auraName=genesisamethyst_silent;d=50} @self
+ - sound{s=block.note_block.chime;v=2;p=1.42;delay=3} @self
+ - sound{s=block.note_block.chime;v=2;p=1.29;delay=3} @self
+ - sound{s=block.note_block.chime;v=2;p=1.25;delay=6} @self
+ - sound{s=block.note_block.chime;v=2;p=1.21;delay=6} @self
+ - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self
  - delay 21
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
