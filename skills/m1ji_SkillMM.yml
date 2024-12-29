@@ -506,7 +506,7 @@ GenesisRuby_Attack_oE:
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
  Skills:
- - aura{auraName=genesisruby_air;d=40} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - aura{auraName=genesisruby_air;d=40} @trigger ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:lightning{} 
  - stopsound{s=entity.lightning_bolt.thunder} @origin
  - sound{s=entity.generic.burn;v=1;p=1.5;repeat=3;repeaetInterval=3}
@@ -538,7 +538,6 @@ m1ji_GenesisRuby_airAttack:
  - hasaura{aura=genesisruby_air} false
  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
  Skills:
- - message{m="なぐれた！"} @self
  - auraremove{aura=genesisruby_air}
  - damage{a=30;type=none} @EIR{r=3;ignore=players}
  - e:p{p=sweep_attack;hS=1.5;vS=1.75;a=10;repeat=1;repeatInterval=3}
