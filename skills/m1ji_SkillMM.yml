@@ -534,6 +534,7 @@ m1ji_GenesisRuby_Use:
  - auraremove{aura=genesisruby<caster.name>} @EIR{r=15+(<caster.var.genesisruby_attackplus>*3)}
 
 m1ji_GenesisRuby_airAttack:
+ Cooldown: 1
  Conditions:
  - hasaura{aura=genesisruby_air} true
  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
