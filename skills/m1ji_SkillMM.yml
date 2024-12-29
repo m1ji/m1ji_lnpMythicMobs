@@ -537,12 +537,12 @@ genesisruby_airoT:
  Skills:
  - message{m="<skill.var.aura-name>"}
 
-
 m1ji_GenesisRuby_airAttack:
  Conditions:
  - hasaura genesisruby_air true
+ - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
  Skills:
- - message{m="なぐれた！"}
+ - message{m="なぐれた！"} @self
  - auraremove{aura=genesisruby_air}
  - damage{a=30;type=none} @EIR{r=3;ignore=players}
  - e:p{p=sweep_attack;hS=1.5;vS=1.75;a=10;repeat=1;repeatInterval=3}
