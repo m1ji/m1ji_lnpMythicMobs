@@ -661,8 +661,8 @@ m1ji_GenesisAmethyst_Use2:
      - e:p{c=#f6ecff;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - e:p{c=#5ffffa;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-     - damage{fo=true;a=15} @EntitiesNearOrigin{r=2;limit=1;ignore=players;sort=NEAREST}
-     - damage{fo=true;a=10;ia=true} @EntitiesNearOrigin{r=2;limit=1;ignore=players;sort=NEAREST}
+     - damage{fo=true;a=15} @EntitiesNearOrigin{r=0.75;limit=1;ignore=players;sort=NEAREST}
+     - damage{fo=true;a=10;ia=true} @EntitiesNearOrigin{r=0.75;limit=1;ignore=players;sort=NEAREST}
      ];
      d=21;
      yo=0
