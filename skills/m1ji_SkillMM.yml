@@ -624,112 +624,36 @@ m1ji_GenesisAmethyst_Use:
  - aura{auraName=clsilent;d=20} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
- - sound{s=block.note_block.chime;v=2;p=1.57} @self
- - skill{s=m1ji_GenesisAmethyst_Use2} @self
- - p{oT=[
-     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
-     ];
-     oH=[
-     - damage{a=15;ia=true}
-     - damage{a=20;pi=true}
-     ];
-     v=25;
-     i=1;
-     hnp=true;
-     hp=false;
-     hR=2.5;
-     vR=2.5;
-     hto=true
-     } @EIR{r=5;limit=5;sort=RANDOM} 
- - p{oT=[
-     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
-     ];
-     oH=[
-     - damage{a=10;ia=true}
-     - damage{a=20;pi=true}
-     ];
-     v=25;
-     i=1;
-     hR=2;
-     vR=2;
-     hnp=true;
-     hp=false;
-     hO=10
-     } @TL
- - p{oT=[
-     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
-     ];
-     oH=[
-     - damage{a=10;ia=true}
-     - damage{a=20;pi=true}
-     ];
-     v=25;
-     i=1;
-     hR=2;
-     vR=2;
-     hnp=true;
-     hp=false;
-     hO=-10
-     } @TL
-     
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.25} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.5} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.75} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.25} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.5} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.75} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.25} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.5} @TL
+ - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.75} @TL
+ 
 m1ji_GenesisAmethyst_Use2:
- Cooldown: 4
  Skills:
- - delay 5
- - sound{s=block.note_block.chime;v=2;p=1.57} @self
- - sound{s=block.note_block.chime;v=2;p=1.57} @self
- - sound{s=block.note_block.chime;v=2;p=1.57} @self
- - p{oT=[
-     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+ - e:p{p=falling_dust;m=purpur_block;a=1} @origin
+ - totem{oS=[
+     - e:p{p=reddust;c=#ff90f6;a=3;fo=true;size=0.75} @origin
      ];
-     oH=[
-     - damage{a=15;ia=true}
-     - damage{a=20;pi=true}
+     oE=[
+     - sound{s=item.trident.riptide_3;v=0.5;p=2}
+     - e:p{p=flame;a=1;fo=true} @origin
+     - e:p{c=#956DAF;hS=0.05;vS=0.05;fo=true;a=2} @origin
+     - e:p{c=#f6ecff;hS=0.05;vS=0.05;fo=true;a=2} @origin
+     - damage{fo=true;a=15} @EntitiesNearOrigin{r=1.5;limit=1;ignore=players;sort=NEAREST}
+     - damage{fo=true;a=10;ia=true} @EntitiesNearOrigin{r=1.5;limit=1;ignore=players;sort=NEAREST}
      ];
-     v=25;
-     i=1;
-     hnp=true;
-     hp=false;
-     hR=2.5;
-     vR=2.5;
-     hto=true
-     } @EIR{r=5;limit=5;sort=RANDOM} 
- - p{oT=[
-     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
-     ];
-     oH=[
-     - damage{a=10;ia=true}
-     - damage{a=20;pi=true}
-     ];
-     v=25;
-     i=1;
-     hR=2;
-     vR=2;
-     hnp=true;
-     hp=false;
-     hO=10
-     } @TL
- - p{oT=[
-     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
-     ];
-     oH=[
-     - damage{a=10;ia=true}
-     - damage{a=20;pi=true}
-     ];
-     v=25;
-     i=1;
-     hR=2;
-     vR=2;
-     hnp=true;
-     hp=false;
-     hO=-10
-     } @TL
+     d=30;
+     yo=0
+     } @origin
      
 m1ji_GenesisAmethyst_Swing:
  Cooldown: 2.5
