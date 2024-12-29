@@ -721,7 +721,7 @@ m1ji_GenesisAmethyst_Swing:
      - e:pr{c=#f6ecff;size=0.85;r=1.5;points=15;repeat=32;repeatInterval=2;a=1;hS=0.05} @origin
      - e:p{c=#f6ecff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
      - e:p{c=#f3e5ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-     - e:p{c=#8fe6ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{c=#8fe6ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - potion{t=SLOW;d=20;l=3;fo=true} @EntitiesNearOrigin{r=3.5;ignore=players}
      ];
      oE=[
