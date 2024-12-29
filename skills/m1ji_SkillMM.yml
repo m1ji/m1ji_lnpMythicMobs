@@ -632,7 +632,7 @@ m1ji_GenesisAmethyst_Use:
  - sound{s=item.trident.throw;v=1.5;p=1.88} @self
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#f6ecff;a=15;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     - e:p{c=#f6ecff;a=8;hS=0.3;vS=0.3;size=0.5;repeat=2;repeatInterval=1} @origin
      ];
      oH=[
      - damage{a=8;type=none}
@@ -647,7 +647,7 @@ m1ji_GenesisAmethyst_Use:
      } @EIR{r=5;limit=5;sort=RANDOM} 
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#f6ecff;a=15;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     - e:p{c=#f6ecff;a=8;hS=0.3;vS=0.3;size=0.5;repeat=2;repeatInterval=1} @origin
      ];
      oH=[
      - damage{a=10;type=none}
@@ -662,7 +662,7 @@ m1ji_GenesisAmethyst_Use:
      } @TL
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
-     - e:p{c=#f6ecff;a=15;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
+     - e:p{c=#f6ecff;a=8;hS=0.3;vS=0.3;size=0.5;repeat=2;repeatInterval=1} @origin
      ];
      oH=[
      - damage{a=10;type=none}
