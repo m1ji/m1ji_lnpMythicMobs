@@ -735,19 +735,19 @@ m1ji_GenesisAmethyst_Swing:
  Cooldown: 2.5
  Skills:
  - sound{s=block.end_portal.spawn;p=1.35;v=2} @self
- - sound{s=block.amethyst_block.resonate;v=2;p=1.65;repeat=2;repeatInterval=2} @self
- - sound{s=block.amethyst_block.resonate;v=2;p=1.65;repeat=2;repeatInterval=2} @self
- - sound{s=block.amethyst_block.resonate;v=2;p=1.65;repeat=2;repeatInterval=2} @self
+ - sound{s=block.amethyst_block.resonate;v=2;p=1.75;repeat=2;repeatInterval=2} @self
+ - sound{s=block.amethyst_block.resonate;v=2;p=1.83;repeat=2;repeatInterval=2} @self
+ - sound{s=block.amethyst_block.resonate;v=2;p=1.97;repeat=2;repeatInterval=2} @self
  - totem{oS=[
-     - e:pr{c=#956DAF;size=0.85;r=1.5;points=15;repeat=32;repeatInterval=2;a=1;hS=0.05} @origin
-     - e:p{c=#956DAF;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
+     - e:pr{c=#f6ecff;size=0.85;r=1.5;points=15;repeat=32;repeatInterval=2;a=1;hS=0.05} @origin
+     - e:p{c=#f6ecff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
      - e:p{c=#ff90f6;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
      ];
      oE=[
-     - e:p{hS=0.4;vS=1;c=#bc9ac0;size=1.65;a=10;repeat=16;repeatInterval=1;audience=caster} @origin
-     - e:p{hS=0.45;vS=1.5;c=#a27ec0F;size=1.5;a=10;repeat=30;repeatInterval=1} @origin
-     - e:p{hS=0.45;vS=1.5;c=#ff90f6;size=1.5;a=10;repeat=30;repeatInterval=1} @origin
-     - e:p{hS=0.45;vS=1.5;p=electric_spark;a=8;repeat=30;repeatInterval=1} @origin
+     - e:p{hS=0.25;vS=1;c=#bc9ac0;size=1.65;a=10;repeat=16;repeatInterval=1;audience=caster} @origin
+     - e:p{hS=0.3;vS=1.5;c=#a27ec0;size=1.5;a=10;repeat=30;repeatInterval=1} @origin
+     - e:p{hS=0.3;vS=1.5;c=#ff90f6;size=1.5;a=10;repeat=30;repeatInterval=1} @origin
+     - e:p{hS=0.3;vS=1.5;p=electric_spark;a=8;repeat=30;repeatInterval=1} @origin
      - damage{repeat=1;repeatInterval=15;a=20;fo=true} @EntitiesNearOrigin{r=5;ignore=players}
      - damage{repeat=1;repeatInterval=15;a=10;ia=true;fo=true} @EntitiesNearOrigin{r=5;ignore=players}
      - sound{s=entity.evoker.cast_spell;v=2;p=1.75;repeat=15;repeatInterval=2} @self
@@ -756,16 +756,16 @@ m1ji_GenesisAmethyst_Swing:
      d=20
      } @RLNTE{a=2;r=6;s=2;minr=2}
  - totem{oS=[
-     - e:pr{c=#956DAF;size=0.85;r=1.5;points=15;repeat=32;repeatInterval=2;a=1;hS=0.05} @origin
-     - e:p{c=#956DAF;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
+     - e:pr{c=#f6ecff;size=0.85;r=1.5;points=15;repeat=32;repeatInterval=2;a=1;hS=0.05} @origin
+     - e:p{c=#f6ecff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
      - e:p{c=#ff90f6;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
      - potion{t=SLOW;d=20;l=3;fo=true} @EntitiesNearOrigin{r=3.5;ignore=players}
      ];
      oE=[
-     - e:p{hS=0.4;vS=1;c=#bc9ac0;size=1.65;a=10;repeat=16;repeatInterval=1;audience=caster} @origin
-     - e:p{hS=0.45;vS=1.5;c=#a27ec0;size=1.5;a=10;repeat=16;repeatInterval=1} @origin
-     - e:p{hS=0.45;vS=1.5;c=#ff90f6;size=1.5;a=10;repeat=16;repeatInterval=1} @origin
-     - e:p{hS=0.45;vS=1.5;p=electric_spark;a=8;repeat=30;repeatInterval=1} @origin
+     - e:p{hS=0.25;vS=1;c=#bc9ac0;size=1.65;a=10;repeat=16;repeatInterval=1;audience=caster} @origin
+     - e:p{hS=0.3;vS=1.5;c=#a27ec0;size=1.5;a=10;repeat=16;repeatInterval=1} @origin
+     - e:p{hS=0.3;vS=1.5;c=#ff90f6;size=1.5;a=10;repeat=16;repeatInterval=1} @origin
+     - e:p{hS=0.3;vS=1.5;p=electric_spark;a=8;repeat=30;repeatInterval=1} @origin
      - damage{a=7;repeat=1;repeatInterval=15;fo=true} @EntitiesNearOrigin{r=5;ignore=players;limit=2}
      - damage{a=4;repeat=1;repeatInterval=15;ia=true;fo=true} @EntitiesNearOrigin{r=5;ignore=players;limit=2}
      ];
