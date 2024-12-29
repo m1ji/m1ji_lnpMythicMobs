@@ -756,7 +756,7 @@ m1ji_GenesisAquamarine_Use:
  - variableadd{var=skill.ice_ensyutu;amount=0.15;repeat=90;repeatInterval=1}
  - potion{t=SLOW;d=20;l=2} @self
  - totem{oE=[
-         - totem{oT=GenesisAquamarine_UseTotem;d=<caster.var.ice_field_ct>}
+         - totem{oT=GenesisAquamarine_UseTotem;d=<caster.var.ice_field_ct>} @origin{y=-1.25}
          - aura{auraname=genesisaqua2;oT=GenesisAquamarine_Use2;d=160;i=1} @self
          ];
          md=50;
@@ -764,7 +764,7 @@ m1ji_GenesisAquamarine_Use:
          sE=false;
          hp=false;
          hnp=false
-         } @selfLocation{y=-1.85}
+         } @selfLocation{y=0.5}
  - p{oT=[
      - e:p{p=snowflake} @origin
      ];
