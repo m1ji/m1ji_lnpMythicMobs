@@ -506,7 +506,7 @@ GenesisRuby_Attack_oE:
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
  Skills:
- - onSwing{auraName=genesisruby_air;d=30;oT=genesisruby_airoT;osw=genesisruby_airAttack} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - aura{auraName=genesisruby_air;d=30;oT=genesisruby_airoT} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - e:lightning{} 
  - stopsound{s=entity.lightning_bolt.thunder} @origin
  - sound{s=entity.generic.burn;v=1;p=1.5;repeat=3;repeaetInterval=3}
@@ -538,7 +538,7 @@ genesisruby_airoT:
  - message{m="空中"} ?!onground{}
  - message{m="not 空中"} ?onground{}
 
-genesisruby_airAttack:
+m1ji_GenesisRuby_airAttack:
  Skills:
  - message{m="なぐれた！"}
  - auraremove{aura=genesisruby_air}
@@ -561,7 +561,7 @@ m1ji_GenesisTourmaline_Use:
  Skills:
  - modifyMana{a=-80} @self
  - aura{auraName=genesistourmaline_charge;d=56;oS=m1ji_GenesisTourmaline_oS;oT=m1ji_GenesisTourmaline_oT;oE=m1ji_GenesisTourmaline_oE;bt=true;
-    bartimerdtext="Tourmaline チャージ時間";bartimecolor=WHITE;bartimerstyle=SEGMENTED_10} @self
+    bartimerdisplay="Tourmalineチャージ時間";bartimecolor="WHITE";bartimerstyle="SEGMENTED_10"} @self
  
 m1ji_GenesisTourmaline_oS:
  Skills:
