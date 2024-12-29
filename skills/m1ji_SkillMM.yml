@@ -655,9 +655,10 @@ m1ji_GenesisAmethyst_Use2:
      oE=[
      - sound{s=item.trident.riptide_3;v=0.15;p=2}
      - e:p{p=instant_effect;a=1;fo=true} @origin
-     - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - e:p{c=#956DAF;hS=0.05;vS=0.05;fo=true;a=2} @origin
-     - e:p{c=#f6ecff;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin
+     - e:p{c=#f6ecff;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{c=#5ffffa;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - damage{fo=true;a=15} @EntitiesNearOrigin{r=1.5;limit=1;ignore=players;sort=NEAREST}
      - damage{fo=true;a=10;ia=true} @EntitiesNearOrigin{r=1.5;limit=1;ignore=players;sort=NEAREST}
      ];
@@ -676,36 +677,44 @@ m1ji_GenesisAmethyst_Swing:
  - sound{s=block.amethyst_block.resonate;v=2;p=1.97;repeat=2;repeatInterval=2} @self
  - totem{oS=[
      - e:pr{c=#f6ecff;size=0.85;r=1.5;points=15;repeat=32;repeatInterval=2;a=1;hS=0.05} @origin
-     - e:p{c=#f6ecff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
-     - e:p{c=#f3e5ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
+     - e:p{c=#f6ecff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin 
+     - e:p{c=#f3e5ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{c=#8fe6ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      ];
      oE=[
      - e:p{hS=0.25;vS=1;c=#bc9ac0;size=1.45;a=10;repeat=16;repeatInterval=1;audience=caster} @origin
-     - e:p{hS=0.3;vS=1.5;c=#a27ec0;size=1.3;a=10;repeat=30;repeatInterval=1} @origin
-     - e:p{hS=0.3;vS=1.5;c=#ff90f6;size=1.3;a=10;repeat=30;repeatInterval=1} @origin
+     - e:p{hS=0.3;vS=1.5;c=#a27ec0;size=1.3;a=10;repeat=30;repeatInterval=1} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{hS=0.3;vS=1.5;c=#ff90f6;size=1.3;a=10;repeat=30;repeatInterval=1} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{hS=0.3;vS=1.5;c=#76fff7;size=1.3;a=10;repeat=16;repeatInterval=1} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{hS=0.3;vS=1.5;c=#43f2ff;size=1.3;a=10;repeat=16;repeatInterval=1} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - e:p{hS=0.3;vS=1.5;p=electric_spark;a=8;repeat=30;repeatInterval=1} @origin
      - damage{a=20+(<caster.var.genesisamethyst_ct>*2);repeat=1;repeatInterval=15;fo=true} @EntitiesNearOrigin{r=5;ignore=players}
      - damage{a=10+(<caster.var.genesisamethyst_ct>*2);repeat=1;repeatInterval=15;ia=true;fo=true} @EntitiesNearOrigin{r=5;ignore=players}
      - sound{s=entity.evoker.cast_spell;v=2;p=1.75;repeat=15;repeatInterval=2} @self
      - sound{s=entity.illusioner.prepare_mirror;p=2;repeat=30;repeatInterval=1;v=0.5} @self
      ]; 
-     d=20
+     d=18;
+     sB=false;
      } @RLNTE{a=2;r=6;s=2;minr=2}
  - totem{oS=[
      - e:pr{c=#f6ecff;size=0.85;r=1.5;points=15;repeat=32;repeatInterval=2;a=1;hS=0.05} @origin
      - e:p{c=#f6ecff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
-     - e:p{c=#f3e5ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin
+     - e:p{c=#f3e5ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{c=#8fe6ff;size=0.85;repeat=32;repeatInterval=2;a=2;hS=0.65;a=35} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - potion{t=SLOW;d=20;l=3;fo=true} @EntitiesNearOrigin{r=3.5;ignore=players}
      ];
      oE=[
      - e:p{hS=0.25;vS=1;c=#bc9ac0;size=1.45;a=10;repeat=16;repeatInterval=1;audience=caster} @origin
-     - e:p{hS=0.3;vS=1.5;c=#a27ec0;size=1.3;a=10;repeat=16;repeatInterval=1} @origin
-     - e:p{hS=0.3;vS=1.5;c=#ff90f6;size=1.3;a=10;repeat=16;repeatInterval=1} @origin
+     - e:p{hS=0.3;vS=1.5;c=#a27ec0;size=1.3;a=10;repeat=16;repeatInterval=1} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} 
+     - e:p{hS=0.3;vS=1.5;c=#ff90f6;size=1.3;a=10;repeat=16;repeatInterval=1} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{hS=0.3;vS=1.5;c=#76fff7;size=1.3;a=10;repeat=16;repeatInterval=1} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{hS=0.3;vS=1.5;c=#43f2ff;size=1.3;a=10;repeat=16;repeatInterval=1} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - e:p{hS=0.3;vS=1.5;p=electric_spark;a=8;repeat=30;repeatInterval=1} @origin
      - damage{a=7+(<caster.var.genesisamethyst_ct>*2);repeat=1;repeatInterval=15;fo=true} @EntitiesNearOrigin{r=5;ignore=players;limit=2}
      - damage{a=4+(<caster.var.genesisamethyst_ct>*2);repeat=1;repeatInterval=15;ia=true;fo=true} @EntitiesNearOrigin{r=5;ignore=players;limit=2}
      ];
-     d=20
+     d=18;
+     sB=false
      } @EIR{r=7.5;ignore=players;limit=2+<caster.var.genesisamethyst_ct>}
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
