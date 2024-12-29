@@ -624,7 +624,7 @@ m1ji_GenesisAmethyst_Use:
  - hasMana{a=>40} true
  - wearing{s=HAND;m=PvE_Weapon_GenesisAmethyst_m1ji_} true
  Skills:
- - modifyManager{a=-40} @self
+ - modifyMana{a=-40} @self
  - setVar{var=caster.genesisamethyst_ct;val=0} 
  - setVar{var=caster.genesisamethyst_ct;val=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
@@ -745,7 +745,7 @@ m1ji_GenesisAmethyst_Swing:
  - hasMana{a=>50} true
  - wearing{s=HAND;m=PvE_Weapon_GenesisAmethyst_m1ji_} true
  Skills:
- - modifyManager{a=-50} @self
+ - modifyMana{a=-50} @self
  - setVar{var=caster.genesisamethyst_ct;val=0} 
  - setVar{var=caster.genesisamethyst_ct;val=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.end_portal.spawn;p=1.35;v=2} @self
