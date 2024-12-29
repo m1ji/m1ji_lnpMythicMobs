@@ -629,19 +629,24 @@ m1ji_GenesisAmethyst_Use:
  - sound{s=block.note_block.chime;v=2;p=1.25;delay=6} @self
  - sound{s=block.note_block.chime;v=2;p=1.21;delay=6} @self
  - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.25} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.5} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.75} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.25} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.5} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.75} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.25} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.5} @TL
- - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.75} @TL
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false} @TL
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.25} @TL
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.5} @TL
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.75} @TL
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.25} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.5} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=20;sfo=0.75} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.25} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.5} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;hO=-20;sfo=0.75} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  
+m1ji_GenesisAmethystUse_oH:
+ Skills:
+ - damage{a=8;type=none}
+ - e:p{p=sweep_attack;hS=0.5;vS=2;a=3}
+
 m1ji_GenesisAmethyst_Use2:
  Skills:
  - e:p{p=falling_dust;m=purpur_block;a=1} @origin
@@ -649,10 +654,11 @@ m1ji_GenesisAmethyst_Use2:
      - e:p{p=reddust;c=#ff90f6;a=3;fo=true;size=0.75} @origin
      ];
      oE=[
-     - sound{s=item.trident.riptide_3;v=0.2;p=2}
-     - e:p{p=flame;a=1;fo=true} @origin
+     - sound{s=item.trident.riptide_3;v=0.15;p=2}
+     - e:p{p=instant_effect;a=1;fo=true} @origin
+     - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      - e:p{c=#956DAF;hS=0.05;vS=0.05;fo=true;a=2} @origin
-     - e:p{c=#f6ecff;hS=0.05;vS=0.05;fo=true;a=2} @origin
+     - e:p{c=#f6ecff;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin
      - damage{fo=true;a=15} @EntitiesNearOrigin{r=1.5;limit=1;ignore=players;sort=NEAREST}
      - damage{fo=true;a=10;ia=true} @EntitiesNearOrigin{r=1.5;limit=1;ignore=players;sort=NEAREST}
      ];
