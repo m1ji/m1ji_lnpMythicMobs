@@ -538,7 +538,7 @@ genesisruby_airoT:
  - message{m="空中"} ?!onground{}
  - message{m="not 空中"} ?onground{}
  - auraremove{aura=genesisruby_air} ?onground{}
- - onattack{oH=genesisruby_airAttack;auraName=genesisruby_airAttack;d=1;fo=true} ?!onground{}
+ - onattack{oH=genesisruby_airAttack;auraName=genesisruby_airAttack;d=3;fo=true} ?!onground{}
 #  - skill{s=genesisruby_airAttack} ?!onground{}
 
 genesisruby_airAttack:
