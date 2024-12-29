@@ -160,6 +160,7 @@ PvE_Weapon_GenesisRuby_m1ji_:
  - ATTRIBUTES
  Options:
   Unbreakable: true
+  ItemVersion: 1
  Enchantments:
  - PROTECTION_ENVIRONMENTAL:6
 

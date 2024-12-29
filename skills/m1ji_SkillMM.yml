@@ -537,6 +537,7 @@ m1ji_GenesisRuby_airAttack:
  Conditions:
  - hasaura{aura=genesisruby_air} true
  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
+ - onground{} false
  Skills:
  - auraremove{aura=genesisruby_air}
  - damage{a=30;type=none} @EIR{r=3;ignore=players}
