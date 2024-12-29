@@ -537,13 +537,12 @@ genesisruby_airoT:
  Skills:
  - message{m="空中"} ?!onground{}
  - message{m="not 空中"} ?onground{}
- - auraremove{aura=genesisruby_air} @self ?!onground{}
+ - auraremove{aura=genesisruby_air} @origin ?!onground{}
  - onattack{oH=genesisruby_airAttack;auraName=genesisruby_airAttack;d=1} ?onground{}
 
 genesisruby_airAttack:
- Conditions:
- - hasaura genesisruby_air true
  Skills:
+ - message{m="なぐれた！"} @trigger
  - auraremove{aura=genesisruby_air}
  - damage{a=30;type=none} @target
  - e:p{p=sweep_attack;hS=1.5;vS=1.75;a=10;repeat=1;repeatInterval=3} @trigger
