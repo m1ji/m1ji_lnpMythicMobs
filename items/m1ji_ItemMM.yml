@@ -153,7 +153,7 @@ PvE_Weapon_GenesisRuby_m1ji_:
  Skills: 
  - skill{s=m1ji_GenesisRuby_Attack} ~onAttack
  - skill{s=m1ji_GenesisRuby_Use} ~onUse
- - skill{s=m1ji_GenesisRuby_airAttack} ~onAttack
+ - skill{s=m1ji_GenesisRuby_airAttck} ~onSwing
  Hide:
  - ENCHANTS
  - UNBREAKABLE
