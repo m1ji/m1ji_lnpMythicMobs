@@ -629,6 +629,7 @@ m1ji_GenesisAmethyst_Use:
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - skill{s=m1ji_GenesisAmethyst_Use2}
+ - sound{s=item.trident.throw;v=1.5;p=1.88} @self
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
      - e:p{c=#f6ecff;a=15;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
@@ -687,6 +688,7 @@ m1ji_GenesisAmethyst_Use2:
  - sound{s=block.note_block.chime;v=2;p=1.21;delay=6} @self
  - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self
  - delay 21
+ - sound{s=item.trident.throw;v=1.5;p=1.88} @self
  - p{oT=[
      - e:p{p=falling_dust;m=purpur_block;a=2} @origin
      - e:p{c=#f6ecff;a=7;hS=0.45;vS=0.45;size=0.5;repeat=2;repeatInterval=1} @origin
