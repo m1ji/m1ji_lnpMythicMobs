@@ -535,9 +535,9 @@ m1ji_GenesisRuby_Use:
 
 genesisruby_airoT:
  Skills:
- - auraremove{aura=genesisruby_air} @self ?onground{}
  - message{m="空中"} ?onground{}
  - message{m="not 空中"} ?!onground{}
+ - auraremove{aura=genesisruby_air} @self ?onground{}
  - onattack{oH=genesisruby_airAttack;auraName=genesisruby_airAttack;d=1} ?!onground{}
 
 genesisruby_airAttack:
