@@ -628,59 +628,59 @@ m1ji_GenesisAmethyst_Use:
  - setVar{var=caster.genesisamethyst_ct;val=1} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
- - sound{s=block.note_block.chime;v=2;p=1.42;delay=3} @self
- - sound{s=block.note_block.chime;v=2;p=1.29;delay=3} @self
- - sound{s=block.note_block.chime;v=2;p=1.25;delay=6} @self
- - sound{s=block.note_block.chime;v=2;p=1.21;delay=6} @self
- - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true} @TL
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;sfo=0.25} @TL
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;sfo=1} @TL
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20;sfo=0.25} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=20;sfo=1} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20;sfo=0.25} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - p{oH=m1ji_GenesisAmethystUse_oH;oT=m1ji_GenesisAmethyst_Use2;hR=0.5;vS=0.5;i=1;mr=25;d=50;v=20;sE=false;sB=true;hO=-20;sfo=1} @TL ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- 
-m1ji_GenesisAmethystUse_oH:
- Skills:
- - damage{a=8;type=none}
- - e:p{p=sweep_attack;hS=0.5;vS=2;a=3}
-
-m1ji_GenesisAmethyst_Use2:
- Skills:
- - e:p{p=falling_dust;m=purpur_block;a=1} @origin
- - totem{oS=[
-     - e:p{p=reddust;c=#ff90f6;a=3;fo=true;size=0.75} @origin
+ - sound{s=block.note_block.chime;v=2;p=1.42;delay=3} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - sound{s=block.note_block.chime;v=2;p=1.29;delay=3} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - sound{s=block.note_block.chime;v=2;p=1.25;delay=6} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - sound{s=block.note_block.chime;v=2;p=1.21;delay=6} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - sound{s=block.note_block.chime;v=2;p=1.14;delay=14} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
      ];
-     oE=[
-     - sound{s=item.trident.riptide_3;v=0.15;p=2}
-     - e:p{p=instant_effect;a=1;fo=true} @origin
-     - e:p{c=#956DAF;hS=0.05;vS=0.05;fo=true;a=2} @origin
-     - e:p{c=#f6ecff;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-     - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-     - e:p{c=#5ffffa;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-     - damage{fo=true;a=15} @EntitiesNearOrigin{r=1;limit=1;ignore=players;sort=NEAREST}
+     oH=[
+     - damage{a=15;ia=true}
+     - damage{a=20;pi=true}
      ];
-     d=21;
-     yo=0
-     } @origin
- - totem{oS=[
-     - e:p{p=reddust;c=#ff90f6;a=3;fo=true;size=0.75} @origin
+     v=25;
+     i=1;
+     hnp=true;
+     hp=false;
+     hR=2.5;
+     vR=2.5;
+     hto=true
+     } @EIR{r=5;limit=5;sort=RANDOM} 
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
      ];
-     oE=[
-     - sound{s=item.trident.riptide_3;v=0.15;p=2}
-     - e:p{p=instant_effect;a=1;fo=true} @origin
-     - e:p{c=#956DAF;hS=0.05;vS=0.05;fo=true;a=2} @origin
-     - e:p{c=#f6ecff;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-     - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-     - e:p{c=#5ffffa;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
-     - damage{fo=true;a=15} @EntitiesNearOrigin{r=1;limit=1;ignore=players;sort=NEAREST}
+     oH=[
+     - damage{a=10;ia=true}
+     - damage{a=20;pi=true}
      ];
-     d=32;
-     yo=0
-     } @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     v=25;
+     i=1;
+     hR=2;
+     vR=2;
+     hnp=true;
+     hp=false;
+     hO=10
+     } @TL
+ - p{oT=[
+     - e:p{p=falling_dust;m=purpur_block;a=2} @origin
+     - e:p{c=#956DAF;a=15;hS=0.45;vS=0.45;size=0.45} @origin
+     ];
+     oH=[
+     - damage{a=10;ia=true}
+     - damage{a=20;pi=true}
+     ];
+     v=25;
+     i=1;
+     hR=2;
+     vR=2;
+     hnp=true;
+     hp=false;
+     hO=-10
+     } @TL
      
 m1ji_GenesisAmethyst_Swing:
  Cooldown: 8+(<caster.var.genesisamethyst_ct>*2)
