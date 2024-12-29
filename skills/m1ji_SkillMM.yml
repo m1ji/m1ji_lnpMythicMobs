@@ -624,6 +624,8 @@ m1ji_GenesisAmethyst_Use:
  - aura{auraName=clsilent;d=20} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
+ - sound{s=block.note_block.chime;v=2;p=1.42;delay=3} @self
+ - sound{s=block.note_block.chime;v=2;p=1.29;delay=3} @self
  - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false} @TL
  - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.25} @TL
  - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.5} @TL
@@ -644,7 +646,7 @@ m1ji_GenesisAmethyst_Use2:
      - e:p{p=reddust;c=#ff90f6;a=3;fo=true;size=0.75} @origin
      ];
      oE=[
-     - sound{s=item.trident.riptide_3;v=0.5;p=2}
+     - sound{s=item.trident.riptide_3;v=0.2;p=2}
      - e:p{p=flame;a=1;fo=true} @origin
      - e:p{c=#956DAF;hS=0.05;vS=0.05;fo=true;a=2} @origin
      - e:p{c=#f6ecff;hS=0.05;vS=0.05;fo=true;a=2} @origin
