@@ -539,6 +539,8 @@ genesisruby_airoT:
  - message{m="not 空中"} ?onground{}
 
 m1ji_GenesisRuby_airAttack:
+ Conditions:
+ - hasaura genesisruby_air true
  Skills:
  - message{m="なぐれた！"}
  - auraremove{aura=genesisruby_air}
