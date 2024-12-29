@@ -739,6 +739,79 @@ m1ji_GenesisAmethyst_Swing:
      sB=false
      } @EIR{r=7.5;ignore=players;limit=2+<caster.var.genesisamethyst_ct>}
 
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+m1ji_GenesisAquamarine_Use:
+ Cooldown: 10
+ Conditions:
+ - wearing{s=HAND;m=PvE_Weapon_GenesisAquamarine_m1ji_} true
+ Skills:
+ - setvariable{var=caster.ice_field_ct;val=160;type=INTEGER} @self
+ - aura{auraName=<caster.var.ice_field_ct>}
+ - setvariable{var=caster.genesisaqua2_x;value=<caster.l.x.double>;type=FLOAT} @self
+ - setvariable{var=caster.genesisaqua2_z;value=<caster.l.z.double>;type=FLOAT} @self
+ - setvariable{var=skill.ice_ensyutu;value=-3;type=FLOAT} @self
+ - variableadd{var=skill.ice_ensyutu;amount=0.15;repeat=90;repeatInterval=1}
+ - potion{t=SLOW;d=20;l=2} @self
+ - totem{oE=[
+         - totem{oT=GenesisAquamarine_UseTotem;d=<caster.var.ice_field_ct>}
+         - aura{auraname=genesisaqua2;oT=GenesisAquamarine_Use2;d=160;i=1} @self
+         ];
+         d=50
+         } @selfLocation{y=-1.85}
+ - p{oT=[
+     - e:p{p=snowflake} @origin
+     ];
+     oE=[
+     - totem{oT=[
+         - e:pr{c=#2ECCFA;r=<skill.var.ice_ensyutu>;a=1;points=30;fo=true;cd=0.05} @origin
+         - e:pr{p=snowflake;r=<skill.var.ice_ensyutu>;a=1;points=30;fo=true;cd=0.05} @origin
+         - e:pr{c=#2ECCFA;r=<skill.var.ice_ensyutu>;a=1;points=50;fo=true;cd=0.05;audience=caster} @origin
+         - e:pr{p=snowflake;r=<skill.var.ice_ensyutu>;a=1;points=50;fo=true;cd=0.05;audience=caster} @origin
+         ];
+         d=30;
+         fo=true
+         } @origin
+     ];
+     v=10;
+     d=30;
+     mr=10;
+     vO=90;
+     sB=false;
+     sE=false
+     }
+ - delay 211
+  
+GenesisAquamarine_Use2:
+  Skills:
+  - setvariable{var=caster.genesisaqua2_1x;value=(<caster.var.genesisaqua2_x>-<caster.l.x>)*(<caster.var.genesisaqua2_x>-<caster.l.x>);type=FLOAT} @self
+  - setvariable{var=caster.genesisaqua2_1z;value=(<caster.var.genesisaqua2_z>-<caster.l.z>)*(<caster.var.genesisaqua2_z>-<caster.l.z>);type=FLOAT} @self
+  - setvariable{var=caster.genesisaqua2_1;value=<caster.var.genesisaqua2_1x>+<caster.var.genesisaqua2_1z>;type=FLOAT} @self
+  - skill{s=GenesisAquamarine_Use3} @self
+  - skill{s=GenesisAquamarine_Use4} @self
+  
+GenesisAquamarine_Use3:
+  Conditions:
+  - variableInRange{var=caster.genesisaqua2_1;value=<65} true
+  Skills:
+  - heal{a=(<caster.mhp>/20+2);cd=1.5} @self
+  - potion{t=SPEED;d=10;l=1} @self
+  
+GenesisAquamarine_Use4:
+  Conditions:
+  - variableInRange{var=caster.genesisaqua2_1;value=>64} true
+  Skills:
+
+GenesisAquamarine_UseTotem:
+ Skills:
+# - potion{t=SLOW;d=10;l=1} @EntitiesNearOrigin{r=7.5}
+ - e:pr{p=snowflake;hS=2;vS=5;r=5.7;cd=1.5;audience=world} @origin 
+ - e:pr{p=snowflake;hS=2;vS=5;r=5.7;cd=0.3;audience=caster} @origin 
+ - e:pr{c=#7401DF;r=7.5;points=75;cd=1;audience=world} @origin
+ - e:pr{c=#2ECCFA;r=7.5;points=150;cd=1;audience=caster} @origin
+ - freeze{ticks=200;cd=1.25} @trigger @EntitiesNearOrigin{r=7.5}
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
 #

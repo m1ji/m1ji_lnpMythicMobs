@@ -231,6 +231,35 @@ PvE_Weapon_GAmethyst2_m1ji_:
  Options:
    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjNiMDk4YWE0ODQ0OWExYjkzNDRlMzA1YTFhMzE5YmUwNmZiYzc0NDNmN2UyZThlMjU2YzRkY2NlMjA5MzJhMyJ9fX0=
 
+PvE_Weapon_GenesisAquamarine_m1ji_:
+ Id: stick
+ Model: 112
+ Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#a9dbff>Aquamarine'
+ Lore:
+ - '&f平和である'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル1 [<gradient:#e5caf1:#544761>&l誓いと盟約</gradient>&r]'
+ - '&f発動条件: 左クリック / CT: 10秒'
+ - '&fダメージ: 4-20 属性: &fnone'
+ - '&f自身の周囲と敵の位置に亜空間を出現させ、短時間ダメージを与える'
+ - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
+ - '&fスキル2 [<gradient:#9b83b5:#f2def7>&l紫水の如く</gradient>&r]'
+ - '&f発動条件: 右クリック / CT: なし'
+ - '&fダメージ: 15 属性: &fnone'
+ - '&f一発目で弾道を確定させ、一秒後にその弾道上の敵にダメージを与える'
+ Skills:
+ - skill{s=m1ji_GenesisAquamarine_Use} ~onUse
+#  - skill{s=m1ji_GenesisAquamarine_Swing} ~onSwing
+ Hide:
+ - ENCHANTS
+ - UNBREAKABLE
+ - ATTRIBUTES
+ Options:
+  Unbreakable: true
+ Enchantments:
+ - PROTECTION_ENVIRONMENTAL:6
+
+
 
 PvE_Weapon_GenesisDiamond_m1ji_:
  Id: diamond
