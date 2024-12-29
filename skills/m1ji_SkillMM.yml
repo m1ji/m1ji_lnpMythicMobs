@@ -665,6 +665,22 @@ m1ji_GenesisAmethyst_Use2:
      d=21;
      yo=0
      } @origin
+ - totem{oS=[
+     - e:p{p=reddust;c=#ff90f6;a=3;fo=true;size=0.75} @origin
+     ];
+     oE=[
+     - sound{s=item.trident.riptide_3;v=0.15;p=2}
+     - e:p{p=instant_effect;a=1;fo=true} @origin
+     - e:p{c=#956DAF;hS=0.05;vS=0.05;fo=true;a=2} @origin
+     - e:p{c=#f6ecff;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{p=glow;a=1;fo=true} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - e:p{c=#5ffffa;hS=0.12;vS=0.12;fo=true;a=2;size=0.75} @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
+     - damage{fo=true;a=15} @EntitiesNearOrigin{r=1.5;limit=1;ignore=players;sort=NEAREST}
+     - damage{fo=true;a=10;ia=true} @EntitiesNearOrigin{r=1.5;limit=1;ignore=players;sort=NEAREST}
+     ];
+     d=32;
+     yo=0
+     } @origin ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
      
 m1ji_GenesisAmethyst_Swing:
  Cooldown: 8+(<caster.var.genesisamethyst_ct>*2)
