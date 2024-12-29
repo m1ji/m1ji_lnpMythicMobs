@@ -543,6 +543,7 @@ m1ji_GenesisRuby_airAttack:
  - e:p{p=sweep_attack;hS=1.5;vS=1.75;a=10;repeat=1;repeatInterval=3}
  - sound{s=entity.iron_golem.repair;v=1.5;p=2}
  - sound{s=entity.zombie.attack_iron_door;v=1.5;p=1.85}
+ - sound{s=block.small_amethyst_bud.break ;v=2;p=1.55;repeat=3;repeatInterval=2} 
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////////
