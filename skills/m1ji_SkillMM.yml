@@ -507,7 +507,7 @@ GenesisRuby_Attack_oE:
  - wearing{s=HAND;m=PvE_Weapon_GenesisRuby_m1ji_} true
  Skills:
  - aura{auraName=genesisruby_air;d=40} @self ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - e:lightning{} 
+ - e:lightning{} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - stopsound{s=entity.lightning_bolt.thunder} @origin
  - sound{s=entity.generic.burn;v=1;p=1.5;repeat=3;repeaetInterval=3}
  - sound{s=entity.breeze.shoot;v=1;p=2}
@@ -548,7 +548,7 @@ m1ji_GenesisRuby_airAttack:
  - sound{s=block.small_amethyst_bud.break ;v=2;p=1.55;repeat=3;repeatInterval=2} 
  - delay 10
  - sound{s=item.trident.thunder;v=1.5;p=2}
- - e:lightning{} @target
+ - e:lightning{} @target 
  - damage{a=15;type=none} @target
 
 
@@ -557,7 +557,7 @@ m1ji_GenesisRuby_airAttack:
 # //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 m1ji_GenesisTourmaline_Use:
- Coooldown: 1+<caster.var.genesistourmaline_plus>
+ Coooldown: 13+<caster.var.genesistourmaline_plus>
  Conditions:
  - wearing{s=HAND;m=PvE_Weapon_GenesisTourmaline_m1ji_} true
  - hasMana{a=>80} true
