@@ -535,8 +535,8 @@ m1ji_GenesisRuby_Use:
 
 genesisruby_airoT:
  Skills:
- - message{m="空中"} ?!onground{}
- - message{m="not 空中"} ?onground{}
+ - message{m="<skill.var.aura-name>"}
+
 
 m1ji_GenesisRuby_airAttack:
  Conditions:
