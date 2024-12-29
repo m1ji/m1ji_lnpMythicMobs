@@ -535,7 +535,7 @@ m1ji_GenesisRuby_Use:
 
 genesisruby_airoT:
  Skills:
- - message{m="<skill.var.aura-name>"}
+ - message{m="<caster.name> <skill.var.aura-name>"}
 
 m1ji_GenesisRuby_airAttack:
  Conditions:
@@ -563,7 +563,7 @@ m1ji_GenesisTourmaline_Use:
  Skills:
  - modifyMana{a=-80} @self
  - aura{auraName=genesistourmaline_charge;d=56;oS=m1ji_GenesisTourmaline_oS;oT=m1ji_GenesisTourmaline_oT;oE=m1ji_GenesisTourmaline_oE;bt=true;
-    bartimerdisplay="Tourmalineチャージ時間";bartimecolor="WHITE";bartimerstyle="SEGMENTED_10"} @self
+    bartimerdisplay="Tourmalineチャージ時間";bartimercolor="WHITE";bartimerstyle=SEGMENTED_10} @self
  
 m1ji_GenesisTourmaline_oS:
  Skills:
