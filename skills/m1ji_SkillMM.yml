@@ -626,6 +626,9 @@ m1ji_GenesisAmethyst_Use:
  - sound{s=block.note_block.chime;v=2;p=1.57} @self
  - sound{s=block.note_block.chime;v=2;p=1.42;delay=3} @self
  - sound{s=block.note_block.chime;v=2;p=1.29;delay=3} @self
+ - sound{s=block.note_block.chime;v=2;p=1.25;delay=6} @self
+ - sound{s=block.note_block.chime;v=2;p=1.21;delay=6} @self
+ - sound{s=block.note_block.chime;v=2;p=1.14;delay=15} @self
  - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false} @TL
  - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.25} @TL
  - p{oT=m1ji_GenesisAmethyst_Use2;i=1;mr=100;d=50;v=20;sE=false;sB=false;sfo=0.5} @TL
