@@ -161,7 +161,7 @@ PvE_Weapon_GenesisRuby_m1ji_:
  Options:
   Unbreakable: true
   ItemVersion: 1
-  Group: 'Main-Weapon'
+  Group: 'Melee-Weapon'
  Enchantments:
  - PROTECTION_ENVIRONMENTAL:6
 
