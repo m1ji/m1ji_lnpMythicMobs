@@ -865,13 +865,14 @@ m1ji_GenesisAmethyst_Swing:
 #  - freeze{ticks=200;cd=1.25} @EntitiesNearOrigin{r=7.5;ignore=players}
 
 m1ji_GenesisAquamarine_Swing:
- Cooldown: 0.25
+ Cooldown: 0.3
  Skills:
+ - aura{n=genesisaqua_swing;ms=3;rd=true;t=30;bartimertxt="聡明の矢 チャージ <skill.var.genesisaqua_swing-stacks>/3"}
  - p{oS=[
     - e:ps{size=0.5;c=#67cef3;r=0.5;a=15;fo=true}
     ];
     oT=[
-    - e:p{p=instant_effect;cd=0.1;;hS=0.5;vS=0.5fo=true}
+    - e:p{p=instant_effect;cd=0.1;;hS=0.05;vS=0.05;a=2;fo=true}
     - e:p{c=43cdff;size=0.7;fo=true;a=10;hS=0.5;vS=0.5}
     ];
     v=20;
