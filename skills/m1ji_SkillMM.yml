@@ -871,8 +871,8 @@ m1ji_GenesisAquamarine_Swing:
     - e:ps{size=0.5;c=#67cef3;r=0.5;a=15;fo=true}
     ];
     oT=[
-    - e:p{p=ominous_spawning;cd=0.1;fo=true}
-    - e:p{c=43cdff;size=0.7;fo=true}
+    - e:p{p=instant_effect;cd=0.1;;hS=0.5;vS=0.5fo=true}
+    - e:p{c=43cdff;size=0.7;fo=true;a=10;hS=0.5;vS=0.5}
     ];
     v=20;
     mr=17;
