@@ -796,73 +796,94 @@ m1ji_GenesisAmethyst_Swing:
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 # //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-m1ji_GenesisAquamarine_Use:
- Cooldown: 10
- Conditions:
- - wearing{s=HAND;m=PvE_Weapon_GenesisAquamarine_m1ji_} true
- Skills:
- - setvariable{var=caster.ice_field_ct;val=160;type=INTEGER} @self
- - aura{auraName=<caster.var.ice_field_ct>}
- - setvariable{var=caster.genesisaqua2_x;value=<caster.l.x.double>;type=FLOAT} @self
- - setvariable{var=caster.genesisaqua2_z;value=<caster.l.z.double>;type=FLOAT} @self
- - setvariable{var=skill.ice_ensyutu;value=-3;type=FLOAT} @self
- - variableadd{var=skill.ice_ensyutu;amount=0.15;repeat=90;repeatInterval=1}
- - potion{t=SLOW;d=20;l=2} @self
- - totem{oE=[
-         - totem{oT=GenesisAquamarine_UseTotem;d=<caster.var.ice_field_ct>} @origin{y=-1.25}
-         - aura{auraname=genesisaqua2;oT=GenesisAquamarine_Use2;d=160;i=1} @self
-         ];
-         md=50;
-         sB=false;
-         sE=false;
-         hp=false;
-         hnp=false
-         } @selfLocation{y=0.5}
- - p{oT=[
-     - e:p{p=snowflake} @origin
-     ];
-     oE=[
-     - totem{oT=[
-         - e:pr{c=#2ECCFA;r=<skill.var.ice_ensyutu>;a=1;points=30;fo=true;cd=0.05} @origin
-         - e:pr{p=snowflake;r=<skill.var.ice_ensyutu>;a=1;points=30;fo=true;cd=0.05;audience=caster} @origin
-         - e:pr{c=#2ECCFA;r=<skill.var.ice_ensyutu>;a=1;points=50;fo=true;cd=0.05;audience=caster} @origin
-         - e:pr{p=snowflake;r=<skill.var.ice_ensyutu>;a=1;points=50;fo=true;cd=0.05;audience=caster} @origin
-         ];
-         d=30;
-         fo=true
-         } @origin
-     ];
-     v=10;
-     d=30;
-     mr=10;
-     vO=90;
-     sB=false;
-     sE=false
-     }
- - delay 211
+# m1ji_GenesisAquamarine_Use:
+#  Cooldown: 10
+#  Conditions:
+#  - wearing{s=HAND;m=PvE_Weapon_GenesisAquamarine_m1ji_} true
+#  Skills:
+#  - setvariable{var=caster.ice_field_ct;val=160;type=INTEGER} @self
+#  - aura{auraName=<caster.var.ice_field_ct>}
+#  - setvariable{var=caster.genesisaqua2_x;value=<caster.l.x.double>;type=FLOAT} @self
+#  - setvariable{var=caster.genesisaqua2_z;value=<caster.l.z.double>;type=FLOAT} @self
+#  - setvariable{var=skill.ice_ensyutu;value=-3;type=FLOAT} @self
+#  - variableadd{var=skill.ice_ensyutu;amount=0.15;repeat=90;repeatInterval=1}
+#  - potion{t=SLOW;d=20;l=2} @self
+#  - totem{oE=[
+#          - totem{oT=GenesisAquamarine_UseTotem;d=<caster.var.ice_field_ct>} @origin{y=-1.25}
+#          - aura{auraname=genesisaqua2;oT=GenesisAquamarine_Use2;d=160;i=1} @self
+#          ];
+#          md=50;
+#          sB=false;
+#          sE=false;
+#          hp=false;
+#          hnp=false
+#          } @selfLocation{y=0.5}
+#  - p{oT=[
+#      - e:p{p=snowflake} @origin
+#      ];
+#      oE=[
+#      - totem{oT=[
+#          - e:pr{c=#2ECCFA;r=<skill.var.ice_ensyutu>;a=1;points=30;fo=true;cd=0.05} @origin
+#          - e:pr{p=snowflake;r=<skill.var.ice_ensyutu>;a=1;points=30;fo=true;cd=0.05;audience=caster} @origin
+#          - e:pr{c=#2ECCFA;r=<skill.var.ice_ensyutu>;a=1;points=50;fo=true;cd=0.05;audience=caster} @origin
+#          - e:pr{p=snowflake;r=<skill.var.ice_ensyutu>;a=1;points=50;fo=true;cd=0.05;audience=caster} @origin
+#          ];
+#          d=30;
+#          fo=true
+#          } @origin
+#      ];
+#      v=10;
+#      d=30;
+#      mr=10;
+#      vO=90;
+#      sB=false;
+#      sE=false
+#      }
+#  - delay 211
   
-GenesisAquamarine_Use2:
-  Skills:
-  - setvariable{var=caster.genesisaqua2_1x;value=(<caster.var.genesisaqua2_x>-<caster.l.x>)*(<caster.var.genesisaqua2_x>-<caster.l.x>);type=FLOAT} @self
-  - setvariable{var=caster.genesisaqua2_1z;value=(<caster.var.genesisaqua2_z>-<caster.l.z>)*(<caster.var.genesisaqua2_z>-<caster.l.z>);type=FLOAT} @self
-  - setvariable{var=caster.genesisaqua2_1;value=<caster.var.genesisaqua2_1x>+<caster.var.genesisaqua2_1z>;type=FLOAT} @self
-  - skill{s=GenesisAquamarine_Use3} @self
+# GenesisAquamarine_Use2:
+#   Skills:
+#   - setvariable{var=caster.genesisaqua2_1x;value=(<caster.var.genesisaqua2_x>-<caster.l.x>)*(<caster.var.genesisaqua2_x>-<caster.l.x>);type=FLOAT} @self
+#   - setvariable{var=caster.genesisaqua2_1z;value=(<caster.var.genesisaqua2_z>-<caster.l.z>)*(<caster.var.genesisaqua2_z>-<caster.l.z>);type=FLOAT} @self
+#   - setvariable{var=caster.genesisaqua2_1;value=<caster.var.genesisaqua2_1x>+<caster.var.genesisaqua2_1z>;type=FLOAT} @self
+#   - skill{s=GenesisAquamarine_Use3} @self
   
-GenesisAquamarine_Use3:
-  Conditions:
-  - variableInRange{var=caster.genesisaqua2_1;value=<65} true
-  Skills:
-  - heal{a=(<caster.mhp>/20+2);cd=1.5} @self
-  - potion{t=SPEED;d=10;l=1} @self
+# GenesisAquamarine_Use3:
+#   Conditions:
+#   - variableInRange{var=caster.genesisaqua2_1;value=<65} true
+#   Skills:
+#   - heal{a=(<caster.mhp>/20+2);cd=1.5} @self
+#   - potion{t=SPEED;d=10;l=1} @self
 
-GenesisAquamarine_UseTotem:
+# GenesisAquamarine_UseTotem:
+#  Skills:
+# # - potion{t=SLOW;d=10;l=1} @EntitiesNearOrigin{r=7.5}
+#  - e:pr{p=snowflake;hS=2;vS=5;r=5.7;cd=1.5;audience=caster} @origin 
+#  - e:pr{p=snowflake;hS=2;vS=5;r=5.7;cd=0.3;audience=caster} @origin 
+#  - e:pr{c=#7401DF;r=7.5;points=75;cd=1;audience=caster} @origin
+#  - e:pr{c=#2ECCFA;r=7.5;points=150;cd=1;audience=caster} @origin
+#  - freeze{ticks=200;cd=1.25} @EntitiesNearOrigin{r=7.5;ignore=players}
+
+m1ji_GenesisAquamarine_Swing:
+ Cooldown: 0.25
  Skills:
-# - potion{t=SLOW;d=10;l=1} @EntitiesNearOrigin{r=7.5}
- - e:pr{p=snowflake;hS=2;vS=5;r=5.7;cd=1.5;audience=caster} @origin 
- - e:pr{p=snowflake;hS=2;vS=5;r=5.7;cd=0.3;audience=caster} @origin 
- - e:pr{c=#7401DF;r=7.5;points=75;cd=1;audience=caster} @origin
- - e:pr{c=#2ECCFA;r=7.5;points=150;cd=1;audience=caster} @origin
- - freeze{ticks=200;cd=1.25} @EntitiesNearOrigin{r=7.5;ignore=players}
+ - p{oS=[
+    - e:ps{size=0.5;c=#67cef3;r=0.5;a=15;fo=true}
+    ];
+    oT=[
+    - e:p{p=ominous_spawning;cd=0.1;fo=true}
+    - e:p{c=43cdff;size=0.7;fo=true}
+    ];
+    v=20;
+    mr=17;
+    i=1;
+    sE=true;sB=true;hp=false;hnp=true;g=0.05;b=arrow;
+    } @EIC{a=70;r=15;sort=NEAREST;limit=1}
+
+
+
+
+
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
 #
