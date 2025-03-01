@@ -902,21 +902,21 @@ m1ji_GenesisAquamarine_Shoot1:
  Conditions:
  - hasaura genesisaqua_mark false
  Skills:
- - cancelevent
+ - cancelevent{}
 
-m1ji_GenesisAquamarine_Shoot2:
- Conditions:
- - hasaura genesisaqua_mark true
- Skills:
- - raytrace{
-    es=[
-    - damage{a=5}
-    ];
-    ls=[
-    - e:p{c=#8cc8ff}
-    ];
-    ac=1;rw=0.1;
- } @TL
+# m1ji_GenesisAquamarine_Shoot2:
+#  Conditions:
+#  - hasaura genesisaqua_mark true
+#  Skills:
+#  - raytrace{
+#     es=[
+#     - damage{a=5}
+#     ];
+#     ls=[
+#     - e:p{c=#8cc8ff}
+#     ];
+#     ac=1;rw=0.1
+#  } @TL
 
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
