@@ -883,7 +883,7 @@ m1ji_GenesisAquamarine_Swing:
         - e:ps{size=0.25;c=#67cef3;r=0.25;a=40;fo=true;audience=trigger}
         ];d=200
         } ?hasaurastacks{n=genesisaqua_swing;s=>7}
-    ]
+    ];
     v=30;mr=20;i=1;sE=true;sB=true;hp=false;hnp=true;g=0.05;b=arrow;
     } @EIC{a=70;r=20;sort=NEAREST;limit=1}
  - skill{s=m1ji_GenesisAquamarine_Swing_Check}
