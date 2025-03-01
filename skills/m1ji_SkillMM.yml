@@ -867,7 +867,8 @@ m1ji_GenesisAmethyst_Swing:
 m1ji_GenesisAquamarine_Swing:
  Cooldown: 0.3
  Skills:
- - aura{n=genesisaqua_swing;ms=3;rd=true;t=30;bartimertext="聡明の矢 チャージ <skill.var.genesisaqua_swing-stacks>/3";i=1} @self
+ - aura{n=genesisaqua_swing;ms=3;rd=true;t=30;
+    bartimerdisplay="聡明の矢 <skill.var.genesisaqua_swing-stacks><&fs>3";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10;bartimertext="";i=1} @self
  - p{oS=[
     - e:ps{size=0.5;c=#67cef3;r=0.5;a=15;fo=true}
     ];
