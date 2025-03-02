@@ -911,15 +911,15 @@ m1ji_GenesisAquamarine_Shoot1:
     ];
     oH=[
     - damage{a=10}
-    - sudoskill{s=m1ji_GenesisAqua_Leap} @target
+    - sudoskill{s=m1ji_GenesisAqua_Leap}
     ];
     v=35;mr=25;i=1;sE=true;sB=true;hp=false;hnp=true;b=arrow;
     } @EIC{a=15;r=25;sort=NEAREST;limit=1}
 
 m1ji_GenesisAqua_Leap:
  Skills:
- - leap{v=-600;repeat=1;repeatInterval=1} @trigger{y=-1}
- - leap{v=-400;repeat=1;delay=2} @trigger{y=-1}
+ - leap{v=-600;repeat=1;repeatInterval=1} @origin{y=-1}
+ - leap{v=-400;repeat=1;delay=2} @origin{y=-1}
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
