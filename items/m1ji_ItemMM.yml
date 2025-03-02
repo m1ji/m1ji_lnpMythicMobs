@@ -276,9 +276,9 @@ PvE_Weapon_GenesisAquamarine_m1ji_:
  - '&f属性: &f自然' 
  - '&f印が存在する時のみ発動可能。Hitした敵の元へ素早くダッシュし、連撃を与え後退する'
  Skills:
- - skill{s=m1ji_GenesisAquamarine_Shoot} ~onShoot ?targetinlineofsight
- - skill{s=m1ji_GenesisAquamarine_Swing} ~onSwing
- - skill{s=m1ji_GenesisAquamarine_crouchSwing} ~onSwing
+ - skill{s=m1ji_GenesisAquamarine_Shoot} ~onShoot
+ - skill{s=m1ji_GenesisAquamarine_Swing} ~onSwing ?targetinlineofsight
+ - skill{s=m1ji_GenesisAquamarine_crouchSwing} ~onSwing ?targetinlineofsight
  Hide:
  - ENCHANTS
  - UNBREAKABLE
