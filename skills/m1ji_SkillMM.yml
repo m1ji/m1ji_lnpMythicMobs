@@ -868,7 +868,7 @@ m1ji_GenesisAquamarine_Swing:
  Skills:
  - skill{s=m1ji_GenesisAquamarine_Swing1} ?!wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
  - skill{s=m1ji_GenesisAquamarine_Swing2} ?wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_}
- - skill{s=m1ji_GenesisAquamarine_Swing_Check}
+ - skill{s=m1ji_GenesisAquamarine_Swing_Check1}
  - skill{s=m1ji_GenesisAquamarine_Swing_Check2}
 
 m1ji_GenesisAquamarine_Swing1:
