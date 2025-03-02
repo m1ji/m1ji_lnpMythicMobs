@@ -1078,7 +1078,7 @@ m1ji_GenesisAquamarine_Shoot2:
      oH=[
      - damage{a=3}
      ];
-     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=1
+     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=3;repeatInterval=2
      }
  - slash{oS=[
      - sound{s=entity.witch.throw;v=1.2;p=0.5}
@@ -1090,7 +1090,7 @@ m1ji_GenesisAquamarine_Shoot2:
      oH=[
      - damage{a=3}
      ];
-     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=1;delay=10
+     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=2;repeatInterval=1;delay=14
      }
     
 
