@@ -278,6 +278,7 @@ PvE_Weapon_GenesisAquamarine_m1ji_:
  Skills:
  - skill{s=m1ji_GenesisAquamarine_Shoot} ~onShoot
  - skill{s=m1ji_GenesisAquamarine_Swing} ~onSwing
+ - skill{s=m1ji_GenesisAquamarine_crouchSwing} ~onSwing
  Hide:
  - ENCHANTS
  - UNBREAKABLE
