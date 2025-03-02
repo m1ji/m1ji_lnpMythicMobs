@@ -867,11 +867,10 @@ m1ji_GenesisAmethyst_Swing:
 m1ji_GenesisAquamarine_Swing:
  Cooldown: 0.55
  Conditions:
- - hasaura genesisaqua_swingct false
  - crouching{} false
  Skills:
  - aura{n=genesisaqua_swing;d=30;c=7;ms=7;
-    bartimerdisplay="聡明の矢 <skill.var.aura-stacks><&fs>7";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10;bt=true} @self
+    bartimerdisplay="聡明の矢 <skill.var.aura-stacks><&fs>7";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10;bt=true} @self ?!hasaura{n=genesisaqua_mark}
  - p{oS=[
     - sound{s=entity.firework_rocket.launch;v=1;p=1.5}
     - sound{s=block.amethyst_cluster.hit;v=1.15;p=1.6}
@@ -892,7 +891,6 @@ m1ji_GenesisAquamarine_Swing:
 m1ji_GenesisAquamarine_crouchSwing:
  Cooldown: 1.6
  Conditions:
- - hasaura genesisaqua_swingct false
  - crouching{} true
  Skills:
  - jump{v=0.8} @self
@@ -901,7 +899,7 @@ m1ji_GenesisAquamarine_crouchSwing:
  - disengage{v=0.5}
  - jump{v=-1} @self
  - aura{n=genesisaqua_swing;d=45;c=7;ms=7;
-    bartimerdisplay="聡明の矢 <skill.var.aura-stacks><&fs>7";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10;bt=true} @self
+    bartimerdisplay="聡明の矢 <skill.var.aura-stacks><&fs>7";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10;bt=true} @self ?!hasaura{n=genesisaqua_mark}
  - p{oS=[
     - sound{s=entity.firework_rocket.launch;v=1;p=1.5}
     - sound{s=block.amethyst_cluster.hit;v=1.15;p=1.6}
@@ -924,7 +922,6 @@ m1ji_GenesisAquamarine_Swing_Check:
  - hasaurastacks{n=genesisaqua_swing;s=>6} true
  Skills:
  - auraremove{n=genesisaqua_swing;delay=1}
- - aura{n=genesisaqua_swingct;d=200} @self
  - aura{n=genesisaqua_mark;d=200;bartimerdisplay="聡明の矢チャージ完了";bartimercolor=BLUE;bartimerstyle=SEGMENTED_10;bt=true} @self
 
 m1ji_GenesisAquamarine_Shoot:
