@@ -889,9 +889,9 @@ m1ji_GenesisAquamarine_Swing_Check:
  Conditions:
  - hasaurastacks{n=genesisaqua_swing;s=>7} true
  Skills:
- - auraremove{n=genesisaqua_swing}
+ - auraremove{n=genesisaqua_swing;delay=1}
  - aura{n=genesisaqua_swingct;d=200}
- - aura{n=genesisaqua_mark;d=200}
+ - aura{n=genesisaqua_mark;d=200;bartimerdisplay="聡明の矢チャージ完了";bartimercolor=BLUE;bartimerstyle=SEGMENTED_10;bt=true}
 
 m1ji_GenesisAquamarine_Shoot:
  Skills:
@@ -908,15 +908,18 @@ m1ji_GenesisAquamarine_Shoot2:
  Conditions:
  - hasaura genesisaqua_mark true
  Skills:
- - raytrace{
-    es=[
-    - damage{a=5}
+ - p{oS=[
+    - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
     ];
-    ls=[
-    - e:p{c=#8cc8ff}
+    oT=[
+    - e:p{p=instant_effect;cd=0.1;;hS=0.05;vS=0.05;a=2;fo=true;audience=caster}
+    - e:p{c=43cdff;size=0.7;a=10;hS=0.5;vS=0.5;fo=true;audience=caster}
     ];
-    ac=1;rw=0.1
- } @TL
+    oH=[
+    - damage{a=3}
+    ];
+    v=30;mr=25;i=1;sE=true;sB=true;hp=false;hnp=true;g=0.05;b=arrow;
+    } @EIC{a=70;r=25;sort=NEAREST;limit=1}
 
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
