@@ -262,16 +262,16 @@ PvE_Weapon_GAmethyst2_m1ji_:
 PvE_Weapon_GenesisAquamarine_m1ji_:
  Id: bow
  Model: 112
- Display: '<gradient:#cdffd4:#b8ebff>Genesis</gradient> &7ver. <#a9dbff>Aquamarine'
+ Display: '<gradient:#cdffd4:#86ddff>Genesis</gradient> &7ver. <#a9dbff>Aquamarine'
  Lore:
  - '&f幸福であれ'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
- - '&fスキル1 [<gradient:#e5caf1:#544761>&l聡明の矢</gradient>&r]'
+ - '&fスキル1 [<gradient:#86ddff:#cdffd4>&l聡明の矢</gradient>&r]'
  - '&f発動条件: 左クリック'
  - '&f属性: &f自然'
  - '&f前方の最も近い敵に向かって矢を飛ばす。一定数発射すると印が付く'
  - '-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
- - '&fスキル2 [<gradient:#9b83b5:#f2def7>&l勇敢なる者</gradient>&r]'
+ - '&fスキル2 [<gradient:#cdffd4:#86ddff>&l勇敢なる者</gradient>&r]'
  - '&f発動条件: 右クリック長押し'
  - '&f属性: &f自然' 
  - '&f印が存在する時のみ発動可能。Hitした敵の元へ素早くダッシュし、連撃を与え後退する'
