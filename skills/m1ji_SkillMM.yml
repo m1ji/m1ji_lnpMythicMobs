@@ -905,8 +905,8 @@ m1ji_GenesisAquamarine_Shoot1:
  Conditions:
  - hasaura genesisaqua_mark true
  Skills:
- - auraremove{n=genesisaqua_mark}
  - p{oS=[
+    - auraremove{n=genesisaqua_mark}
     - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
     ];
     oT=[
