@@ -895,7 +895,7 @@ m1ji_GenesisAquamarine_Swing1:
     } @EIC{a=70;r=20;sort=NEAREST;limit=1}
 
 m1ji_GenesisAquamarine_Swing2:
- Cooldown: 0.6
+ Cooldown: 0.55
  Conditions:
  - crouching{} false
  Skills:
