@@ -953,7 +953,7 @@ m1ji_GenesisAquamarine_crouchSwing1:
     v=30;mr=20;i=1;sE=true;sB=true;hp=false;hnp=true;g=0.05;b=arrow;repeat=2;repeatInterval=3;sso=-1to1;syo=0to1.25;sfo=0to0.3
     } @EIC{a=70;r=20;sort=NEAREST;limit=1}
 
-m1ji_GenesisAquamarine_crouchSwing1:
+m1ji_GenesisAquamarine_crouchSwing2:
  Cooldown: 1.15
  Conditions:
  - crouching{} true
