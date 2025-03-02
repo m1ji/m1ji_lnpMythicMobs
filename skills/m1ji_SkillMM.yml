@@ -899,7 +899,7 @@ m1ji_GenesisAquamarine_crouchSwing:
  - potion{t=LEVITATION;d=12;l=1} @self
  - delay 12
  - jump{v=-1} @self
- - aura{n=genesisaqua_swing;d=30;c=7;ms=7;
+ - aura{n=genesisaqua_swing;d=45;c=7;ms=7;
     bartimerdisplay="聡明の矢 <skill.var.aura-stacks><&fs>7";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10;bt=true} @self
  - p{oS=[
     - sound{s=entity.firework_rocket.launch;v=1;p=1.5}
