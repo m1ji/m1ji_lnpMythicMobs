@@ -916,6 +916,7 @@ m1ji_GenesisAquamarine_Shoot1:
     } @EIC{a=15;r=25;sort=NEAREST;limit=1}
  - slash{oS=[
      - sound{s=entity.witch.throw;v=1.2;p=0.5}
+     - sound{s=block.amethyst_cluster.hit;v=1.2;p=2}
      ];
      oP=[
      - effect:particles{p=CRIT}
@@ -923,10 +924,11 @@ m1ji_GenesisAquamarine_Shoot1:
      oH=[
      - damage{a=3}
      ];
-     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=3
+     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=5;repeatInterval=2
      }
  - slash{oS=[
      - sound{s=entity.witch.throw;v=1.2;p=0.5}
+     - sound{s=block.amethyst_cluster.hit;v=1.2;p=2}
      ];
      oP=[
      - effect:particles{p=CRIT}
