@@ -918,8 +918,8 @@ m1ji_GenesisAquamarine_Shoot1:
 
 m1ji_GenesisAqua_Leap:
  Skills:
- - leap{v=-600;repeat=1;repeatInterval=1} @origin{y=-1}
- - leap{v=-400;repeat=1;delay=2} @origin{y=-1}
+ - leap{v=-600;repeat=1;repeatInterval=1;fo=true} @trigger{y=-1}
+ - leap{v=-400;repeat=1;delay=2;fo=true} @trigger{y=-1}
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
