@@ -1057,7 +1057,6 @@ m1ji_GenesisAquamarine_Shoot2:
  - hasaura genesisaqua_mark true
  - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
  Skills:
- - leap{v=500} @forward{f=5;y=0.5}
  - p{oS=[
     - auraremove{n=genesisaqua_mark} @self
     - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
@@ -1072,6 +1071,9 @@ m1ji_GenesisAquamarine_Shoot2:
     ];
     v=35;mr=25;i=1;sE=true;sB=true;hp=false;hnp=true;b=arrow;
     } @EIC{a=15;r=25;sort=NEAREST;limit=1}
+ - leap{v=350} @EIC{a=15;r=25;sort=NEAREST;limit=1}
+ - leap{v=200;repeat=1;repeatInterval=1;delay=1} @EIC{a=15;r=25;sort=NEAREST;limit=1}
+ - delay 10
  - slash{oS=[
      - sound{s=entity.witch.throw;v=1.2;p=0.5}
      - sound{s=block.amethyst_cluster.hit;v=1.2;p=2}
@@ -1096,6 +1098,9 @@ m1ji_GenesisAquamarine_Shoot2:
      ];
      y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=1;delay=14
      }
+ - potion{t=LEVITATION;d=8;l=1} @self
+ - jump{v=0.5} @self
+ - disengage{v=0.5}
     
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
