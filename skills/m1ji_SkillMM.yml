@@ -1006,8 +1006,6 @@ m1ji_GenesisAquamarine_Shoot:
  - cancelevent{}
  - skill{s=m1ji_GenesisAquamarine_Shoot1}
  - skill{s=m1ji_GenesisAquamarine_Shoot2}
- - skill{s=m1ji_GenesisAquamarine_Swing_Check}
- - skill{s=m1ji_GenesisAquamarine_Swing_Check2}
 
 m1ji_GenesisAquamarine_Shoot1:
  Conditions:
@@ -1017,6 +1015,7 @@ m1ji_GenesisAquamarine_Shoot1:
  - p{oS=[
     - auraremove{n=genesisaqua_mark} @self
     - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
+    - skill{s=m1ji_GenesisAquamarine_Swing_Check1}
     ];
     oT=[
     - e:p{p=instant_effect;cd=0.1;;hS=0.05;vS=0.05;a=2;fo=true;audience=caster}
@@ -1060,6 +1059,7 @@ m1ji_GenesisAquamarine_Shoot2:
  - p{oS=[
     - auraremove{n=genesisaqua_mark} @self
     - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
+    - skill{s=m1ji_GenesisAquamarine_Swing_Check2}
     ];
     oT=[
     - e:p{p=instant_effect;cd=0.1;;hS=0.05;vS=0.05;a=2;fo=true;audience=caster}
