@@ -887,7 +887,7 @@ m1ji_GenesisAquamarine_Swing:
 
 m1ji_GenesisAquamarine_Swing_Check:
  Conditions:
- - hasaurastacks{n=genesisaqua_swing;s=>7} true
+ - hasaurastacks{n=genesisaqua_swing;s=>6} true
  Skills:
  - auraremove{n=genesisaqua_swing;delay=1}
  - aura{n=genesisaqua_swingct;d=200} @self
