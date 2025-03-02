@@ -1005,10 +1005,12 @@ m1ji_GenesisAquamarine_Shoot:
  Skills:
  - cancelevent{}
  - skill{s=m1ji_GenesisAquamarine_Shoot1}
+ - skill{s=m1ji_GenesisAquamarine_Shoot2}
 
 m1ji_GenesisAquamarine_Shoot1:
  Conditions:
  - hasaura genesisaqua_mark true
+ - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} false
  Skills:
  - p{oS=[
     - auraremove{n=genesisaqua_mark} @self
@@ -1033,7 +1035,7 @@ m1ji_GenesisAquamarine_Shoot1:
      oH=[
      - damage{a=3}
      ];
-     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=5;repeatInterval=2
+     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=1
      }
  - slash{oS=[
      - sound{s=entity.witch.throw;v=1.2;p=0.5}
@@ -1045,7 +1047,7 @@ m1ji_GenesisAquamarine_Shoot1:
      oH=[
      - damage{a=3}
      ];
-     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=1;repeatInterval=2;delay=20
+     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=1;delay=10
      }
     
 
