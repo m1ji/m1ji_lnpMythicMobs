@@ -911,7 +911,7 @@ m1ji_GenesisAquamarine_Shoot1:
     ];
     oH=[
     - damage{a=10}
-    - sudoskill{s=m1ji_GenesisAqua_Leap}
+    - sudoskill{s=m1ji_GenesisAqua_Leap} @target
     ];
     v=35;mr=25;i=1;sE=true;sB=true;hp=false;hnp=true;b=arrow;
     } @EIC{a=15;r=25;sort=NEAREST;limit=1}
