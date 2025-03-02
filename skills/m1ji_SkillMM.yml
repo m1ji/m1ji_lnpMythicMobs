@@ -1040,7 +1040,7 @@ m1ji_GenesisAquamarine_Shoot1:
      y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=5;repeatInterval=2
      }
  - slash{oS=[
-     - sound{s=entity.witch.throw;v=1.2;p=0.5}
+     - sound{s=entity.witch.throw;v=0.8;p=0.5}
      - sound{s=block.amethyst_cluster.hit;v=1.2;p=2}
      ];
      oP=[
@@ -1057,6 +1057,7 @@ m1ji_GenesisAquamarine_Shoot2:
  - hasaura genesisaqua_mark true
  - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
  Skills:
+ - sudoskill{s=m1ji_GenesisAquamarine_Velocity} @EIC{a=15;r=25;sort=NEAREST;limit=1}
  - p{oS=[
     - auraremove{n=genesisaqua_mark} @self
     - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
@@ -1087,7 +1088,7 @@ m1ji_GenesisAquamarine_Shoot2:
      y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=3;repeatInterval=2
      }
  - slash{oS=[
-     - sound{s=entity.witch.throw;v=1.2;p=0.5}
+     - sound{s=entity.witch.throw;v=0.8;p=0.5}
      - sound{s=block.amethyst_cluster.hit;v=1.2;p=2}
      ];
      oP=[
@@ -1098,12 +1099,15 @@ m1ji_GenesisAquamarine_Shoot2:
      ];
      y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=1;delay=14
      }
- - potion{t=LEVITATION;d=22;l=2} @self
- - jump{v=0.5} @self
+ - potion{t=LEVITATION;d=22;l=1} @self
+ - jump{v=0.4} @self
  - delay 18
  - jump{v=1.1} @self
  - disengage{v=1}
     
+m1ji_GenesisAquamarine_Velocity:
+ Skills:
+ - velocity{m=set;x=0;y=0;z=0;repeat=14;repaetInterval=1} @PNO{r=1.5}
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
