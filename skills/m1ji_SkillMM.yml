@@ -1098,7 +1098,7 @@ m1ji_GenesisAquamarine_Shoot2:
      ];
      y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=1;delay=14
      }
- - potion{t=LEVITATION;d=8;l=1} @self
+ - potion{t=LEVITATION;d=22;l=2} @self
  - jump{v=0.5} @self
  - delay 18
  - jump{v=1.1} @self
