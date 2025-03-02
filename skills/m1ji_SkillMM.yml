@@ -895,16 +895,10 @@ m1ji_GenesisAquamarine_Swing_Check:
 
 m1ji_GenesisAquamarine_Shoot:
  Skills:
+ - cancelevent{}
  - skill{s=m1ji_GenesisAquamarine_Shoot1}
- - skill{s=m1ji_GenesisAquamarine_Shoot2}
 
 m1ji_GenesisAquamarine_Shoot1:
- Conditions:
- - hasaura genesisaqua_mark false
- Skills:
- - cancelevent{}
-
-m1ji_GenesisAquamarine_Shoot2:
  Conditions:
  - hasaura genesisaqua_mark true
  Skills:
@@ -916,11 +910,16 @@ m1ji_GenesisAquamarine_Shoot2:
     - e:p{c=43cdff;size=0.7;a=10;hS=0.5;vS=0.5;fo=true;audience=caster}
     ];
     oH=[
-    - damage{a=3}
+    - damage{a=10}
+    - sudoskill{s=m1ji_GenesisAqua_Leap}
     ];
-    v=30;mr=25;i=1;sE=true;sB=true;hp=false;hnp=true;g=0.05;b=arrow;
-    } @EIC{a=70;r=25;sort=NEAREST;limit=1}
+    v=35;mr=25;i=1;sE=true;sB=true;hp=false;hnp=true;b=arrow;
+    } @EIC{a=15;r=25;sort=NEAREST;limit=1}
 
+m1ji_GenesisAqua_Leap:
+ Skills:
+ - leap{v=-600;repeat=1;repeatInterval=1} @trigger{y=-1}
+ - leap{v=-400;repeat=1;delay=2} @trigger{y=-1}
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
