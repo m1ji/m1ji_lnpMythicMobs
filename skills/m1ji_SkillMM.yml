@@ -1057,7 +1057,6 @@ m1ji_GenesisAquamarine_Shoot2:
  - hasaura genesisaqua_mark true
  - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
  Skills:
- - sudoskill{s=m1ji_GenesisAquamarine_Velocity} @EIC{a=15;r=25;sort=NEAREST;limit=1}
  - p{oS=[
     - auraremove{n=genesisaqua_mark} @self
     - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
@@ -1072,8 +1071,8 @@ m1ji_GenesisAquamarine_Shoot2:
     ];
     v=35;mr=25;i=1;sE=true;sB=true;hp=false;hnp=true;b=arrow;
     } @EIC{a=15;r=25;sort=NEAREST;limit=1}
- - leap{v=550;repeat=1;repeatInterval=2} @EIC{a=15;r=25;sort=NEAREST;limit=1}
- - leap{v=200;repeat=1;repeatInterval=1;delay=4} @EIC{a=15;r=25;sort=NEAREST;limit=1}
+ - leap{v=450;repeat=1;repeatInterval=2} @EIC{a=15;r=25;sort=NEAREST;limit=1}
+ - leap{v=100;repeat=2;repeatInterval=1;delay=4} @EIC{a=15;r=25;sort=NEAREST;limit=1}
  - delay 12
  - slash{oS=[
      - sound{s=entity.witch.throw;v=1.2;p=0.5}
@@ -1104,10 +1103,6 @@ m1ji_GenesisAquamarine_Shoot2:
  - delay 18
  - jump{v=1.1} @self
  - disengage{v=1}
-    
-m1ji_GenesisAquamarine_Velocity:
- Skills:
- - velocity{m=set;x=0;y=0;z=0;repeat=14;repaetInterval=1} @PNO{r=4}
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
