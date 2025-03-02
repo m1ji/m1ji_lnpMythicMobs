@@ -1035,6 +1035,49 @@ m1ji_GenesisAquamarine_Shoot1:
      oH=[
      - damage{a=3}
      ];
+     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=5;repeatInterval=2
+     }
+ - slash{oS=[
+     - sound{s=entity.witch.throw;v=1.2;p=0.5}
+     - sound{s=block.amethyst_cluster.hit;v=1.2;p=2}
+     ];
+     oP=[
+     - effect:particles{p=CRIT}
+     ];
+     oH=[
+     - damage{a=3}
+     ];
+     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=1;repeatInterval=2;delay=20
+     }
+
+m1ji_GenesisAquamarine_Shoot2:
+ Conditions:
+ - hasaura genesisaqua_mark true
+ - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
+ Skills:
+ - p{oS=[
+    - auraremove{n=genesisaqua_mark} @self
+    - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
+    ];
+    oT=[
+    - e:p{p=instant_effect;cd=0.1;;hS=0.05;vS=0.05;a=2;fo=true;audience=caster}
+    - e:p{c=43cdff;size=0.7;a=10;hS=0.5;vS=0.5;fo=true;audience=caster}
+    ];
+    oH=[
+    - damage{a=10}
+    ];
+    v=35;mr=25;i=1;sE=true;sB=true;hp=false;hnp=true;b=arrow;
+    } @EIC{a=15;r=25;sort=NEAREST;limit=1}
+ - slash{oS=[
+     - sound{s=entity.witch.throw;v=1.2;p=0.5}
+     - sound{s=block.amethyst_cluster.hit;v=1.2;p=2}
+     ];
+     oP=[
+     - effect:particles{p=CRIT}
+     ];
+     oH=[
+     - damage{a=3}
+     ];
      y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=4;repeatInterval=1
      }
  - slash{oS=[
