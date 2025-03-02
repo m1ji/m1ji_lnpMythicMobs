@@ -865,7 +865,7 @@ m1ji_GenesisAmethyst_Swing:
 #  - freeze{ticks=200;cd=1.25} @EntitiesNearOrigin{r=7.5;ignore=players}
 
 m1ji_GenesisAquamarine_Swing:
- Cooldown: 0.4
+ Cooldown: 0.55
  Conditions:
  - hasaura genesisaqua_swingct false
  - crouching{} false
@@ -890,14 +890,15 @@ m1ji_GenesisAquamarine_Swing:
  - skill{s=m1ji_GenesisAquamarine_Swing_Check}
 
 m1ji_GenesisAquamarine_crouchSwing:
- Cooldown: 0.6
+ Cooldown: 0.8
  Conditions:
  - hasaura genesisaqua_swingct false
  - crouching{} true
  Skills:
- - jump{v=0.5} @self
+ - jump{v=0.8} @self
  - potion{t=LEVITATION;d=12;l=1} @self
- - jump{v=-1;delay=12} @self
+ - delay 12
+ - jump{v=-1} @self
  - aura{n=genesisaqua_swing;d=30;c=7;ms=7;
     bartimerdisplay="聡明の矢 <skill.var.aura-stacks><&fs>7";bartimercolor=WHITE;bartimerstyle=SEGMENTED_10;bt=true} @self
  - p{oS=[
@@ -911,7 +912,7 @@ m1ji_GenesisAquamarine_crouchSwing:
     - e:p{c=43cdff;size=0.7;a=10;hS=0.5;vS=0.5;fo=true;audience=caster}
     ];
     oH=[
-    - damage{a=3}
+    - damage{a=4}
     ];
     v=30;mr=20;i=1;sE=true;sB=true;hp=false;hnp=true;g=0.05;b=arrow;
     } @EIC{a=70;r=20;sort=NEAREST;limit=1}
