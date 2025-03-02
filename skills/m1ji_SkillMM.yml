@@ -1107,7 +1107,7 @@ m1ji_GenesisAquamarine_Shoot2:
     
 m1ji_GenesisAquamarine_Velocity:
  Skills:
- - velocity{m=set;x=0;y=0;z=0;repeat=14;repaetInterval=1} @PNO{r=1.5}
+ - velocity{m=set;x=0;y=0;z=0;repeat=14;repaetInterval=1} @PNO{r=4}
 
 # -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #
