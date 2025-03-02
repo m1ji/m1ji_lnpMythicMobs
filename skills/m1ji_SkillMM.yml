@@ -1057,7 +1057,7 @@ m1ji_GenesisAquamarine_Shoot2:
  - hasaura genesisaqua_mark true
  - wearing{s=OFFHAND;m=PvE_Weapon_GenesisDiamond_m1ji_} true
  Skills:
- - leap{v=200} @self
+ - leap{v=500} @forward{f=5;y=0.5}
  - p{oS=[
     - auraremove{n=genesisaqua_mark} @self
     - e:ps{size=0.25;c=#67cef3;r=0.35;a=70;fo=true;audience=caster;repeat=4;repeatInterval=1}
