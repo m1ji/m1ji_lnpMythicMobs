@@ -934,7 +934,7 @@ m1ji_GenesisAquamarine_Shoot1:
      oH=[
      - damage{a=3}
      ];
-     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=1;repeatInterval=1;delay=20
+     y=1.8;w=4;h=2;mpd=true;a=180;roll=-35to35;repeat=1;repeatInterval=1;delay=18
      }
     
 
